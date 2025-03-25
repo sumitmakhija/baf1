@@ -1,0 +1,16 @@
+{% load static %}
+<div class="blob-image-picker">
+    <div class="standard-upload">
+        {{ standard_widget }}
+    </div>
+    <div class="gallery-picker">
+        <button type="button" class="gallery-button" data-field-name="{{ name }}" data-gallery-url="{{ gallery_url }}">
+            Select from Gallery
+        </button>
+    </div>
+    {% if value %}
+    <div class="current-image">
+        <img src="{{ value.url }}" alt="Current image" style="max-width: 200px; max-height: 200px; margin-top: 10px;">
+    </div>
+    {% endif %}
+</div>

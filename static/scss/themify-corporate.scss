@@ -1,0 +1,17 @@
+@import "partials/_colors";
+@import "partials/_functions";
+
+@include themify(
+  "theme-corporate",
+  map-get($corporate, red-primary),
+  map-get($corporate, red-light),
+  map-get($corporate, redBlack),
+  map-get($corporate, redBlackHover),
+  '../images/section-images/home/bg-cta-mobile.png',
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cg id='Group_300508' data-name='Group 300508' transform='translate(-4358 2711)'%3E%3Crect id='::before' width='28' height='28' rx='14' transform='translate(4358 -2711)' fill='%23dd1403'/%3E%3Cg id='Group_175438' data-name='Group 175438' transform='translate(4365 -2715.668)'%3E%3Cpath id='Vector' d='M5.4-2.333,1.6-6.2a.9.9,0,0,0-.667-.267A.9.9,0,0,0,.267-6.2.9.9,0,0,0,0-5.533a.9.9,0,0,0,.267.667L4.8-.267A.9.9,0,0,0,5.467,0a.821.821,0,0,0,.667-.333l7.4-8.733a.76.76,0,0,0,.233-.633,1.142,1.142,0,0,0-.3-.667.821.821,0,0,0-.633-.3.865.865,0,0,0-.633.267Z' transform='translate(0 24.334)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A",
+  '../images/section-images//islamic/islamic-about/board-cta-bg.png',
+  '../images/section-images/instant-loan/bg-corporate.png',
+  '../images/section-images/about/visionbg.png',
+  $white,
+  $black
+);

@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    {% include 'header_tags.html' %}
+  </head>
+  <body class="theme-premier">
+    {% include 'header.html' %}
+    <main>    
+    <!-- hero banner home -->
+    {% if hero_slider_sections %}
+    {% for hero_slider in hero_slider_sections %}
+      {% include 'slider_hero_prem.html' with hero_slider=hero_slider %}
+    {% endfor %}
+  {% else %}
+    {% include 'hero_section_slider.html' %}
+  {% endif %}
+    <!-- news ticker -->
+   
+    <!-- roshan digital section -->
+    {% include 'account_promo.html' %}
+    {% include 'financial_solutions.html' %}
+    <!-- offers slider -->
+    {% include 'offers.html' %}
+<section class="p-t-100 p-b-50">
+    {% include 'promo_banner.html' %}
+    {% include 'banking_promo.html' %}
+</section>
+      <!-- latesUpdate -->
+      {% include 'election_directors_file.html' %}
+    
+    </main>
+
+    {% include 'footer.html' %}
+    {% include 'footer_tags.html' %}
+  </body>
+</html>

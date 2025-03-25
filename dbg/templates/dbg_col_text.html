@@ -1,0 +1,26 @@
+{% if col_entries %}
+<section class="content-right p-t-100 p-b-50 text-list-sec bggrey">
+    <div class="container">
+        <div class="row align-items-center ">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 ">
+                {% for entry in col_entries %}
+                <div class="content-wrp">
+                    <span class="h2 mb-3">{{ entry.column1.heading }}</span>
+                    {{ entry.column1.description|safe }}
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-xxl-1 offset-xl-1 offset-lg-1">
+                {% for entry in col_entries %}
+                <div class="content-wrp">
+                    <span class="h2 mb-3">{{ entry.column2.heading }}</span>
+                    {{ entry.column2.description|safe }}
+                    
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

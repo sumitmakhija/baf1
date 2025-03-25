@@ -1,0 +1,47 @@
+{% load customfilters %}
+{% if modal_promo %}
+<div class="container">
+    <div class="cta-mobile-abt">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <span class="h2 m-b-20">{{ modal_promo.title }}</span>
+          {{ modal_promo.description|first_paragraph|safe  }}
+          <button type="button" class="btn-full mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            {{ modal_promo.cta_text }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+              <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#dd1403" opacity="0"/>
+              <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#dd1403"/>
+            </g>
+          </svg>
+          </button>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 position-relative">
+          <img class="img-fluid img-absolute" src="{{ modal_promo.image_1.url }}" alt="" title="" />
+        </div>
+      </div>
+    </div>
+</div>
+{% endif %}
+<div class="aboutmodal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7"> 
+                    <span class="h4">{{ modal_promo.header }}</span>
+                    <span class="h2">{{ modal_promo.title }}</span>
+                    {{ modal_promo.description|safe }}
+                    
+                    <span class="h5 mt-4">{{ modal_promo.person_name }}</span>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5"> 
+                    <img class="img-fluid img-absolute" src="{{ modal_promo.image_2.url }}" alt="" title="" />
+                </div>
+        </div>
+        </div>
+    </div>
+</div>

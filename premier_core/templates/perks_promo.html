@@ -1,0 +1,30 @@
+{% if lounge_promo_data %}
+<section class="bnpl-benifit-sec">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10">
+                <ul>
+                    {% for benefits_data in lounge_promo_data.logo_promo.all %}
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                            <g id="Group_301209" data-name="Group 301209" transform="translate(-1 -1)">
+                                <rect id="Rectangle_164115" data-name="Rectangle 164115" width="64" height="64" transform="translate(1 1)" fill="none"/>
+                                <g id="Group_301868" data-name="Group 301868" transform="translate(-2715.151 -6264.667)">
+                                <path id="flight_takeoff_24dp_5F6368_FILL0_wght100_GRAD-25_opsz24_1_" data-name="flight_takeoff_24dp_5F6368_FILL0_wght100_GRAD-25_opsz24 (1)" d="M114.952-751.979v-2.059H163.9v2.059Zm3.715-15.75L109.5-783.076l3.594-.888,8.4,7.188,13.973-3.635-15.548-20.879,4.806-1.211L147.1-783.439l13.731-3.635a3.918,3.918,0,0,1,3.009.505,3.9,3.9,0,0,1,1.838,2.443,4.357,4.357,0,0,1-.323,2.968,3.275,3.275,0,0,1-2.181,1.838Z" transform="translate(2610.5 7074.5)" fill="none" stroke="#000" stroke-width="1"/>
+                                <path id="flight_takeoff_24dp_5F6368_FILL0_wght100_GRAD-25_opsz24_1_2" data-name="flight_takeoff_24dp_5F6368_FILL0_wght100_GRAD-25_opsz24 (1)" d="M113.954-759.667v-3.239h49.408v3.239Z" transform="translate(2611.498 7082.684)" fill="#e6c26c"/>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <p>{{ benefits_data.perks_name }}</p>
+                    </li>
+                    {% endfor %}
+                   
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-5">
+                {{ lounge_promo_data.description|safe }}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

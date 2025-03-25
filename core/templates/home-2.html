@@ -1,0 +1,53 @@
+<!-- templates/home.html -->
+
+{% load static %}
+
+{% include 'header.html' %}
+<!-- Render first hero section (index 0) -->
+{% if hero_sections|length > 0 %}
+    {% for hero_section in hero_sections %}
+        {% include 'hero_section.html' with hero_section=hero_section %}
+    {% endfor %}
+{% endif %}
+<p> RDA
+    {% if account_promo %}
+    <div class="account-promo">
+        <h1>{{ account_promo.main_heading }}</h1>
+        <p>{{ account_promo.description }}</p>
+        <h2>{{ account_promo.features_heading }}</h2>
+        <ul>
+            {% for feature in account_promo.get_features_list %}
+                <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+        <img src="{{ account_promo.image.url }}" alt="Promo Image">
+        <a href="{{ account_promo.cta_url }}" class="cta-button">{{ account_promo.cta_text }}</a>
+    </div>
+{% else %}
+    <p>No promo selected.</p>
+{% endif %}
+</p>
+<p>Updates
+    {% for news in news_updates %}
+    <div class="news-update">
+        <h2>{{ news.heading }}</h2>
+        <img src="{{ news.image.url }}" alt="{{ news.heading }}">
+        <h3>{{ news.headline }}</h3>
+        <p>{{ news.description }}</p>
+        <a href="{{ news.cta_link }}">{{ news.cta_text }}</a>
+    </div>
+{% endfor %}
+</p>
+<!-- Render second hero section (index 1)
+{% if hero_sections|length > 1 %}
+    {% with hero_section=hero_sections.1 %}
+        {% include 'hero_section.html' with hero_section=hero_section %}
+    {% endwith %}
+{% else %}
+    <div class="hero-section">
+        <h1>Default Hero Section</h1>
+        <p>This is a default hero section.</p>
+    </div>
+{% endif %} -->
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}

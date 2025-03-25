@@ -1,0 +1,25 @@
+{% if banking_promos %}
+<div class="container m-t-50">
+    <div class="row">
+      {% for promo in banking_promos %}
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+        <div class="box-cta box-{{ promo.promo_type }}-banking">
+            <img class="img-fluid" src="{{ promo.image.url }}" alt="Islamic Banking" title="Islamic Banking" />
+            <span class="h5 text-{{ promo.promo_type }} mb-0">{{ promo.title }}</span>
+            <span class="h5 font-tahoma">{{ promo.description }}</span>
+
+            <a class="" href="{{ promo.cta_link }}">
+              {{ promo.cta_text }} 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <g id="Group_172558" data-name="Group 172558" transform="translate(-356 -420)">
+                  <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#3c949e" opacity="0"/>
+                  <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#3c949e"/>
+                </g>
+              </svg>
+            </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}

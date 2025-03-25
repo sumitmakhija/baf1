@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    {% include 'header_tags.html' %}
+</head>
+
+<body class="theme-premier">
+    {% include 'header.html' %}
+    <main class="">
+        <!-- hero banner -->
+        {% include 'hero_section_2.html' %}
+
+        {% if card_detail_1 %}
+        <section class="notice-table p-t-100 table-responsive">
+            <div class="container">
+                <span class="h3 mb-4">{{ card_detail_1.title }}</span>
+                <div>
+                    {{ card_detail_1.table|safe }}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% if card_detail_2 %}
+        <section class="notice-table p-t-100 p-b-100 table-responsive">
+            <div class="container">
+                <span class="h3 mb-4">{{ card_detail_2.title }}</span>
+                <div>
+                    {{ card_detail_2.table|safe }}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% include 'acc_features_zigzag.html' %}
+
+        {% include 'financial_program_promo.html' %}
+        
+        {% include 'column_bullets_promo.html' %}
+
+        {% include 'multicolumn_faq.html' %}
+
+        {% include 'text_promo.html' %}
+
+        {% include 'golden_promo.html' %}
+
+        {% include 'prem_nested_faqs.html' %}
+
+        {% include 'files_faq.html' %}
+
+        {% include 'promo_banner_full.html' %}
+
+ 
+
+    </main>
+    {% include 'footer.html' %}
+    {% include 'footer_tags.html' %}
+</body>
+
+</html>

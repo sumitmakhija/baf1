@@ -1,0 +1,64 @@
+{% load customfilters %}
+<section class="tabbed-section p-b-100 p-t-100">
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">
+                
+                
+                
+                <!-- tabs list -->
+                <ul class="row justify-content-center mb-3 list-unstyled" id="pills-tab" role="tablist">
+                    {% for tabs in tabs_promo %}
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 nav-item" role="presentation">
+                        {% if forloop.counter == 1 %}
+                        <button class="btn-tabs nav-link active" id="current-account-{{ forloop.counter }}" data-bs-toggle="pill" data-bs-target="#tab-current-account-{{ forloop.counter }}" type="button" role="tab" aria-controls="tab-current-account-{{ forloop.counter }}" aria-selected="true">
+
+                        {% else %}
+                        <button class="btn-tabs nav-link" id="current-account-{{ forloop.counter }}" data-bs-toggle="pill" data-bs-target="#tab-current-account-{{ forloop.counter }}" type="button" role="tab" aria-controls="tab-current-account-{{ forloop.counter }}" aria-selected="true">
+                        {% endif %}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                                <g id="finance_7_" data-name="finance (7)" transform="translate(0.317 0.317)">
+                                    <rect id="Rectangle_163725" data-name="Rectangle 163725" width="55.111" height="3.556" transform="translate(4.127 55.683)"/>
+                                    <path id="Path_106574" data-name="Path 106574" d="M49.595,19.841a1.982,1.982,0,0,0,1.982-1.982V11.911a1.982,1.982,0,0,0-1.308-1.863L28.463,2.119a1.982,1.982,0,0,0-1.348,0L5.308,10.048A1.982,1.982,0,0,0,4,11.911v5.947a1.982,1.982,0,0,0,1.982,1.982H7.965V45.612H4v3.965H51.577V45.612H47.612V19.841ZM7.965,13.3,27.789,6.083,47.612,13.3v2.577H7.965ZM31.753,45.612h-7.93V19.841h7.93ZM11.93,19.841h7.93V45.612H11.93ZM43.648,45.612h-7.93V19.841h7.93Z" transform="translate(3.894 1.93)"/>
+                                    <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" width="64" height="64" transform="translate(-0.317 -0.317)" fill="none"/>
+                                </g>
+                            </svg>
+                            <span>{{ tabs.name }}</span>
+                        </button>
+                    </li>
+                    {% endfor %}
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- current account tab -->
+                    {% for tabs in tabs_promo %}
+                    {% if forloop.counter == 1 %}
+                    <div class="tab-pane fade show active" id="tab-current-account-{{ forloop.counter }}" role="tabpanel" aria-labelledby="current-account-{{ forloop.counter }}" tabindex="{{ forloop.counter }}">
+                    {% else %}
+                    <div class="tab-pane fade" id="tab-current-account-{{ forloop.counter }}" role="tabpanel" aria-labelledby="current-account-{{ forloop.counter }}" tabindex="{{ forloop.counter }}">
+                    {% endif %}        
+
+                        <div class="row align-items-center justify-content-center">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 ">
+                                {% if tabs.content|contains_p_tag %}
+                                    {{ tabs.content|safe }}
+                                {% else %}
+                                    <ul class="list-unstyled list-check-circle-outline mt-4"> 
+                                        {{ tabs.content|strip_ul|safe }}
+                                    </ul>
+                                {% endif %}
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

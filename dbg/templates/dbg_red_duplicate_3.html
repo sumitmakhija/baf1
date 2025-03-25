@@ -1,0 +1,27 @@
+
+
+{% if red_promo_3  %}
+<section class=" p-b-100">
+    <div class="container">
+        <div class="row">
+            {% for promo in red_promo_3 %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                {% if promo.image %}
+                <div class="vision-box {% if forloop.first %}vision-box-left{% else %}vision-box-right{% endif %}"
+                    data-bg="{{ promo.image.url }}">
+                {% endif %}
+                    <div class="vision-box-txt">
+                        <div>
+                            <span class="h5 text-islamic mb-10">{{ promo.title }}</span>
+                            {{ promo.description|safe }}
+                        </div>
+                        <a href="{{ promo.cta1_url }}" class="btn-outline active">{{ promo.cta1_text }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</section>
+{% endif %}

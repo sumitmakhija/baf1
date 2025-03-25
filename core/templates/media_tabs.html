@@ -1,0 +1,190 @@
+{% load static %}
+<section class="tabbed-section p-t-100 p-b-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  col-xxl-12">
+                <!-- tabs list -->
+                <ul class="row mb-3 list-unstyled justify-content-center" id="pills-tab" role="tablist">
+                    {% regroup media_tabs by tab as tab_list %}
+                    {% for tab_group in tab_list %}
+                    <li class="col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 col-xxl-2 nav-item" role="presentation">
+                        <button class="btn-tabs nav-link {% if forloop.first %}active{% endif %}" 
+                               id="{{ tab_group.grouper|slugify }}" 
+                               data-bs-toggle="pill"
+                               data-bs-target="#tab-{{ tab_group.grouper|slugify }}" 
+                               type="button" 
+                               role="tab" 
+                               aria-controls="{{ tab_group.grouper|slugify }}"
+                               aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+                            {% with first_item=tab_group.list|first %}
+                            {% if first_item.tab_image %}
+                            <img class="img-fluid" src="{{ first_item.tab_image.url }}" alt="{{ tab_group.grouper }}" title="{{ tab_group.grouper }}" />
+                            {% endif %}
+                            {% endwith %}
+                            <span>{{ tab_group.grouper }}</span>
+                        </button>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    {% regroup media_tabs by tab as tab_list %}
+                    {% for tab_group in tab_list %}
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" 
+                         id="tab-{{ tab_group.grouper|slugify }}" 
+                         role="tabpanel"
+                         aria-labelledby="{{ tab_group.grouper|slugify }}" 
+                         tabindex="0">
+                        <div class="row">
+                            {% if tab_group.grouper == 'Glossary' %}
+                                {% for item in tab_group.list %}
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <div class="account-box">
+                                        <div class="img-wrapper">
+                                            <img src="{{ item.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                        </div>
+                                        <div class="account-details">
+                                            <span class="h6">{{ item.title }}</span>
+                                            {{ item.description|safe }}
+                                            {% if item.cta_link and item.cta_text %}
+                                            <a href="{{ item.cta_link }}" class="btn-learnMore">
+                                                {{ item.cta_text }}
+                                            </a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% elif tab_group.grouper == 'All Banknotes' %}
+                                {% for item in tab_group.list %}
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="account-box">
+                                        <div class="img-wrapper">
+                                            <img src="{{ item.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                        </div>
+                                        <div class="account-details">
+                                            <span class="h6">{{ item.title }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% elif tab_group.grouper == 'Press Releases' %}
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                        <form>
+                                            <label>Year Filter</label>
+                                            <div class="form-flex">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>All</option>
+                                                    <option value="1">2024</option>
+                                                    <option value="2">2023</option>
+                                                    <option value="3">2022</option>
+                                                    <option value="4">2021</option>
+                                                    <option value="5">2020</option>
+                                                    <option value="6">2019</option>
+                                                    <option value="7">2018</option>
+                                                    <option value="8">2017</option>
+                                                    <option value="9">2016</option>
+                                                    <option value="10">2015</option>
+                                                </select>
+                                                <button class="btn-red">FILTER</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <span class="h2">2024</span>
+                                </div>
+                                {% for item in tab_group.list %}
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <div class="account-box">
+                                        <div class="img-wrapper">
+                                            <img src="{{ item.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                        </div>
+                                        <div class="account-details">
+                                            <span class="h6">{{ item.title }}</span>
+                                            <a href="{{ item.cta_link }}" class="btn-learnMore">
+                                                {{ item.cta_text }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% elif tab_group.grouper == 'Media Contacts' %}
+                                {% for item in tab_group.list %}
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                    <div class="account-box">
+                                        <div class="contact-details">
+                                            <span class="h6">{{ item.title }}</span>
+                                            {{ item.description|safe }}
+                                            <div class="contact-info">
+                                                <ul class="list-unstyled">
+                                                    <li>
+                                                        <a href="tel:+92-21-35209961">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24">
+                                                                <g id="phone" transform="translate(-236 -668)">
+                                                                    <rect id="Rectangle_164126" data-name="Rectangle 164126"
+                                                                        width="24" height="24"
+                                                                        transform="translate(236 668)" fill="none" />
+                                                                    <g id="Group_300773" data-name="Group 300773"
+                                                                        transform="translate(238 670)">
+                                                                        <path id="Path_106625" data-name="Path 106625"
+                                                                            d="M17.321,20a9.848,9.848,0,0,1-4.028-1.412,24.124,24.124,0,0,1-6.5-5.388,24.124,24.124,0,0,1-5.388-6.5A9.848,9.848,0,0,1,0,2.679,2.667,2.667,0,0,1,2.679,0h2.5a2.567,2.567,0,0,1,2.589,2.232,16.536,16.536,0,0,0,.893,3.571,2.665,2.665,0,0,1-.589,2.768L7.036,9.607a21.429,21.429,0,0,0,3.357,3.357l1.036-1.036a2.665,2.665,0,0,1,2.768-.589,16.536,16.536,0,0,0,3.571.893A2.567,2.567,0,0,1,20,14.821v2.5A2.667,2.667,0,0,1,17.321,20ZM2.679,1.786a.893.893,0,0,0-.893.893V13.321a.893.893,0,0,0,.893.893H17.321a.893.893,0,0,0,.893-.893V2.679a.893.893,0,0,0-.893-.893Z"
+                                                                            fill="#c13333" />
+                                                                        <path id="Path_106627" data-name="Path 106627"
+                                                                            d="M10,9.143a2.679,2.679,0,0,1-1.5-.464L.464,2.643A.893.893,0,1,1,1.536,1.357L9.571,7.393a.893.893,0,0,0,.857,0L18.464,1.357a.893.893,0,1,1,1.071,1.286l-8.036,6.036A2.679,2.679,0,0,1,10,9.143Z"
+                                                                            fill="#c13333" />
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            <span>+92-21-35209961</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="mailto:info@bankalfalah.com">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24">
+                                                                <g id="email" transform="translate(-236 -728)">
+                                                                    <rect id="Rectangle_164127" data-name="Rectangle 164127"
+                                                                        width="24" height="24"
+                                                                        transform="translate(236 728)" fill="none" />
+                                                                    <g id="Group_300774" data-name="Group 300774"
+                                                                        transform="translate(238 732)">
+                                                                        <path id="Path_106626" data-name="Path 106626"
+                                                                            d="M17.321,16H2.679A2.682,2.682,0,0,1,0,13.321V2.679A2.682,2.682,0,0,1,2.679,0H17.321A2.682,2.682,0,0,1,20,2.679V13.321A2.682,2.682,0,0,1,17.321,16ZM2.679,1.786a.893.893,0,0,0-.893.893V13.321a.893.893,0,0,0,.893.893H17.321a.893.893,0,0,0,.893-.893V2.679a.893.893,0,0,0-.893-.893Z"
+                                                                            fill="#c13333" />
+                                                                        <path id="Path_106627" data-name="Path 106627"
+                                                                            d="M10,9.143a2.679,2.679,0,0,1-1.5-.464L.464,2.643A.893.893,0,1,1,1.536,1.357L9.571,7.393a.893.893,0,0,0,.857,0L18.464,1.357a.893.893,0,1,1,1.071,1.286l-8.036,6.036A2.679,2.679,0,0,1,10,9.143Z"
+                                                                            fill="#c13333" />
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            <span>info@bankalfalah.com</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% elif tab_group.grouper == 'Images' %}
+                                {% for item in tab_group.list %}
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="account-box">
+                                        <div class="img-wrapper">
+                                            <img src="{{ item.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+</section>

@@ -1,0 +1,62 @@
+{% load static %}
+{% if vision_mission_promo %}
+<section class="p-t-100 ">
+    <div class="container">
+        <div class="row mt-4">
+            {% for entry in vision_mission_promo %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                {% if forloop.counter == 2 %}
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                {% endif %}
+                <div class="compalintbox">
+                    <div class="complintInner">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                            <g id="Group_300744" data-name="Group 300744" transform="translate(-2 -2)">
+                                <g id="Group_300350" data-name="Group 300350" transform="translate(2 2)">
+                                <rect id="Rectangle_855" data-name="Rectangle 855" width="80" height="80" fill="none"/>
+                                </g>
+                                <g id="settings-85" transform="translate(30.197 31.586)">
+                                <path id="Path_106584" data-name="Path 106584" d="M41.148,15.89c-4.549-3.578,0-7.7,0-7.7l.121-.121L38.844,3.881,38.6,4a5.11,5.11,0,0,1-2.183.485C32.9,4.488,31.93.121,31.93.121V0H27.139l-.061.243c-.485,3.518-2.79,4.185-4.549,4.185a7.227,7.227,0,0,1-2.062-.3l-.182-.061L17.92,8.248l.182.121c4.549,3.578,0,7.7,0,7.7l-.121.121,2.426,4.185.243-.121a5.507,5.507,0,0,1,2.183-.485c3.518,0,4.488,4.306,4.488,4.306l.061.182h4.791l.061-.243c.485-3.457,2.79-4.124,4.549-4.124a7.227,7.227,0,0,1,2.062.3l.182.061,2.426-4.185ZM38.358,18.8a11.2,11.2,0,0,0-1.637-.182,5.363,5.363,0,0,0-5.64,4.427H28.23c-.667-1.88-2.3-4.488-5.458-4.488a7.136,7.136,0,0,0-1.88.3L19.5,16.375a6.764,6.764,0,0,0,1.819-4.609,5.5,5.5,0,0,0-1.88-3.821l1.395-2.487a11.2,11.2,0,0,0,1.637.182,5.363,5.363,0,0,0,5.64-4.427h2.85c.546,1.516,2,4.488,5.458,4.488a7.136,7.136,0,0,0,1.88-.3l1.456,2.487a7.074,7.074,0,0,0-1.88,4.609,5.5,5.5,0,0,0,1.88,3.821Z" transform="translate(-17.92 0)" fill="#fbfbfb" stroke="#fff" stroke-width="1"/>
+                                <path id="Path_106585" data-name="Path 106585" d="M289.558,294.4a5.4,5.4,0,1,0,5.4,5.4A5.41,5.41,0,0,0,289.558,294.4Zm0,9.582a4.185,4.185,0,1,1,4.185-4.185A4.193,4.193,0,0,1,289.558,303.982Z" transform="translate(-277.853 -287.425)" fill="#fbfbfb" stroke="#fff" stroke-width="1"/>
+                                </g>
+                                <g id="Rectangle_164088" data-name="Rectangle 164088" transform="translate(10 37.357)" fill="none" stroke="#fff" stroke-width="2">
+                                <rect width="11" height="14" rx="3" stroke="none"/>
+                                <rect x="1" y="1" width="9" height="12" rx="2" fill="none"/>
+                                </g>
+                                <g id="Rectangle_164089" data-name="Rectangle 164089" transform="translate(62 37.357)" fill="none" stroke="#fff" stroke-width="2">
+                                <rect width="11" height="14" rx="3" stroke="none"/>
+                                <rect x="1" y="1" width="9" height="12" rx="2" fill="none"/>
+                                </g>
+                                <path id="Path_106588" data-name="Path 106588" d="M2002.14,679.78s2.58-18.056,26.549-17.717,26.8,18.191,26.8,18.191" transform="translate(-1987.155 -644.68)" fill="none" stroke="#fff" stroke-width="2"/>
+                                <path id="Path_106589" data-name="Path 106589" d="M2042.579,690.146s-4.67,11.941-18.033,14.57" transform="translate(-1975.915 -636.237)" fill="none" stroke="#fff" stroke-width="2"/>
+                                <g id="Rectangle_164101" data-name="Rectangle 164101" transform="translate(34.828 68)" fill="none" stroke="#fff" stroke-width="2">
+                                <rect width="12" height="6" rx="3" stroke="none"/>
+                                <rect x="1" y="1" width="10" height="4" rx="2" fill="none"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="h3">{{ entry.header }}</span>
+                        {{ entry.description|safe  }}
+                    </div>
+                </div>
+                </a>
+            </div>
+            {% endfor %}
+            
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="consumerbg" data-bg="{% static '/images/section-images/contact/consumer-bg.png' %}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <span class="h3 "><b>Consumer Finance Centers</b></span>
+                                <p class="mb-5 mt-4">You can also meet with our representatives at Consumer Finance Centers for Credit Card, Personal, Auto & Home Loan queries. Please <a href="#" class="text-corporate">Click here</a>   to view the complete list of centers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  {% endif %}

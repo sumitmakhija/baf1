@@ -1,0 +1,214 @@
+{% load static %}
+{% if footer %}
+<!-- Footer Block -->
+<footer class="pt-5 pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                <img src="{{ footer_image.footer_logo.url }}" class="footer-img" alt="Bank Alfalah" title="Bank Alfalah"
+                    class="img-fluid mb-4" />
+            </div>
+
+
+
+            {% for footer_item in footer %}
+            {% if forloop.counter0|divisibleby:4 %}
+            {% if not forloop.first %}
+            </ul>
+        </div>
+        {% endif %}
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+            <ul class="list-unstyled list-footer">
+                {% endif %}
+                <li class="mb-2">
+                    <a href="{{ footer_item.link_url }}">{{ footer_item.link_text }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div> <!-- Close the last opened column div -->
+
+
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+            <span class="h5 mb-4">Contact Us</span>
+            <ul class="list-unstyled list-footer-contact">
+                <li class="mb-2">
+                    <a>Head Office, B.A. Building, I.I. Chundrigar Road, Karachi-74000, Pakistan</a>
+                </li>
+                <li class="mb-2">
+                    <a href="mailto:contactus@bankalfalah.com" target="_blank">contactus@bankalfalah.com</a>
+                </li>
+                <li class="mb-2">
+                    <a href="tel:+922111777786" target="_blank">+92 (21) 111 777 786</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix mt-4"></div>
+    <div class="box-social">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                <span class="h4">
+                    Stay connect with<br class="d-none d-md-block" /> anyone & anywhere
+                </span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                <span class="h5">
+                    WE IN SOCIAL
+                </span>
+                <ul class="list-inline list-social-icons">
+                    <!-- facebook -->
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/BankAlfalahOfficial/" target="_blank">
+                            <svg id="Link" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                viewBox="0 0 40 40">
+                                <g class="Link_Frame_Border_" data-name="Link [Frame Border]" fill="none"
+                                    stroke="rgba(20,23,49,0.15)" stroke-width="1">
+                                    <rect width="40" height="40" rx="6" stroke="none" />
+                                    <rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="none" />
+                                </g>
+                                <g id="Img" transform="translate(9 9)">
+                                    <path id="Vector"
+                                        d="M6.417,18.333H2.75V10.542H0V6.875H2.75V4.308A3.975,3.975,0,0,1,7.006,0,25.822,25.822,0,0,1,9.625.128v3.08H8.25c-1.833,0-1.833.889-1.833,1.833V6.875H9.625l-.917,3.667H6.417Z"
+                                        transform="translate(6.417 1.833)" fill="#6e6e6e" />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <!-- twitter -->
+                    <!-- <li class="list-inline-item">
+                          <a href="#" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                                  <g id="Group_300532" data-name="Group 300532" transform="translate(-593 -4914)">
+                                      <g id="Link" transform="translate(593 4914)">
+                                          <g class="Link_Frame_Border_" data-name="Link [Frame Border]" fill="none" stroke="rgba(20,23,49,0.15)" stroke-width="1">
+                                              <rect width="40" height="40" rx="6" stroke="none"/>
+                                              <rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="none"/>
+                                          </g>
+                                      </g>
+                                      <g id="Group_175560" data-name="Group 175560" transform="translate(602 4923)">
+                                          <rect id="Rectangle_96" data-name="Rectangle 96" width="21.156" height="21.156" transform="translate(0.221 0)" fill="#6e6e6e" opacity="0"/>
+                                          <path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M19.377,7.752c.014.192.014.384.014.576A12.507,12.507,0,0,1,6.8,20.921,12.508,12.508,0,0,1,0,18.934a9.157,9.157,0,0,0,1.069.055,8.864,8.864,0,0,0,5.5-1.891,4.434,4.434,0,0,1-4.138-3.07,5.582,5.582,0,0,0,.836.069,4.681,4.681,0,0,0,1.165-.151A4.427,4.427,0,0,1,.877,9.6V9.547a4.458,4.458,0,0,0,2,.562,4.433,4.433,0,0,1-1.37-5.92,12.581,12.581,0,0,0,9.126,4.632,5,5,0,0,1-.11-1.014,4.43,4.43,0,0,1,7.66-3.028A8.714,8.714,0,0,0,20.994,3.71a4.414,4.414,0,0,1-1.946,2.439A8.873,8.873,0,0,0,21.6,5.464a9.515,9.515,0,0,1-2.22,2.288Z" transform="translate(0 -1.793)" fill="#6e6e6e"/>
+                                      </g>
+                                  </g>
+                              </svg>
+                          </a>
+                      </li> -->
+                    <!-- linkedin -->
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/company/bank-alfalah-limited/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                                <g id="Group_300531" data-name="Group 300531" transform="translate(-649 -4914)">
+                                    <g id="Link" transform="translate(649 4913.927)">
+                                        <g class="Link_Frame_Border_" data-name="Link [Frame Border]"
+                                            transform="translate(0 0.073)" fill="none" stroke="rgba(20,23,49,0.15)"
+                                            stroke-width="1">
+                                            <rect width="40" height="40" rx="6" stroke="none" />
+                                            <rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="none" />
+                                        </g>
+                                        <g id="Img" transform="translate(8.305 9.324)">
+                                            <path id="Vector"
+                                                d="M3.667,1.834A1.833,1.833,0,1,1,3.13.538a1.833,1.833,0,0,1,.536,1.3ZM3.722,16.5H.055V5.024H3.722ZM9.478,6.564C11,3.787,17.472,3.576,17.472,9.232V16.5H13.851V10.478c0-3.667-4.372-3.355-4.372,0V16.5H5.867V5.024H9.515Z"
+                                                transform="translate(2.695 2.749)" fill="#6e6e6e" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <!-- instagram -->
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/bank_alfalah/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                                <g id="Group_300530" data-name="Group 300530" transform="translate(-705 -4914)">
+                                    <g id="Link" transform="translate(705 4913.927)">
+                                        <g class="Link_Frame_Border_" data-name="Link [Frame Border]"
+                                            transform="translate(0 0.073)" fill="none" stroke="rgba(20,23,49,0.15)"
+                                            stroke-width="1">
+                                            <rect width="40" height="40" rx="6" stroke="none" />
+                                            <rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="none" />
+                                        </g>
+                                        <g id="Img" transform="translate(9.167 9.239)">
+                                            <path id="Vector"
+                                                d="M9.167,6.417a2.75,2.75,0,1,0,1.945.805A2.75,2.75,0,0,0,9.167,6.417Zm0-1.833A4.583,4.583,0,1,1,5.926,5.926,4.583,4.583,0,0,1,9.167,4.583Zm5.958-.229a1.146,1.146,0,1,1-.336-.81A1.146,1.146,0,0,1,15.125,4.354ZM9.167,1.833c-2.268,0-2.638.006-3.693.053a4.98,4.98,0,0,0-1.648.3,2.646,2.646,0,0,0-.99.644,2.649,2.649,0,0,0-.645.99,4.973,4.973,0,0,0-.3,1.648c-.048,1.012-.053,1.366-.053,3.693,0,2.268.006,2.638.053,3.693a5,5,0,0,0,.3,1.647,2.85,2.85,0,0,0,1.634,1.634,4.99,4.99,0,0,0,1.65.305c1.012.048,1.366.053,3.693.053,2.268,0,2.638-.006,3.693-.053a5.01,5.01,0,0,0,1.647-.3,2.677,2.677,0,0,0,.99-.644,2.65,2.65,0,0,0,.645-.99,5.011,5.011,0,0,0,.3-1.65c.048-1.012.053-1.366.053-3.693,0-2.268-.006-2.638-.053-3.693a4.99,4.99,0,0,0-.3-1.648,2.668,2.668,0,0,0-.644-.99,2.644,2.644,0,0,0-.99-.645,4.978,4.978,0,0,0-1.648-.3c-1.012-.048-1.366-.053-3.693-.053ZM9.167,0c2.491,0,2.8.009,3.778.055a6.753,6.753,0,0,1,2.226.426A4.469,4.469,0,0,1,16.8,1.538a4.5,4.5,0,0,1,1.057,1.624,6.772,6.772,0,0,1,.426,2.226c.043.977.055,1.288.055,3.778s-.009,2.8-.055,3.778a6.777,6.777,0,0,1-.426,2.226,4.68,4.68,0,0,1-2.681,2.681,6.772,6.772,0,0,1-2.226.426c-.977.043-1.288.055-3.778.055s-2.8-.009-3.779-.055a6.777,6.777,0,0,1-2.226-.426A4.483,4.483,0,0,1,1.538,16.8,4.5,4.5,0,0,1,.481,15.171a6.748,6.748,0,0,1-.426-2.226C.012,11.968,0,11.657,0,9.167s.009-2.8.055-3.779A6.748,6.748,0,0,1,.481,3.162,4.473,4.473,0,0,1,1.538,1.538,4.489,4.489,0,0,1,3.162.481,6.748,6.748,0,0,1,5.388.055C6.365.012,6.676,0,9.167,0Z"
+                                                transform="translate(1.833 1.833)" fill="#304761" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <!-- youtube -->
+                    <li class="list-inline-item">
+                        <a href="https://www.youtube.com/channel/UCeLrbPJV56Pr20lENYQ23NA" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                                <g id="Group_300529" data-name="Group 300529" transform="translate(-761 -4914)">
+                                    <g id="Link" transform="translate(761 4914)">
+                                        <g class="Link_Frame_Border_" data-name="Link [Frame Border]" fill="none"
+                                            stroke="rgba(20,23,49,0.15)" stroke-width="1">
+                                            <rect width="40" height="40" rx="6" stroke="none" />
+                                            <rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="none" />
+                                        </g>
+                                    </g>
+                                    <g id="Group_175559" data-name="Group 175559" transform="translate(768.634 4922)">
+                                        <rect id="Rectangle_93" data-name="Rectangle 93" width="23.51" height="23.51"
+                                            transform="translate(0.366 0)" fill="#6e6e6e" opacity="0" />
+                                        <path id="Icon_awesome-youtube" data-name="Icon awesome-youtube"
+                                            d="M22.219,6.879a2.717,2.717,0,0,0-1.912-1.924C18.622,4.5,11.861,4.5,11.861,4.5s-6.761,0-8.447.455A2.717,2.717,0,0,0,1.5,6.879a28.5,28.5,0,0,0-.452,5.238A28.5,28.5,0,0,0,1.5,17.354a2.676,2.676,0,0,0,1.912,1.893c1.686.455,8.447.455,8.447.455s6.761,0,8.447-.455a2.676,2.676,0,0,0,1.912-1.893,28.5,28.5,0,0,0,.452-5.238,28.5,28.5,0,0,0-.452-5.238ZM9.649,15.331V8.9L15.3,12.117,9.649,15.331Z"
+                                            transform="translate(0.139 -0.346)" fill="#6e6e6e" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://itunes.apple.com/pk/app/alfa/id1050684372?mt=8" target="_blank">
+                            <img src="{% static 'images/icons/apple-app-store-icon2.png' %}"
+                                alt="Download from App Store" title="Download from App Store"
+                                class="img-fluid img-app-icon" />
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://play.google.com/store/apps/details?id=com.base.bankalfalah&hl=en"
+                            target="_blank">
+                            <img src="{% static 'images/icons/play-store-icon2.png' %}" alt="Download from Play Store"
+                                title="Download from Play Store" class="img-fluid img-app-icon" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix mt-4"></div>
+    <div class="copyrights d-flex justify-content-between py-4">
+        <p><span id="footer-year"></span> Bank Alfalah, &copy; All Rights Reserved.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item ms-3">
+                <a href="#">
+                    Terms and Conditions
+                </a>
+            </li>
+            <li class="list-inline-item ms-3">
+                <a href="#">
+                    Privacy Notice
+                </a>
+            </li>
+            <li class="list-inline-item ms-3">
+                <a href="#">
+                    Cookie Notice
+                </a>
+            </li>
+            <li class="list-inline-item ms-3">
+                <a href="#">
+                    Sitemap
+                </a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</footer>
+{% endif %}

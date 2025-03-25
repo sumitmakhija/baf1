@@ -1,0 +1,52 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    {% include 'header_tags.html' %}
+</head>
+
+<body class="theme-islamic">
+    {% include 'header.html' %}
+    <main class="">
+        {% include 'hero_section_2.html' %}
+        <!-- Please, update `src` with the url shared in configuration document -->
+        <section class="p-t-50 p-b-50">
+            <div class="container-fluid p-0">
+                <div class="row">   
+                    <div class="col-lg-12">
+                       
+                        <iframe
+                        class="iframe-peekaboo"
+                            src=https://alfalah-web.peekaboo.guru/
+                            width="100%"
+                            frameBorder="0"
+                            scrolling="no"
+                            id="peekabooConnect"
+                            onload="iframeResize()"
+                        ></iframe>
+                        <!-- <script type="text/javascript">
+                            iframeResize = function() {
+                                iFrameResize(
+                                    {
+                                        interval: 200,
+                                        log: false
+                                    },
+                                    "#peekabooConnect"
+                                );
+                            };
+                        </script> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}
+
+</html>
+
+

@@ -1,0 +1,304 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    {% include 'header_tags.html' %}
+</head>
+
+<body class="theme-premier">
+    {% include 'header.html' %}
+    <main class="">
+        <!-- hero banner -->
+    {% if order == True %}
+
+        {% include 'hero_section_2.html' %}
+        {% if text_promo %}
+        <section class="disclaimer-txt">
+            <div class="container">
+            {% if text_promo.show_title == True %}
+            <span class="h6">{{ text_promo.title }}</span>
+            {% endif %}
+            {{ text_promo.description_before|safe }}
+            </div>
+        </section>
+        {% endif %}
+        {% include 'column_bullets_promo.html' %}
+        {% include 'acc_features_zigzag.html' %}
+        {% if table_promo %}
+        <section class="notice-table p-t-50 p-b-50 table-responsive">
+            <div class="container">
+                <span class="h4 mb-4 ">{{ table_promo.title }}</span>
+                <p class="mb-5">{{ table_promo.description }}</p>
+                <div>
+                    {{ table_promo.table|safe }}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% if table_promo_2 %}
+        <section class="notice-table p-t-50 p-b-50 table-responsive">
+            <div class="container">
+                <span class="h4 mb-4 ">{{ table_promo_2.title }}</span>
+                <p class="mb-5">{{ table_promo_2.description }}</p>
+                <div>
+                    {{ table_promo_2.table|safe }}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% if table_promo_3 %}
+        <section class="notice-table p-t-50 p-b-50 table-responsive">
+            <div class="container">
+                <span class="h4 mb-4 ">{{ table_promo_3.title }}</span>
+                <p class="mb-5">{{ table_promo_3.description }}</p>
+                <div>
+                    {{ table_promo_3.table|safe }}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% if calculator == True %}
+        <section class="calculator-sec p-t-50 p-b-50">
+            <div class="container">
+                <div class="calculator-box">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                            <span class="h2 mb-4">Bank Alfalah Home Finance Calculator</span>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-2 mb-md-0">
+                            <div class="calculator-inner-box">
+                                <form action="">
+                                    <div class="row row-gap-2 align-items-center">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 px-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected hidden>Select Your Income Source</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 px-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected hidden>Select Property Type</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 px-2 dateofbirth">
+                                            <input type="date" class="form-control" placeholder="Date of Birth">
+                                            
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 px-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected hidden>Select Installments Tenure</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 px-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected hidden>Select Installments Tenure</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 px-2">
+                                            <input type="number" class="form-control" placeholder="Consumer Contribution Percentage">
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 px-2 mt-3">
+                                            <button type="submit" class="btn-outline active">Calculate <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="Group_172555" data-name="Group 172555"
+                                                        transform="translate(-356 -420)">
+                                                        <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16"
+                                                            height="16" transform="translate(356 420)" fill="#fff"
+                                                            opacity="0" />
+                                                        <path id="Icon_material-chevron-right"
+                                                            data-name="Icon material-chevron-right"
+                                                            d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z"
+                                                            transform="translate(347.115 413)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 px-2 mt-3 text-right">
+                                            <small class="">*Terms & Conditions apply.</small>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% include 'multicolumn_faq.html' %}
+
+        {% include 'golden_promo.html' %}
+        {% include 'cards_content.html' %}
+        {% include 'perks_promo.html' %}
+        {% include 'files_faq.html' %}
+        {% include 'promo_banner.html' %}
+        {% include 'promo_banner_full.html' %}
+        {% include 'regions.html' %}
+        {% include 'text_promo_bottom.html' %}
+        {% include 'branch_logo_promo.html' %}
+        
+    {% endif %}
+    {% if order == False %}
+
+        {% include 'hero_section_2.html' %}
+        {% include 'column_bullets_promo.html' %}
+        {% include 'acc_features_zigzag.html' %}
+        {% if table_promo %}
+        <section class="notice-table p-t-50 p-b-50 table-responsive">
+            <div class="container">
+                <span class="h4 mb-4 ">{{ table_promo.title }}</span>
+                <p class="mb-5">{{ table_promo.description }}</p>
+                <div>
+                    {{ table_promo.table|safe }}
+                </div>
+            </div>
+        </section>
+        
+        {% endif %}
+        {% if table_promo_2 %}
+        <section class="notice-table p-t-50 p-b-50 table-responsive">
+            <div class="container">
+                <span class="h4 mb-4 ">{{ table_promo_2.title }}</span>
+                <p class="mb-5">{{ table_promo_2.description }}</p>
+                <div>
+                    {{ table_promo_2.table|safe }}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% if table_promo_3 %}
+        <section class="notice-table p-t-50 p-b-50 table-responsive">
+            <div class="container">
+                <span class="h4 mb-4 ">{{ table_promo_3.title }}</span>
+                <p class="mb-5">{{ table_promo_3.description }}</p>
+                <div>
+                    {{ table_promo_3.table|safe }}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        {% include 'text_promo.html' %}
+        {% if calculator == True %}
+        <section class="calculator-sec p-t-50 p-b-50">
+            <div class="container">
+                <div class="calculator-box">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                            <span class="h2 mb-4">Bank Alfalah Home Finance Calculator</span>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-2 mb-md-0">
+                            <div class="calculator-inner-box">
+                                <form action="">
+                                    <div class="row row-gap-2 align-items-center">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 px-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected hidden>Select Your Income Source</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 px-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected hidden>Select Property Type</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 px-2 dateofbirth">
+                                            <input type="date" class="form-control" placeholder="Date of Birth">
+                                            
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 px-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected hidden>Select Installments Tenure</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 px-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected hidden>Select Installments Tenure</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 px-2">
+                                            <input type="number" class="form-control" placeholder="Consumer Contribution Percentage">
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 px-2 mt-3">
+                                            <button type="submit" class="btn-outline active">Calculate <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="Group_172555" data-name="Group 172555"
+                                                        transform="translate(-356 -420)">
+                                                        <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16"
+                                                            height="16" transform="translate(356 420)" fill="#fff"
+                                                            opacity="0" />
+                                                        <path id="Icon_material-chevron-right"
+                                                            data-name="Icon material-chevron-right"
+                                                            d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z"
+                                                            transform="translate(347.115 413)" fill="#fff" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 px-2 mt-3 text-right">
+                                            <small class="">*Terms & Conditions apply.</small>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% include 'multicolumn_faq.html' %}
+
+        {% include 'golden_promo.html' %}
+        {% include 'cards_content.html' %}
+        {% include 'perks_promo.html' %}
+        {% include 'files_faq.html' %}
+        {% include 'promo_banner.html' %}
+        {% include 'promo_banner_full.html' %}
+        {% include 'regions.html' %}
+        {% include 'text_promo_bottom.html' %}
+        {% include 'branch_logo_promo.html' %}
+        
+    {% endif %}
+
+
+        
+</main>
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}
+
+</html>

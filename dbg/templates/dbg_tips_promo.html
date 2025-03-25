@@ -1,0 +1,22 @@
+{% if tips_data %}
+<section class="register-box-sec p-t-100 p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="text-center m-b-32">
+                    <span class="h2 headingColor">{{ tips_data.heading }}</span>
+                </div>
+                <div class="register-boxwrp">
+                    {% for promo in tips_data.entries %}
+                    <div class="resiter-box">
+                        <img class="img-fluid img-icon" src="{{ promo.logo }}" alt=""
+                                title="" />
+                        <p>{{ promo.name }}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+</section>
+{% endif %}

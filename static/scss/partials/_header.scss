@@ -1,0 +1,400 @@
+/*****************************************************************
+header styling
+*****************************************************************/
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 20px; /* Distance from the right of the screen */
+  z-index: 1000; /* Ensure it stays above other elements */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-box {
+  background-color: #25D366; /* WhatsApp green for the bubble */
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 20px; /* Rounded corners for bubble effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  animation: fadeIn 1s ease-in-out, pulsate 1.5s infinite; /* Smooth fade-in and pulsate */
+  margin-right: 10px; /* Space between the bubble and the icon */
+}
+
+.floating-whatsapp a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: white; /* Neutral background for the icon */
+  border-radius: 50%; /* Circle button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  transition: transform 0.3s ease-in-out;
+  animation: pulsate 1.5s infinite; /* Pulsating effect */
+}
+
+.floating-whatsapp a:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.floating-whatsapp a i {
+  color: #25D366; /* WhatsApp green for the icon */
+  font-size: 24px; /* Size of the icon */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulsate {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(37, 211, 102, 0.5); /* Light green glow */
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.7); /* More intense glow */
+  }
+}
+
+.desktop-menu {
+  display: block;
+}
+
+.top-bar {
+  font-family: "Tahoma", sans-serif;
+  padding: 8px 0;
+  background: $white-topBar;
+
+  p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .banking-select {
+    button {
+      border: none;
+      background: transparent;
+      padding: 0;
+      color: $black;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      border-radius: 0;
+      transition: all 0.5s ease;
+
+      &:hover,
+      &:focus {
+        color: $black;
+        border: none;
+        background: transparent;
+        transition: all 0.5s ease;
+      }
+    }
+
+    .dropdown-menu {
+      border-radius: 0;
+      padding: 0;
+      min-width: 269px;
+
+      li {
+        &:not(:last-child) {
+          border-bottom: 1px solid #dddddd;
+        }
+
+        a {
+          padding: 16px 16px 8px 16px;
+          color: $black;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+
+  .list-top-bar {
+    margin-bottom: 0;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      a {
+        color: #161613;
+        transition: all 0.5s ease;
+
+        svg {
+          transform: translateY(-2px);
+          transition: all 0.5s ease;
+
+          &.right-arrow {
+            transform: rotate(-90deg) translateY(0px) translateX(1px);
+          }
+
+          &.down-arrow {
+            transform: rotate(-90deg) translateY(2px) translateX(1px);
+          }
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+          transition: all 0.5s ease;
+        }
+      }
+
+      // dropdowns
+      .banking-select{
+        button {
+          border: none;
+          background: transparent;
+          padding: 0;
+          color: $black;
+          font-weight: 400;
+          font-family: "Tahoma", sans-serif;
+              font-size: 16px;
+    line-height: 19px;
+        margin-top: 0;
+    margin-bottom: 0;
+    transform: translateY(-2px);
+    border-radius: 0;
+          transition: all 0.5s ease;
+
+          &:hover,
+          &:focus, &:active {
+            color: $black;
+            border: none;
+            background: transparent;
+            transition: all 0.5s ease;
+          }
+          &:after{
+            border-top: 0;
+            border-bottom: 0;
+            border-left: 0;
+            border-right: 0;
+            content: unset;
+            // background-image: url("data:image/svg+xml,%3Csvg class='down-arrow' xmlns='http://www.w3.org/2000/svg' width='5.249' height='8.5' viewBox='0 0 5.249 8.5'%3E%3Cpath id='Path_831' data-name='Path 831' d='M13.5,8.59,10.25,11.834,7,8.59l-1,1,4.25,4.25,4.25-4.25Z' transform='translate(13.839 -6) rotate(90)' fill='%23161613'/%3E%3C/svg%3E");
+          }
+          .globe{
+            transform: translateY(-1px);
+          }
+          svg.down-arrow{
+            transform: rotate(-90deg) translateX(-2px);
+            transform-origin: 0;
+            margin-left: 5px;
+          }
+        }
+
+        .dropdown-menu {
+          border-radius: 0;
+          padding: 0;
+          min-width: 269px;
+
+          li {
+            &:not(:last-child) {
+              border-bottom: 1px solid #dddddd;
+            }
+
+            a {
+              color: $black;
+              padding: 16px 16px 8px 16px;
+              transition: all 0.5s ease;
+            }
+          }
+        }
+      }
+    
+    }
+  }
+}
+
+.theme-navbar {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 30px #00000029;
+  max-height: 80px;
+
+  .navbar-brand{
+    img{
+      max-width: 170px;
+    }
+  }
+  .nav-item {
+    .nav-link {
+      padding-bottom: 0;
+      color: #000000a6 !important;
+
+      &:hover,
+      &:focus {
+        color: #000000cc !important;
+      }
+
+      &.search-icon {
+        svg {
+          transform: translateY(-4px);
+        }
+      }
+    }
+
+    &.dropdown {
+      .dropdown-toggle {
+        &::after {
+          border: none;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.473' height='5.225' viewBox='0 0 8.473 5.225'%3E%3Cpath id='expand_more_FILL0_wght400_GRAD0_opsz24' d='M244.236-635.775,240-640.012l.988-.988,3.248,3.248L247.484-641l.988.988Z' transform='translate(-240 641)'/%3E%3C/svg%3E%0A");
+          background-repeat: no-repeat;
+          width: 9px;
+          height: 6px;
+          transform: translateY(3px);
+        }
+      }
+    }
+  }
+}
+
+
+.navbar-expand-lg {
+  .navbar-nav {
+    .dropdown-menu {
+      position: absolute;
+      left: 0;
+      top: 63px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+    }
+  }
+
+}
+
+
+
+
+
+/* Hide all tab contents initially */
+.tab-pane {
+  display: none;
+}
+
+/* Show the active tab content */
+.tab-pane.show {
+  display: block;
+}
+
+/* Style for the active tab link */
+.nav-link.active {
+  font-weight: bold;
+  /* Highlight active tab */
+}
+
+// molbile header start
+.mobile-menu {
+  display: none;
+
+  .mobile-header-logo {}
+
+  .offcanvas-wrp {
+    .offcanvas-toggle {
+      background-color: transparent;
+      border: 1px solid #000;
+      padding: 2px 5px;
+      border-radius: 4px;
+
+      .toggle-icon {
+        width: 20px;
+        height: 20px;
+        fill: #ff0000;
+        color: #ff0000;
+      }
+    }
+
+    .inner-canvas-header {
+      justify-content: space-between;
+      border-bottom: 1px solid #dde0e9;
+      .offcanvas-back {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        font-size: 16px;
+
+        svg {
+          transform: translateY(-1px);
+        }
+      }
+
+      span,
+      .btn-close {
+        margin: 0;
+      }
+    }
+
+    .offcanvas-body {
+      .navbar-top {
+        list-style-type: none;
+        padding: 16px 0;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        gap: 8px;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          height: 5px;
+        }
+
+        li {
+          list-style: none;
+          display: inline-block;
+          font-size: 12px;
+          font-weight: 500;
+          order: 0;
+          min-width: 120px;
+
+          a {
+            background-color: #f5f8fa;
+            border-radius: 4px;
+            color: #738794;
+            display: block;
+            padding: 10px;
+            text-align: center;
+          }
+        }
+      }
+
+      .navbar-nav {
+        margin-top: 10px;
+
+        li {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          .nav-item-btn {
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.6509803922);
+            width: 100%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// molbile header ends

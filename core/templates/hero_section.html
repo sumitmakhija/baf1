@@ -1,0 +1,15 @@
+
+{% load static %}
+
+{% if hero_section %}
+    <div class="hero-section">
+        <img src="{{ hero_section.image.url }}" alt="{{ hero_section.title }}">
+        <h1>{{ hero_section.title }}</h1>
+        <p>{{ hero_section.description }}</p>
+    </div>
+{% else %}
+    <div class="hero-section">
+        <h1>Default Hero Section</h1>
+        <p>This is a default hero section.</p>
+    </div>
+{% endif %}

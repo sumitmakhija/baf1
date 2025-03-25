@@ -1,0 +1,63 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    {% include 'header_tags.html' %}
+</head>
+<body class="theme-corporate">
+{% include 'header.html' %}
+<main class="notice-quick-links">
+<!-- Main Page Block Start -->
+{% include 'hero_section_2.html' %}
+<section class="pattern-sec p-t-100 p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h2 headingColor m-b-27">{{ shareholding_table.title }}</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                
+                <div class="notice-table">
+                    {{ shareholding_table.table|safe }}
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="free-float-sec p-t-100 p-b-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h2 headingColor m-b-27">Free float of shares</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <img src="{% static 'images/section-images/notice-quick-links/float-statement.png' %}"
+                    class="img-fluid w-100" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="key-info-sec p-t-100 p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h2 headingColor m-b-27">{{ others_table.title }}</span>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="notice-table">
+                    {{ others_table.table|safe }}
+                </div>
+            </div>
+        </div>
+</section>
+</main>
+
+
+<!-- Main Page Block End-->
+
+<!-- Footer Block -->
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}
+</body>
+</html>

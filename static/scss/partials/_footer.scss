@@ -1,0 +1,118 @@
+/*****************************************************************
+footer styling
+*****************************************************************/
+footer {
+  .footer-img{
+    max-width: 180px;
+  }
+  .list-footer {
+    li {
+      a {
+        text-align: left;
+        font-family: "Zemestro Std", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0px;
+        color: $black;
+        display: inline-block;
+        transition: all 0.5s ease;
+        &:hover,
+        &:focus {
+          transform: translateX(5px);
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+  .list-footer-contact {
+    li {
+      a {
+        text-align: left;
+        font-family: "Zemestro Std", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0px;
+        color: $black-light;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        display: inline-block;
+        transition: all 0.5s ease;
+        &:hover,
+        &:focus {
+          transform: translateX(5px);
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+  .box-social {
+    border: 1px solid #14173126;
+    padding: 70px 36px;
+    border-radius: 2px;
+    .h4 {
+      text-align: left;
+      font-weight: 500;
+      font-size: 29px;
+      line-height: 30px;
+      letter-spacing: 0px;
+      color: #141731;
+    }
+    .h5 {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0px;
+      color: #304761;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .list-social-icons {
+      li {
+        a {
+          transition: all 0.5s ease;
+          display: inline-block;
+          &:hover,
+          &:focus {
+            transform: translateY(-5px);
+            filter: drop-shadow(0 0 4px rgba(2, 2, 2, 0.2));
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+    .img-app-icon {
+      margin-bottom: 5px;
+      max-width: 150px;
+      transition: all 0.5s ease;
+      &:hover,
+      &:focus {
+        transform: translateY(-5px);
+        filter: drop-shadow(0 0 4px rgba(2, 2, 2, 0.2));
+        transition: all 0.5s ease;
+      }
+    }
+  }
+  .copyrights {
+    p {
+      font-family: "Zemestro Std", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.33px;
+      color: #303030;
+    }
+    ul {
+      li {
+        a {
+          font-family: "Zemestro Std", sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: -0.33px;
+          color: #303030;
+        }
+      }
+    }
+  }
+}

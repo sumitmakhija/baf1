@@ -1,0 +1,16 @@
+{
+  "name": "alfalah",
+  "version": "1.0.0",
+  "description": "alfalah",
+  "main": "index.js",
+  "scripts": {
+    "css": "sass assets/scss:assets/css/",
+    "css:watch": "sass --load-path=node_modules --watch static/scss:static/css"
+  },
+  "author": "MBK | Convex Interactive PVT(LTD)",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

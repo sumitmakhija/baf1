@@ -1,0 +1,41 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+{% include 'header_tags.html' %}
+
+<body class="theme-islamic">
+{% include 'header.html' %}
+<main class="islamic-accounts">
+{% include 'hero_section_2.html' %}
+{% if table_promo_1 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+            <div class="container">
+                <span class="h4 mb-4 ">{{ table_promo_1.title }}</span>
+                <p class="mb-5">{{ table_promo_1.description }}</p>
+                <div>
+                    {{ table_promo_1.table|safe }}
+                </div>
+            </div>
+    </section>
+{% endif %}
+
+{% if table_promo_2 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+            <div class="container">
+                <span class="h4 mb-4 ">{{ table_promo_2.title }}</span>
+                <p class="mb-5">{{ table_promo_2.description }}</p>
+                <div>
+                    {{ table_promo_2.table|safe }}
+                </div>
+            </div>
+    </section>
+{% endif %}
+{% include 'dbg_agent_text.html' %}
+{% include 'dbg_full_text_2.html' %}
+</main>
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}
+</body> 
+</html>

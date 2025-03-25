@@ -1,0 +1,26 @@
+<section class="leadership-tab p-t-100 p-b-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">
+                <span class="h2 mb-5">Board Of Directors</span>
+                <div class="row">
+                    <!-- board-directors -->
+                    {% for member in directors %}
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <div class="account-box">
+                            <div class="img-wrapper">
+                                <img src="{{ member.image.url }}" class="img-fluid img-cover" alt="" title="">
+                            </div>
+                            <div class="account-details">
+                                <span class="h6">{{ member.name }}</span>
+                                <p>{{ member.designation }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

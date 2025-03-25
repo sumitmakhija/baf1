@@ -1,0 +1,30 @@
+{% load static %}
+<section class="roshan-digital-account p-t-100 p-b-100">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <h2 class="h2">{{ account_promo.main_heading }}</h2>
+          {{ account_promo.description|safe }}
+          <span class="h5">{{ account_promo.features_heading }}</span>
+          <ul class="list-check-circle">
+            {% for feature in account_promo.get_features_list %}
+                <li>{{ feature }}</li>
+            {% endfor %}
+          </ul>
+
+          <a href="{{ account_promo.cta_url }}" class="btn-outline">
+            {{ account_promo.cta_text }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+              <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#dd1403" opacity="0"/>
+                <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#dd1403"/>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <img class="img-fluid" src="{{ account_promo.image.url }}" alt="Roshan Digital Account" title="Roshan Digital Account" />
+        </div>
+      </div>
+    </div>
+  </section>

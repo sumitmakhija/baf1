@@ -1,0 +1,12 @@
+{% if text_promo_bottom %}
+<section class="content-left p-t-100 p-b-50">
+    <div class="container">
+        <div class="row justify-content-between ">
+            <div
+                class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12   ">
+               <span class="h3">{{ text_promo_bottom.title }}</span>
+               {{ text_promo_bottom.description_before|safe }}
+        </div>
+    </div>
+</section>
+{% endif %}

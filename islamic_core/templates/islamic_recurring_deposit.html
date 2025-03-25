@@ -1,0 +1,101 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+{% include 'header_tags.html' %}
+
+<body class="theme-islamic">
+{% include 'header.html' %}
+<main class="islamic-about-us">
+{% include 'hero_section_2.html' %}
+{% include 'tabs_features.html' %}
+<section class="calculator-sec p-t-100 p-b-100">
+    <div class="container">
+        <div class="calculator-box">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                    <span class="h2 mb-4">Bank Alfalah Islamic Recurring Value Deposit Calculator</span>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 mb-2 mb-md-0">
+                    <div class="calculator-inner-box">
+                        <form action="">
+                            <div class="row row-gap-2">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 px-2">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected hidden>Select installment frequency</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 px-2">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected hidden>Select tenure</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 px-2">
+                                    <input type="number" class="form-control" placeholder="Enter Amount">
+                                </div>
+                                <div
+                                    class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 px-2 mt-3">
+                                    <button type="submit" class="btn-outline active">Calculate <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 16 16">
+                                            <g id="Group_172555" data-name="Group 172555"
+                                                transform="translate(-356 -420)">
+                                                <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16"
+                                                    height="16" transform="translate(356 420)" fill="#fff"
+                                                    opacity="0" />
+                                                <path id="Icon_material-chevron-right"
+                                                    data-name="Icon material-chevron-right"
+                                                    d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z"
+                                                    transform="translate(347.115 413)" fill="#fff" />
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                    <div class="calculator-inner-box mb-2">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 border-end">
+                                <div class="text-center">
+                                    <p>Profit</p>
+                                    <span class="h5">PKR 0</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <div class="text-center">
+                                    <p>Principal</p>
+                                    <span class="h5">PKR 0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-inner-box">
+                        <div class="amount-box">
+                            <span class="h5">PKR 0</span>
+                        </div>
+                        <p class="terms-txt">*Terms & Conditions apply.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include 'eligbility_docs.html' %}
+{% include 'faq.html' %}
+{% include 'promo_banner.html' %}
+
+</main>
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}
+</body> 
+</html>

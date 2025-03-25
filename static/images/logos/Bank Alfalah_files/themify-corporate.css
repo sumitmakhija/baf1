@@ -1,0 +1,314 @@
+/*****************************************************************
+colors
+*****************************************************************/
+/*****************************************************************
+theme colors
+*****************************************************************/
+.text-corporate {
+  color: #dd1403;
+}
+
+.text-islamic {
+  color: #007d84;
+}
+
+.text-premier {
+  color: #9C7513;
+}
+
+.font-tahoma {
+  font-family: "Tahoma", sans-serif;
+}
+
+.font-zemestro {
+  font-family: "Zemestro Std", sans-serif;
+}
+
+.bg-slate0 {
+  background-color: #f8f8f8;
+}
+
+.link-corporate {
+  color: #dd1403;
+  text-decoration: underline;
+}
+
+.link-islamic {
+  color: #007d84;
+  text-decoration: underline;
+}
+
+.link-white {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.headingColor {
+  color: #272727;
+}
+
+/*****************************************************************
+function / mixins
+*****************************************************************/
+/***************************************************************
+themify function/mixin
+***************************************************************/
+.theme-corporate ::selection {
+  background: #dd1403;
+  color: #ffffff;
+}
+
+.theme-corporate::-webkit-scrollbar-thumb {
+  background-color: #dd1403;
+}
+
+.theme-corporate .btn-outline {
+  border: 1px solid #dd1403;
+  color: #dd1403;
+}
+.theme-corporate .btn-outline:hover, .theme-corporate .btn-outline:focus, .theme-corporate .btn-outline.active {
+  color: #ffffff;
+  background: transparent linear-gradient(281deg, #a72b2a 0%, #da291c 100%) 0% 0% no-repeat padding-box;
+}
+.theme-corporate .btn-outline:hover svg path, .theme-corporate .btn-outline:focus svg path, .theme-corporate .btn-outline.active svg path {
+  fill: #ffffff;
+}
+.theme-corporate .btn-outline.active:hover, .theme-corporate .btn-outline.active:focus {
+  background: transparent linear-gradient(79deg, #a72b2a 0%, #da291c 100%) 0% 0% no-repeat padding-box;
+}
+
+.theme-corporate .top-bar .banking-select .dropdown-menu li a.active, .theme-corporate .top-bar .banking-select .dropdown-menu li a:hover, .theme-corporate .top-bar .banking-select .dropdown-menu li a:focus {
+  background: none;
+  color: #dd1403;
+  transition: all 0.5s ease;
+}
+.theme-corporate .top-bar .list-top-bar li a:hover, .theme-corporate .top-bar .list-top-bar li a:focus, .theme-corporate .top-bar .list-top-bar li a.active {
+  color: #dd1403;
+}
+.theme-corporate .top-bar .list-top-bar li a:hover svg path, .theme-corporate .top-bar .list-top-bar li a:focus svg path, .theme-corporate .top-bar .list-top-bar li a.active svg path {
+  fill: #dd1403;
+  transition: all 0.5s ease;
+}
+
+.theme-corporate .hero-banner .content-hero .h1 {
+  color: #dd1403;
+}
+.theme-corporate .hero-banner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #dd1403;
+}
+
+.theme-corporate footer {
+  border-bottom: 6px solid #dd1403;
+}
+.theme-corporate footer .list-footer li a:hover, .theme-corporate footer .list-footer li a:focus,
+.theme-corporate footer .list-footer-contact li a:hover,
+.theme-corporate footer .list-footer-contact li a:focus {
+  color: #dd1403;
+}
+.theme-corporate footer .box-social .list-social-icons li a {
+  transition: all 0.5s ease;
+}
+.theme-corporate footer .box-social .list-social-icons li a:hover, .theme-corporate footer .box-social .list-social-icons li a:focus {
+  transition: all 0.5s ease;
+}
+.theme-corporate footer .box-social .list-social-icons li a:hover svg .Link_Frame_Border_ rect:first-child, .theme-corporate footer .box-social .list-social-icons li a:focus svg .Link_Frame_Border_ rect:first-child {
+  fill: #dd1403;
+  transition: all 0.5s ease;
+}
+.theme-corporate footer .box-social .list-social-icons li a:hover svg path, .theme-corporate footer .box-social .list-social-icons li a:focus svg path {
+  fill: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-corporate footer .copyrights p a {
+  transition: all 0.5s ease;
+}
+.theme-corporate footer .copyrights p a:hover, .theme-corporate footer .copyrights p a:focus {
+  color: #dd1403;
+  transition: all 0.5s ease;
+}
+.theme-corporate footer .copyrights ul li a:hover, .theme-corporate footer .copyrights ul li a:focus {
+  color: #dd1403;
+  transition: all 0.5s ease;
+}
+
+.theme-corporate .hero-inner .banner-content-box .h1 {
+  color: #dd1403;
+}
+.theme-corporate .accordion .accordion-item {
+  border: 0;
+}
+.theme-corporate .accordion .accordion-item .accordion-header button.accordion-button:not(.collapsed) {
+  background-color: #dd1403;
+}
+.theme-corporate .list-check-circle-outline li a {
+  color: #dd1403;
+}
+.theme-corporate .account-box .account-details .btn-learnMore:hover, .theme-corporate .account-box .account-details .btn-learnMore:focus {
+  color: #dd1403;
+}
+.theme-corporate .women-service-accordian .accordian-heading .h3 {
+  color: #dd1403;
+}
+.theme-corporate .women-service-accordian .accordian-heading p a {
+  color: #dd1403;
+}
+.theme-corporate .women-service-accordian .box-sub-txt .h4 {
+  color: #dd1403;
+}
+.theme-corporate .tabbed-section .btn-tabs:hover, .theme-corporate .tabbed-section .btn-tabs:focus, .theme-corporate .tabbed-section .btn-tabs.active {
+  background: transparent linear-gradient(281deg, #a72b2a 0%, #da291c 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2196078431);
+  border: 2px solid #dd1403;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.theme-corporate .tabbed-section .btn-tabs:hover svg path,
+.theme-corporate .tabbed-section .btn-tabs:hover svg rect:not(:last-child), .theme-corporate .tabbed-section .btn-tabs:focus svg path,
+.theme-corporate .tabbed-section .btn-tabs:focus svg rect:not(:last-child), .theme-corporate .tabbed-section .btn-tabs.active svg path,
+.theme-corporate .tabbed-section .btn-tabs.active svg rect:not(:last-child) {
+  fill: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-corporate .tabbed-section .btn-tabs:hover span, .theme-corporate .tabbed-section .btn-tabs:focus span, .theme-corporate .tabbed-section .btn-tabs.active span {
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-corporate .box-requirements:hover, .theme-corporate .box-requirements:focus, .theme-corporate .box-requirements.active {
+  background: transparent linear-gradient(281deg, #a72b2a 0%, #da291c 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2196078431);
+  border: 2px solid #dd1403;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.theme-corporate .box-requirements:hover svg path,
+.theme-corporate .box-requirements:hover svg rect:not(:last-child), .theme-corporate .box-requirements:focus svg path,
+.theme-corporate .box-requirements:focus svg rect:not(:last-child), .theme-corporate .box-requirements.active svg path,
+.theme-corporate .box-requirements.active svg rect:not(:last-child) {
+  fill: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-corporate .box-requirements:hover span, .theme-corporate .box-requirements:focus span, .theme-corporate .box-requirements.active span {
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-corporate .custom-mega .menu-left {
+  position: relative;
+}
+.theme-corporate .custom-mega .menu-left img {
+  width: 100%;
+}
+.theme-corporate .custom-mega .menu-left .menu-left-content {
+  background-color: #ffffff;
+  border-radius: 14px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 46px;
+}
+.theme-corporate .custom-mega .menu-left .menu-left-content .h3 {
+  font-size: 30px;
+  color: #dd1403;
+}
+.theme-corporate .custom-mega .menu-left .menu-left-content a {
+  font-size: 18px;
+  color: #dd1403;
+  font-weight: 600;
+}
+.theme-corporate .custom-mega .menu-left .menu-left-content svg rect {
+  fill: #dd1403;
+}
+.theme-corporate .custom-mega .menu-left .menu-left-content svg path {
+  stroke: #dd1403;
+}
+.theme-corporate .custom-mega .nav-tabs {
+  border: none;
+  background: rgba(204, 204, 204, 0.5490196078);
+  border-radius: 100px;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.theme-corporate .custom-mega .nav-tabs .nav-item {
+  text-align: center;
+}
+.theme-corporate .custom-mega .nav-tabs .nav-item .nav-link {
+  color: #666666;
+  font-size: 16px;
+  padding: 8px 23px;
+}
+.theme-corporate .custom-mega .nav-tabs .nav-item .nav-link.active {
+  border-radius: 100px !important;
+  background: #ffffff;
+  color: #dd1403;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1215686275);
+  padding: 8px 23px;
+}
+.theme-corporate .custom-mega .nav-tabs .nav-item .nav-link:hover {
+  border-radius: 100px !important;
+  background: #ffffff;
+  color: #dd1403;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1215686275);
+  padding: 8px 23px;
+}
+.theme-corporate .custom-mega .tab-content .h4 {
+  color: #dd1403;
+  font-size: 22px;
+}
+.theme-corporate .custom-mega .tab-content ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.theme-corporate .custom-mega .tab-content ul li {
+  list-style: none;
+  flex: 2 2 321px;
+}
+.theme-corporate .custom-mega .tab-content ul a {
+  padding-bottom: 10px !important;
+  padding-left: 0;
+}
+.theme-corporate .theme-navbar .nav-item .nav-link.search-icon path {
+  fill: #dd1403 !important;
+}
+.theme-corporate code {
+  color: #dd1403;
+}
+.theme-corporate .notice-table th {
+  background-color: #dd1403;
+}
+.theme-corporate .cta-mobile {
+  background-image: url("../images/section-images/home/bg-cta-mobile.png") !important;
+}
+.theme-corporate .news-ticker {
+  background: #dd1403;
+}
+.theme-corporate .solutions-section .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #dd1403;
+}
+.theme-corporate .offersSlider-scrollbar .swiper-scrollbar-drag {
+  background: #dd1403;
+}
+.theme-corporate .featured-news .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #dd1403;
+}
+.theme-corporate .product-box .product-details .btn-learnMore:hover, .theme-corporate .product-box .product-details .btn-learnMore:focus {
+  color: #dd1403;
+}
+.theme-corporate .list-check-circle li:before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cg id='Group_300508' data-name='Group 300508' transform='translate(-4358 2711)'%3E%3Crect id='::before' width='28' height='28' rx='14' transform='translate(4358 -2711)' fill='%23dd1403'/%3E%3Cg id='Group_175438' data-name='Group 175438' transform='translate(4365 -2715.668)'%3E%3Cpath id='Vector' d='M5.4-2.333,1.6-6.2a.9.9,0,0,0-.667-.267A.9.9,0,0,0,.267-6.2.9.9,0,0,0,0-5.533a.9.9,0,0,0,.267.667L4.8-.267A.9.9,0,0,0,5.467,0a.821.821,0,0,0,.667-.333l7.4-8.733a.76.76,0,0,0,.233-.633,1.142,1.142,0,0,0-.3-.667.821.821,0,0,0-.633-.3.865.865,0,0,0-.633.267Z' transform='translate(0 24.334)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.theme-corporate ::-webkit-scrollbar-thumb {
+  background-color: #dd1403;
+}
+.theme-corporate .board-office-cta .cta-wrp {
+  background-image: url("../images/section-images//islamic/islamic-about/board-cta-bg.png");
+}
+.theme-corporate .contact-details .h5 {
+  color: #dd1403;
+}
+
+.contact-details.heightbox2 {
+  min-height: 415px;
+}
+
+/*# sourceMappingURL=themify-corporate.css.map */

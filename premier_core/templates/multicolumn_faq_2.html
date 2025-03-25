@@ -1,0 +1,60 @@
+{% load customfilters %}
+{% if multi_col_faq_2 %}
+<section class="financial-tab alfa-bnpl-accordian p-t-50 p-b-50">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-1">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- tabs content-1 -->
+                    <div class="tab-pane fade show active" id="tab-annual-report" role="tabpanel"
+                        aria-labelledby="tab-annual-report" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample">
+                                {% for item in multi_col_faq_2 %}
+                                <div class="accordion-item">
+                                    
+                                    <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                      
+                                        
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="true"
+                                        aria-controls="collapse{{ forloop.counter }}">
+                                        {{ item.question }}
+                                        </button>
+                                        
+                                        
+                                    </h2>
+                                    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse"
+                                        aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="accordion theme-accordions" id="faqs">
+                                                <div class="row">
+                                                    {% if item.first_col_answer and item.second_col_answer %}
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                                                        {{ item.first_col_answer|split_p_and_ul|safe }}
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1">
+                                                        {{ item.second_col_answer|split_p_and_ul|safe }}
+                                                    </div>
+                                                    {% else %}
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                        {{ item.first_col_answer|split_p_and_ul|safe }}
+                                                    </div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

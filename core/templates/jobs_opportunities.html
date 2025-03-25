@@ -1,0 +1,34 @@
+{% if jobs_promo %}
+<section class="experience p-t-100 p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                <span class="h2 headingColor">{{ jobs_promo.0.job_section.title }}</span>
+                {{ jobs_promo.0.job_section.description|safe }}
+            </div>
+        </div>
+        <div class="row">
+            {% for job in jobs_promo %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="experianceBox">
+                    <span class="h5">{{ job.job_title|safe }}</span>
+                    <div class="experianceboxInner">
+                        {{ job.job_description|safe }}
+                    </div>
+                    
+                    <a href="{{ job.cta_link }}" class="btn-outline active">
+                        {{ job.cta_text }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                            <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#dd1403" opacity="0"></rect>
+                            <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#dd1403"></path>
+                            </g>
+                        </svg>
+                        </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+  </section>
+{% endif %}

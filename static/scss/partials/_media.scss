@@ -1,0 +1,1104 @@
+/************************************************
+https://www.hobo-web.co.uk/best-screen-size/
+*************************************************
+Desktop
+*************************************************
+------------------------------   Banner
+1	  2560×1440	    (7.41%)    |     ✓
+2	  1920×1080	    (22.62%)   |     ✓
+3	  1680×1050	    (4.28%)    |     ✓
+4	  1792×1120	    (2.06%)    |     ✓
+5 	1600×900      (1.87%)    |     ✓
+6	  1536×864	    (8.60%)    |     ✓
+7	  1440×900	    (9.55%)    |     ✓
+8	  1366×768	    (11.20%)   |     ✓
+9	  1280×800	    (2.33%)    |     ✓
+10  1280×720	    (3.55%)    |     ✓
+
+*************************************************
+Tablets
+*************************************************
+768×1024 – 48.64%
+1280×800 – 7.55%
+800×1280 – 7.44%
+601×962  – 4.5%
+810×1080 – 4.41%
+600×1024 – 2.95%
+
+*************************************************
+Mobile
+*************************************************
+414×816 – 14.51%
+375×667 – 12.47%
+375×812 – 7.21%
+360×640 – 5.43%
+412×915 – 5.18%
+360×780 – 5.04%
+
+***************************************************
+sass --watch style.scss:style.css --style compressed
+**************************************************/
+
+@media (max-width: 2560px) {
+  .hero-inner {
+    width: 100%;
+    // height: 814px;
+    // max-height: 814px;
+    height: 725px;
+    max-height: 725px;
+  }
+
+  .hero-inner img {
+    width: 100%;
+  }
+  header{
+    .container, .container-fluid{
+        max-width: 1900px;
+    }
+  }
+}
+
+@media (max-width: 1920px) {
+  .hero-inner {
+    width: 100%;
+    // height: 610px;
+    // max-height: 610px;
+    height: 545px;
+    max-height: 545px;
+  }
+
+  .hero-inner img {
+    width: 100%;
+  }
+    header{
+        .container, .container-fluid{
+            max-width: 1700px;
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+  .hero-inner {
+    width: 100%;
+    // height: 508px;
+    // max-height: 508px;
+
+    height: 455px;
+    max-height: 455px;
+  }
+
+  .hero-inner img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .contact {
+    .contact-details {
+      &.heightbox1 {
+        min-height: 361px;
+      }
+
+      &.heightbox2 {
+        min-height: 737px;
+      }
+    }
+  }
+
+  .careers {
+    .happines-inner {
+      min-height: 265px;
+    }
+  }
+  .hero-inner {
+    width: 100%;
+    // height: 458px;
+    // max-height: 458px;
+
+    height: 410px;
+    max-height: 410px;
+  }
+
+  .hero-inner img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1367px) {
+  .cta-mobile-abt {
+    .img-absolute {
+      left: 79%;
+      bottom: -65px;
+    }
+  }
+
+  .hero-inner {
+    .banner-content-box {
+      .h1 {
+        font-size: 44px;
+      }
+    }
+  }
+  .hero-inner {
+    width: 100%;
+    height: 434px;
+    max-height: 434px;
+  }
+
+  .hero-inner img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1199px) {
+  .cta-mobile-abt {
+    .img-absolute {
+      max-width: 682px;
+      width: 487px;
+      left: 74%;
+    }
+  }
+
+  .vision-box {
+    padding: 45px 45px;
+  }
+
+  .contact {
+    .contact-details {
+      padding: 22px;
+
+      &.heightbox1 {
+        min-height: 358px;
+      }
+
+      &.heightbox2 {
+        min-height: 727px;
+      }
+
+      .h5 {
+        font-size: 19px;
+        line-height: 22px;
+      }
+
+      .detailsinner {
+        a {
+          word-break: break-all;
+        }
+      }
+    }
+
+    .compalintbox {
+      min-height: 447px;
+    }
+  }
+
+  .careers {
+    .happines-inner {
+      min-height: 291px;
+    }
+  }
+
+  .company-profile {
+    .vision-box {
+      min-height: 270px;
+    }
+  }
+
+  .company-profile {
+    .associate {
+      .company-ass-inner {
+        .h4 {
+          min-height: 92px;
+        }
+      }
+    }
+  }
+
+  .benefit .benefit-inner {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .calculator-sec {
+    .calculator-box {
+      padding: 20px;
+
+      .calculator-inner-box {
+        select {
+          font-size: 18px !important;
+          padding: 8px 16px;
+        }
+
+        input {
+          font-size: 18px !important;
+          padding: 8px 16px;
+        }
+      }
+    }
+  }
+
+  .theme-corporate .btn-outline {
+    padding: 13px;
+    font-size: 16px;
+  }
+
+  .offers-section .h2,
+  .solutions-section .h2 {
+    font-size: clamp(24px, 4vw + 1rem, 28px);
+  }
+
+  .offers-section .offersSlider {
+    margin-top: 40px;
+  }
+
+  .cta-mobile {
+    padding: 60px 30px;
+
+    .img-absolute {
+      position: relative;
+      bottom: -60px;
+    }
+  }
+
+  .cta-mobile-abt {
+    padding: 30px 30px;
+
+    .img-absolute {
+      position: relative;
+      bottom: -30px;
+      width: unset;
+      max-width: unset;
+      left: 68.4%;
+    }
+  }
+
+  .box-cta {
+    padding: 45px 20px;
+    margin-bottom: 24px;
+  }
+
+  .vision-box {
+    margin-bottom: 20px;
+  }
+
+  .award-box {
+    margin-bottom: 20px;
+  }
+
+  .aboutmoda {
+    .modal-dialog {
+      max-width: 748px;
+      // .modal-content{
+      //     padding: 28px 30px;
+      // }
+    }
+  }
+
+  .contact .compalintbox {
+    min-height: 533px;
+
+    .h3 {
+      font-size: 23px;
+    }
+  }
+
+  .contact-details {
+    margin-top: 20px;
+
+    .contact .compalintbox &.heightbox1 {
+      min-height: 358px;
+    }
+
+    &.heightbox2 {
+      min-height: auto;
+    }
+  }
+
+  .careers {
+    .happines-inner {
+      min-height: 279px;
+      padding: 15px 10px;
+
+      .h5 {
+        font-size: 20px;
+        line-height: 21px;
+      }
+    }
+
+    .compalintbox {
+      margin-bottom: 20px;
+    }
+  }
+
+  .career-opportunities {
+    .message-section {
+      .message-detail {
+        li {
+          .h2 {
+            line-height: 33px;
+            font-size: clamp(22px, 4vw + 1rem, 24px);
+          }
+        }
+      }
+    }
+  }
+
+  .experienced-professionals {
+    .experience {
+      .experianceBox {
+        margin: 30px 0 30px 0;
+
+        .h5 {
+          line-height: 25px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .company-profile {
+    .vision-box {
+      min-height: auto;
+    }
+  }
+
+  .company-profile {
+    .associate {
+      .company-ass-inner {
+        .h4 {
+          min-height: 50px;
+          font-size: 18px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+
+  .hero-inner {
+    min-height: auto;
+    max-height: unset;
+
+    .banner-content-box {
+      .h1 {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .islaimc-box {
+    .account-box {
+      .img-wrapper {
+        min-height: 225px;
+        max-height: 225px;
+
+        img {
+          min-height: 225px;
+          max-height: 225px;
+        }
+      }
+    }
+  }
+
+  .islamic-about-us {
+    .financial-tab {
+      .accordion {
+        .accordion-item {
+          .accordion-header {
+            button.accordion-button {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .vision-box-large .h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 769.98px) {
+  .branch-locator {
+    .branch-loctions {
+      ul {
+        li {
+          .left {
+            margin-right: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .notice-table {
+    &.goal-based-table {
+      table {
+        thead {
+          tr {
+            th {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .internet-banking-table {
+    padding-top: 30px;
+  }
+
+  .list-inline-item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .financial-report {
+    .financial-tab {
+      .accordion {
+        .accordion-item {
+          .accordion-body {
+            padding: 24px 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .alfaFQA {
+    .accordion {
+      .accordion-item {
+        .accordion-header {
+          button {
+            &.accordion-button {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .vision-box {
+    .h2 {
+      font-size: 30px;
+    }
+
+    .btn-outline.white-btn {
+      margin-top: 10px;
+    }
+  }
+
+  .cta-iban {
+    .form-div {
+      .form-control {
+        font-size: 16px;
+        height: 45px;
+        padding: 10px 16px;
+      }
+    }
+
+    .generated-iban-box {
+      padding: 90px 10px 90px 10px;
+    }
+  }
+
+  .news-ticker {
+    .container-fluid {
+      padding: 0 10px !important;
+    }
+
+    .news-updates-btn {
+      min-width: 135px;
+      padding: 8px 10px 8px 10px;
+    }
+  }
+
+  .text-sec {
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .box-layout-sec {
+    margin-top: 60px;
+  }
+
+  .goal-based-table {
+    table {
+      width: 800px;
+    }
+  }
+
+  .vision-box.key-fact-box {
+    margin-top: 60px;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .collab-sec {
+    ul {
+      li {
+        .img-box {
+          width: 106px;
+          height: 106px;
+        }
+      }
+    }
+  }
+
+  .register-box-sec {
+    .register-boxwrp {
+      flex-wrap: wrap;
+
+      .resiter-box {
+        width: 100%;
+      }
+    }
+  }
+
+  .vision-box {
+    min-height: 264px;
+
+    .vision-box-txt {
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  .islamic-about-us {
+    .financial-tab {
+      .accordion {
+        .accordion-item {
+          .accordion-body {
+            padding: 16px 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .cta-bg-islamic-about {
+    padding: 30px;
+  }
+
+  .cta-mobile {
+    .h3 {
+      font-size: clamp(20px, 4vw + 1rem, 28px);
+      line-height: 30px;
+    }
+  }
+
+  .cta-mobile-abt .img-absolute {
+    position: relative;
+    bottom: -30px;
+    width: 100%;
+    max-width: unset;
+    left: 69.1%;
+  }
+
+  .aboutmodal,
+  .contactModal {
+    .modal-dialog {
+      .modal-content {
+        padding: 30px !important;
+      }
+    }
+  }
+
+  .contact .compalintbox {
+    min-height: 493px;
+    margin-bottom: 10px;
+  }
+
+  .contact .consumerbg {
+    padding: 26px 15px;
+  }
+
+  .contact .cta-state {
+    padding: 26px 15px;
+  }
+
+  .contact-details {
+    margin-top: 20px;
+
+    &.heightbox1 {
+      min-height: auto;
+    }
+  }
+
+  .contact {
+    .conDetail {
+      .contact-detail {
+        &:nth-child(2) {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .cta-iban {
+    padding: 50px 20px;
+
+    .generated-iban-box {
+      .generatedIBAN {
+        font-size: 20px;
+      }
+    }
+
+    .form-div {
+      padding: 30px;
+
+      .form-control {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .solutions-section,
+  .offers-section {
+    overflow-y: hidden;
+  }
+
+  .alfalah-pehchaan {
+    .text-center {
+      text-align: unset !important;
+    }
+  }
+
+  .cta-bgImage {
+    padding: 20px 35px;
+    background-position: left !important;
+
+    .h3 {
+      font-size: clamp(20px, 4vw + 1rem, 22px);
+    }
+  }
+
+  .btn-outline {
+    padding: 13px;
+    font-size: 16px;
+  }
+
+  .p-b-100,
+  .p-b-50 {
+    padding-bottom: 20px !important;
+  }
+
+  .p-t-100,
+  .p-t-50 {
+    padding-top: 20px !important;
+  }
+
+  .mt-4,
+  .mt-5,
+  .m-t-64,
+  .m-t-32 {
+    margin-top: 0.3rem !important;
+  }
+
+  .cta-state {
+    .h3 {
+      font-size: clamp(18px, 3vw + 1rem, 44px);
+    }
+  }
+
+  .cta-AboutbgImage {
+    padding: 30px 25px;
+  }
+
+  .careers {
+    .happines-inner {
+      margin-bottom: 20px;
+      min-height: auto;
+    }
+
+    .happiness {
+      .h2 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .career-opportunities {
+    .message-section {
+      .message-detail {
+        display: block;
+        margin-top: 20px;
+        padding-left: 10px;
+
+        li {
+          .h2 {
+          }
+
+          .h3 {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .experienced-professionals {
+    .experience {
+      .experianceBox {
+        margin: 20px 0 10px 0;
+
+        a {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  .hero-inner {
+    background: #f7f7f7;
+    overflow: hidden;
+    min-height: unset;
+    height: unset;
+    max-height: unset;
+
+    .banner-content-box {
+    //   padding: 10px 11px;
+      padding: 35px 20px;
+
+      text-align: center;
+
+    }
+  }
+
+  .media {
+    #tab-releases {
+      .account-box {
+        margin-bottom: 20px;
+
+        .account-details {
+          .h6 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .account-box {
+    margin-bottom: 30px;
+
+    .account-details {
+      .h6 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .leadership {
+    .leadership-tab {
+      #pills-tab {
+        position: relative;
+
+        &::before {
+          width: 100%;
+        }
+
+        .btn-tabs {
+          span {
+            font-size: 18px;
+          }
+
+          &:hover,
+          &:focus,
+          &.active {
+            &::before {
+              width: 144px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .investors {
+    .investor-inner {
+      margin: 20px 0 0 0;
+
+      .h3 {
+        font-size: 20px;
+      }
+    }
+
+    .mt-4,
+    .mb-4 {
+      margin: 0 !important;
+    }
+  }
+
+  .hero-inner {
+    .banner-content-box {
+      .h1 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .h2,
+  .featured-news .h2,
+  .content-list .h3,
+  .h3,
+  .h2,
+  .h4 {
+    font-size: clamp(22px, 4vw + 1rem, 24px);
+    line-height: 30px;
+  }
+
+  .board-office-cta .cta-wrp h2 {
+    line-height: 30px;
+  }
+
+  .boxshadowcard .contact-details-box {
+    margin-bottom: 20px;
+  }
+
+  .theme-accordions {
+    .accordion-item {
+      .accordion-button {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .theme-premier
+    .financial-tab
+    .accordion
+    .accordion-item
+    .accordion-header
+    button.accordion-button {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .islamic-list-of-cdms .card-limit-table table thead tr th {
+    font-size: 18px;
+  }
+
+  .islamic-list-of-cdms .card-limit-table table tbody td {
+    font-size: 16px;
+  }
+
+  .contact-details.heightbox2 {
+    min-height: auto !important;
+  }
+
+  .cta-bgImage .h3 {
+    line-height: 30px;
+  }
+
+  .border-end {
+    border-right: unset !important;
+  }
+
+  footer {
+    .list-footer {
+      li {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .box-social {
+      padding: 20px 16px;
+
+      .h4 {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+
+    .copyrights {
+      flex-wrap: wrap;
+    }
+
+    .ms-3 {
+      margin-left: 0 !important;
+    }
+  }
+
+  .Formmsg {
+    .h3 {
+      font-size: 16px;
+    }
+  }
+
+  .contact-details {
+    .h5 {
+      font-size: 20px;
+    }
+  }
+
+  .governance {
+    .happiness {
+      .h2 {
+        margin-bottom: 20px;
+      }
+    }
+
+    .happines-inner {
+      margin-bottom: 20px;
+
+      .h5 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .islaimc-box {
+    .account-box {
+      .img-wrapper {
+        min-height: 100%;
+        max-height: 100%;
+
+        img {
+          min-height: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  .m-t-40 {
+    margin-top: 20px !important;
+  }
+
+  .card-limit-table {
+    table {
+      width: 800px;
+    }
+  }
+
+  .theme-premier {
+    .bnpl-benifit-sec {
+      ul {
+        gap: 26px;
+
+        li {
+        }
+
+        P {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .atmLoct {
+    margin-bottom: 20px;
+  }
+
+  .boxshadowcard {
+    padding: 30px 0;
+  }
+
+  .notice-table {
+    table {
+      width: 800px;
+    }
+  }
+
+  .imgBoxShadow {
+    margin-bottom: 20px;
+  }
+
+  .text-list-sec .content-wrp .h2 {
+    font-size: 24px;
+  }
+
+  .filterMerchants form select {
+    margin-bottom: 20px;
+  }
+
+  .redeem .vision-box {
+    margin-top: 20px;
+  }
+
+  .text-sec p {
+    font-size: 18px;
+  }
+    .content-right .img-container, .content-left .img-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contact .compalintbox {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    min-height: auto;
+    max-height: auto;
+  }
+
+  .theme-premier {
+    .bnpl-benifit-sec {
+      ul {
+        margin: 0 0 0;
+        gap: 36px;
+
+        li {
+        }
+
+        P {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 420px) {
+}
+
+@media (max-width: 320px) {
+}
+
+@media (min-width: 991px) and (max-width: 1377px) {
+  .theme-islamic {
+    .custom-mega {
+      .nav-tabs {
+        .nav-item {
+          .nav-link {
+            padding: 7px 7px !important;
+            font-size: 14px !important;
+
+            &.active {
+              padding: 7px 7px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+{% include 'header_tags.html' %}
+
+<body class="theme-islamic">
+{% include 'header.html' %}
+<main class="islamic-about-us">
+{% include 'hero_section_2.html' %}
+{% include 'tabs_features.html' %}
+{% if card_table_1 or card_table_2 %}
+<section class="card-limit-table p-t-100 p-b-100 table-responsive">
+    <div class="container">
+        <span class="h3 mb-4">{{ card_table_1.title }}</span>
+        <div>
+            {{ card_table_1.table|safe }}
+        </div>
+        <div class="m-t-64 ">
+        <span class="h3 mb-4">{{ card_table_2.title }}</span>
+            {{ card_table_2.table|safe }}
+        </div>
+    </div>
+</section>
+{% endif %}
+{% include 'eligbility_docs.html' %}
+<section class="p-t-100 p-b-100">
+    {% include 'promo_banner.html' %}
+</section>
+{% include 'promo_banner_full.html' %}
+{% include 'faq.html' %}
+</main>
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}
+</body> 
+</html>

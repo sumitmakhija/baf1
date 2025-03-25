@@ -1,0 +1,369 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include 'header_tags.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="theme-corporate">
+    {% include 'header.html' %}
+
+    <div class="loader-overlay" id="loaderOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Main Page Block Start -->
+    <section class="p-t-100 p-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div class="education-form-wrp">
+                        <form class="contactForm" id="employmentForm">
+                            <span class="h1 form-heading">Employment Application Form</span>
+                            <div class="form-divider">
+                                <span class="h5 mb-4 form-subheading">Personal Details</span>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                        <div>
+                                            <label class="form-label">Your full name</label>
+                                            <input type="text" name="full_name" class="form-control"
+                                                placeholder="Enter your full name" maxlength="100" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                        <div>
+                                            <label class="form-label">Email address</label>
+                                            <input type="email" name="email" class="form-control"
+                                                placeholder="What's your email" maxlength="255" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                        <div>
+                                            <label class="form-label">Mobile number</label>
+                                            <input type="text" name="mobile_number" class="form-control"
+                                                placeholder="Enter your mobile number" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                        <div>
+                                            <label class="form-label">CNIC</label>
+                                            <input type="text" name="cnic" class="form-control"
+                                                placeholder="xxxxx-xxxxxxx-x" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                        <div>
+                                            <label class="form-label">Date of birth</label>
+                                            <input type="date" name="date_of_birth" class="form-control"
+                                                min="1980-03-15" max="2030-12-31" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                        <div>
+                                            <label class="form-label">Emergency number</label>
+                                            <input type="text" name="emergency_number" class="form-control"
+                                                placeholder="Enter your emergency contact" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8 mb-3">
+                                        <div>
+                                            <label class="form-label">Address</label>
+                                            <input type="text" name="address" class="form-control"
+                                                placeholder="Enter your full address" maxlength="255" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                        <div>
+                                            <label class="form-label">Preferred City</label>
+                                            <select name="city" class="form-select" required>
+                                                <option value="" hidden="" selected="">Select your preferred city
+                                                </option>
+                                                <option value="Karachi">Karachi</option>
+                                                <option value="Lahore">Lahore</option>
+                                                <option value="Islamabad">Islamabad</option>
+                                                <option value="Rawalpindi">Rawalpindi</option>
+                                                <option value="Peshawar">Peshawar</option>
+                                                <option value="Quetta">Quetta</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- education form dynamic -->
+                            <div class="form-divider">
+                                <span class="h5 mb-4 form-subheading">Education</span>
+                                <div class="form-replicate position-relative" id="form-replicate-education">
+                                    <div class="row align-items-top">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Last/current qualification</label>
+                                                <select name="qualification[1]" class="form-select" required>
+                                                    <option value="" hidden="" selected="">Enter your latest
+                                                        qualification
+                                                    </option>
+                                                    <option value="Bachelors">Bachelors</option>
+                                                    <option value="Masters">Masters</option>
+                                                    <option value="PhD">PhD</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Institution</label>
+                                                <input type="text" name="institution[1]" class="form-control"
+                                                    placeholder="Enter your institution" maxlength="100" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Additional certification</label>
+                                                <input type="text" name="additional_certification[1]"
+                                                    class="form-control"
+                                                    placeholder="Enter any additional certifications" maxlength="100">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Start date</label>
+                                                <input type="date" name="education_start_date[1]" class="form-control"
+                                                    min="1980-03-15" max="2030-12-31" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">End date</label>
+                                                <input type="date" name="education_end_date[1]" class="form-control"
+                                                    min="1980-03-15" max="2030-12-31">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3 align-self-end">
+                                            <label class="form-label">
+                                                <input type="checkbox" name="education_in_process[1]"> In process
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- replicate education button -->
+                                <div class="replicate-btn-container">
+                                    <button type="button" class="add-another-btn" id="add-education">
+                                        <svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor"
+                                            width="20px" height="20px" viewBox="0 0 32 32" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z">
+                                            </path>
+                                        </svg> Add another
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- education form dynamic -->
+                            <!-- expeirence form dynamic -->
+                            <div class="form-divider">
+                                <span class="h5 mb-4 form-subheading">Experience</span>
+                                <div class="form-replicate position-relative" id="form-replicate-experience">
+                                    <div class="row align-items-top">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Industry Type</label>
+                                                <select name="industry_type[1]" class="form-select" required>
+                                                    <option value="" hidden="" selected="">Select Your Preferred
+                                                        Industry
+                                                    </option>
+                                                    <option value="Industry 1">Industry 1</option>
+                                                    <option value="Industry 2">Industry 2</option>
+                                                    <option value="Industry 3">Industry 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Designation</label>
+                                                <input type="text" name="designation[1]" class="form-control"
+                                                    placeholder="Enter your Designation" maxlength="100" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Organization</label>
+                                                <input type="text" name="organization[1]" class="form-control"
+                                                    placeholder="Enter your organization" maxlength="100">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Job start date</label>
+                                                <input type="date" name="job_tenure_from[1]" class="form-control"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
+                                            <div>
+                                                <label class="form-label">Job end date</label>
+                                                <input type="date" name="job_tenure_to[1]" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3 align-self-end">
+                                            <label class="form-label">
+                                                <input type="checkbox" name="job_tenure_in_process[1]"> Currently
+                                                working
+                                                here
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- replicate education button -->
+                                <div class="replicate-btn-container">
+                                    <button type="button" class="add-another-btn" id="add-experience">
+                                        <svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor"
+                                            width="20px" height="20px" viewBox="0 0 32 32" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z">
+                                            </path>
+                                        </svg> Add another
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- education form dynamic -->
+
+                            <div class="form-divider">
+                                <span class="h5 mb-4 form-subheading">Upload CV</span>
+                                <div class="row align-items-end">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 col-xxl-5 mb-3">
+                                        <div class="file-upload-container">
+                                            <input type="file" id="cv_file" name="cv_file" class="hidden-input"
+                                                accept=".pdf,.doc,.docx" required>
+                                            <label for="cv_file" class="drop-zone">
+                                                <div class="upload-instructions">Drop files here or</div>
+                                                <div class="browse-button">Select file</div>
+                                            </label>
+                                            <p class="supported-formats">Supported formats: PDF, DOC, DOCX</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <button type="submit" class="btn-outline active">
+                                    Submit
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                                            <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16"
+                                                transform="translate(356 420)" fill="#fff" opacity="0"></rect>
+                                            <path id="Icon_material-chevron-right"
+                                                data-name="Icon material-chevron-right"
+                                                d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z"
+                                                transform="translate(347.115 413)" fill="#fff"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+    {% include 'footer_tags.html' %}
+
+    <script src="{% static 'js/libs/jquery-masking.js' %}"></script>
+    <script src="{% static 'js/employment-application-form.js' %}"></script>
+
+    <!-- <script>
+        document.getElementById('employmentForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const loaderOverlay = document.getElementById('loaderOverlay');
+            loaderOverlay.style.display = 'flex';
+
+            try {
+                const formData = new FormData(this);
+                const formObject = {};
+
+                formData.forEach((value, key) => {
+                    if (key !== 'cv_file') {
+                        if (key === 'education_in_process') {
+                            formObject[key] = value === 'on';
+                        } else {
+                            formObject[key] = value;
+                        }
+                    }
+                });
+
+                const finalFormData = new FormData();
+                finalFormData.append('data', JSON.stringify(formObject));
+                finalFormData.append('cv_file', formData.get('cv_file'));
+
+                const response = await axios.post('/submit-employment-application/', finalFormData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                });
+
+                if (response.data.status === 'success') {
+                    alert('Application submitted successfully!');
+                    this.reset();
+                } else {
+                    alert('Error submitting application. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting application. Please try again.');
+            } finally {
+                loaderOverlay.style.display = 'none';
+            }
+        });
+
+        // Handle file input display
+        document.getElementById('cv_file').addEventListener('change', function (e) {
+            const fileName = e.target.files[0]?.name;
+            if (fileName) {
+                const uploadInstructions = this.parentElement.querySelector('.upload-instructions');
+                uploadInstructions.textContent = fileName;
+            }
+        });
+    </script> -->
+
+</body>
+
+</html>

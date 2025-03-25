@@ -1,0 +1,12 @@
+{% if text_promo %}
+<section class="content-right p-t-100 p-b-50">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h2 mb-3">{{ text_promo.title }}</span>
+                {{ text_promo.description_before|safe }}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

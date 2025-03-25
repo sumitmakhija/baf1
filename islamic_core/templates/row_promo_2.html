@@ -1,0 +1,152 @@
+{% load customfilters %}
+<section class="content-right content-list p-t-100 p-b-50">
+    <div class="container">
+        
+
+    {% if row_promo_2.multirowpromo.all|length == 1 %}
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h3">{{ row_promo_2 }}</span>
+            </div>
+            {% for entry in row_promo_2.multirowpromo.all %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                <p class="m-t-32"><b>{{ entry.header }}</b></p>
+                <ul class="list-unstyled list-check-circle-outline mt-4">
+                   {{ entry.description|strip_ul|safe }}
+                </ul>
+            </div>
+            {% endfor %}
+    {% endif %}
+
+    {% if row_promo_2.multirowpromo.all|length == 2 %}
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h3">{{ row_promo_2 }}</span>
+            </div>
+            {% for entry in row_promo_2.multirowpromo.all %}
+                {% if forloop.counter|divisibleby:2 %}
+                    <!-- Right Column -->
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1">
+                        <p class="m-t-32"><b>{{ entry.header }}</b></p>
+                        <ul class="list-unstyled list-check-circle-outline mt-4">
+                            {{ entry.description|strip_ul|safe }}
+                        </ul>
+                    </div>
+                {% else %}
+                    <!-- Left Column -->
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                        <p class="m-t-32"><b>{{ entry.header }}</b></p>
+                        <ul class="list-unstyled list-check-circle-outline mt-4">
+                            {{ entry.description|strip_ul|safe }}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endfor %}
+    {% endif %}
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <p class="m-t-64"><b>For further updates and queries, please get in touch with us using the
+                        contact information below:</b></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="contact-details-box">
+                    <span class="h6 mb-2"><b>Bilal Amjad Khan</b></span>
+                    <p>Head Supply Chain Finance</p>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect id="Rectangle_164062" data-name="Rectangle 164062" width="24"
+                                            height="24" fill="#fff" />
+                                    </clipPath>
+                                    <clipPath id="clip-path-3">
+                                        <rect id="Rectangle_164060" data-name="Rectangle 164060" width="15.789"
+                                            height="6.745" transform="translate(0 0)" fill="none" />
+                                    </clipPath>
+                                    <clipPath id="clip-path-4">
+                                        <rect id="Rectangle_164061" data-name="Rectangle 164061" width="10.534"
+                                            height="4.5" transform="translate(0 0)" fill="none" />
+                                    </clipPath>
+                                </defs>
+                                <g id="Mask_Group_136" data-name="Mask Group 136" clip-path="url(#clip-path)">
+                                    <g id="phone-telephone--android-phone-mobile-device-smartphone-iphone"
+                                        clip-path="url(#clip-path)">
+                                        <path id="Path_106845" data-name="Path 106845"
+                                            d="M14.684,18.646a5.04,5.04,0,0,1-2.667-.758l-.009-.006a40.362,40.362,0,0,1-5.953-4.729A39.562,39.562,0,0,1,1.137,7.42L1.13,7.41A4.671,4.671,0,0,1,.368,4.289,4.732,4.732,0,0,1,1.809,1.41l.605-.6L2.423.8a2.054,2.054,0,0,1,2.8,0l0,0L7.858,3.343l0,0a1.913,1.913,0,0,1,0,2.745L7.855,6.1a.886.886,0,0,0-.2.291.846.846,0,0,0,0,.676.886.886,0,0,0,.2.291l0,0,4.146,4a1.011,1.011,0,0,0,1.37,0,2.04,2.04,0,0,1,2.791,0l2.642,2.522.006.006a1.926,1.926,0,0,1,0,2.757l-.008.008-.619.584a5.013,5.013,0,0,1-2.964,1.383A5.109,5.109,0,0,1,14.684,18.646ZM12.574,17a4,4,0,0,0,2.111.6,4.061,4.061,0,0,0,.427-.023,3.965,3.965,0,0,0,2.348-1.1l.007-.006.617-.582a.883.883,0,0,0,0-1.265l-2.637-2.518a.992.992,0,0,0-.677-.265.98.98,0,0,0-.678.266,2.054,2.054,0,0,1-2.8,0l0,0-4.147-4a1.924,1.924,0,0,1-.441-.63,1.89,1.89,0,0,1,0-1.507,1.924,1.924,0,0,1,.439-.628.87.87,0,0,0,0-1.252L4.509,1.562a1.011,1.011,0,0,0-1.366,0l-.6.6-.007.006A3.687,3.687,0,0,0,1.4,4.407a3.627,3.627,0,0,0,.59,2.418A38.651,38.651,0,0,0,12.574,17Z"
+                                            transform="translate(1.929 2.566)" fill="#000001" />
+                                    </g>
+                                    <g id="Group_300653" data-name="Group 300653"
+                                        transform="translate(9.668 -1.653)">
+                                        <g id="Group_300649" data-name="Group 300649"
+                                            transform="matrix(0.719, 0.695, -0.695, 0.719, 4.686, 0)">
+                                            <g id="Group_300648" data-name="Group 300648"
+                                                transform="translate(0 0)" clip-path="url(#clip-path-3)">
+                                                <g id="Group_300647" data-name="Group 300647"
+                                                    transform="translate(2.209 1.974)">
+                                                    <path id="Ellipse_4967" data-name="Ellipse 4967"
+                                                        d="M5.733,0A6.539,6.539,0,0,1,9.738,1.295a4.139,4.139,0,0,1,1.728,3.273A4.139,4.139,0,0,1,9.738,7.84,6.539,6.539,0,0,1,5.733,9.135,6.539,6.539,0,0,1,1.728,7.84,4.139,4.139,0,0,1,0,4.567,4.139,4.139,0,0,1,1.728,1.295,6.539,6.539,0,0,1,5.733,0Zm0,8.091A5.493,5.493,0,0,0,9.1,7.016a3.121,3.121,0,0,0,1.325-2.448A3.121,3.121,0,0,0,9.1,2.119,5.493,5.493,0,0,0,5.733,1.043,5.493,5.493,0,0,0,2.368,2.119,3.121,3.121,0,0,0,1.043,4.567,3.121,3.121,0,0,0,2.368,7.016,5.493,5.493,0,0,0,5.733,8.091Z"
+                                                        transform="translate(0 0)" fill="#007d84" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <g id="Group_300652" data-name="Group 300652"
+                                            transform="matrix(0.719, 0.695, -0.695, 0.719, 4.169, 4.142)">
+                                            <g id="Group_300651" data-name="Group 300651"
+                                                transform="translate(0 0)" clip-path="url(#clip-path-4)">
+                                                <g id="Group_300650" data-name="Group 300650"
+                                                    transform="translate(1.3 1.144)">
+                                                    <path id="Ellipse_4968" data-name="Ellipse 4968"
+                                                        d="M4,0A4.536,4.536,0,0,1,6.777.9,2.931,2.931,0,0,1,8,3.221a2.931,2.931,0,0,1-1.22,2.321A4.536,4.536,0,0,1,4,6.441a4.536,4.536,0,0,1-2.778-.9A2.931,2.931,0,0,1,0,3.221,2.931,2.931,0,0,1,1.22.9,4.536,4.536,0,0,1,4,0ZM4,5.4a3.491,3.491,0,0,0,2.139-.681,1.913,1.913,0,0,0,.817-1.5,1.913,1.913,0,0,0-.817-1.5A3.491,3.491,0,0,0,4,1.043a3.491,3.491,0,0,0-2.139.681,1.913,1.913,0,0,0-.817,1.5,1.913,1.913,0,0,0,.817,1.5A3.491,3.491,0,0,0,4,5.4Z"
+                                                        transform="translate(0 0)" fill="#007d84" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <p>021-3312-2133</p>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect id="Rectangle_164180" data-name="Rectangle 164180" width="24"
+                                            height="24" fill="none" />
+                                    </clipPath>
+                                    <clipPath id="clip-path-2">
+                                        <rect id="Rectangle_164179" data-name="Rectangle 164179" width="24.018"
+                                            height="20.885" fill="none" />
+                                    </clipPath>
+                                </defs>
+                                <g id="email" clip-path="url(#clip-path)">
+                                    <g id="Email-2" data-name="Email" transform="translate(0 1.566)">
+                                        <g id="Group_301139" data-name="Group 301139"
+                                            clip-path="url(#clip-path-2)">
+                                            <g id="mail-send-envelope--envelope-email-message-unopened-sealed-close"
+                                                transform="translate(1.53 4.61)">
+                                                <path id="Path_3804" data-name="Path 3804"
+                                                    d="M13.156,21.527a1.591,1.591,0,0,1-1.091-.43L3.1,12.734a.522.522,0,1,1,.712-.764l8.97,8.364a.553.553,0,0,0,.753,0l8.807-8.353a.522.522,0,1,1,.719.758L14.249,21.1l0,0A1.591,1.591,0,0,1,13.156,21.527Z"
+                                                    transform="translate(-2.93 -11.83)" fill="#007d84" />
+                                            </g>
+                                            <path id="Path_106844" data-name="Path 106844"
+                                                d="M21.213,23.9h-.059c-.467,0-14.512-.021-16.014-.042A2.139,2.139,0,0,1,3.3,22.946a2.17,2.17,0,0,1-.355-.906.522.522,0,0,1,0-.059c0-.121-.005-12.142,0-13.155a.523.523,0,0,1,.006-.075,1.9,1.9,0,0,1,.883-1.364,2.121,2.121,0,0,1,.721-.29.522.522,0,0,1,.087-.007H21.946a.522.522,0,0,1,.1.009,1.684,1.684,0,0,1,1.32,1.717c0,.546.026,11.946,0,13.285a.522.522,0,0,1-.007.078A2.067,2.067,0,0,1,21.213,23.9Zm-.019-1.044h.019a1.039,1.039,0,0,0,1.107-.821c.024-1.519,0-13.106,0-13.224,0-.006,0,0,0-.008a1.05,1.05,0,0,0-.078-.359.491.491,0,0,0-.351-.313H4.691a.937.937,0,0,0-.709.738c0,1.218,0,12.291,0,13.067a1.179,1.179,0,0,0,.2.447,1.138,1.138,0,0,0,.975.431c1.514.021,15.868.042,16.013.042Z"
+                                                transform="translate(-1.403 -4.955)" fill="#000001" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <p>bilal.amjad@bankalfalah.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

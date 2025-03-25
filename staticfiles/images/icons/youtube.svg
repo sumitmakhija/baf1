@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Group_300529" data-name="Group 300529" transform="translate(-761 -4914)">
+    <g id="Link" transform="translate(761 4914)">
+      <g id="Link_Frame_Border_" data-name="Link [Frame Border]" fill="none" stroke="rgba(20,23,49,0.15)" stroke-width="1">
+        <rect width="40" height="40" rx="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_175559" data-name="Group 175559" transform="translate(768.634 4922)">
+      <rect id="Rectangle_93" data-name="Rectangle 93" width="23.51" height="23.51" transform="translate(0.366 0)" fill="#6e6e6e" opacity="0"/>
+      <path id="Icon_awesome-youtube" data-name="Icon awesome-youtube" d="M22.219,6.879a2.717,2.717,0,0,0-1.912-1.924C18.622,4.5,11.861,4.5,11.861,4.5s-6.761,0-8.447.455A2.717,2.717,0,0,0,1.5,6.879a28.5,28.5,0,0,0-.452,5.238A28.5,28.5,0,0,0,1.5,17.354a2.676,2.676,0,0,0,1.912,1.893c1.686.455,8.447.455,8.447.455s6.761,0,8.447-.455a2.676,2.676,0,0,0,1.912-1.893,28.5,28.5,0,0,0,.452-5.238,28.5,28.5,0,0,0-.452-5.238ZM9.649,15.331V8.9L15.3,12.117,9.649,15.331Z" transform="translate(0.139 -0.346)" fill="#6e6e6e"/>
+    </g>
+  </g>
+</svg>

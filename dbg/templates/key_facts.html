@@ -1,0 +1,24 @@
+{% load static %}
+{% if key_facts %}
+<section class="p-t-50 p-b-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <div class="vision-box key-fact-box"
+                    {% if key_facts.image %}
+                    data-bg="{{ key_facts.image.url }}"
+                    {% endif %}>
+                    <div class="vision-box-txt">
+                        <div>
+                            <span class="h2 text-islamic mb-10">{{ key_facts.title }}</span>
+                            {% if key_facts.cta_link %}
+                            <a href="{{ key_facts.cta_link }}" class="btn-outline white-btn">{{ key_facts.cta_text }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

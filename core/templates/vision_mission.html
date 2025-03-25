@@ -1,0 +1,16 @@
+{% if vision_mission_promo %}
+<div class="container m-t-100 m-b-100">
+    <div class="row">
+        {% for entry in vision_mission_promo %}
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+
+            <div class="vision-box">
+                <span class="h5 text-islamic mb-10">{{ entry.header }}</span>
+                {{ entry.description|safe }}
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

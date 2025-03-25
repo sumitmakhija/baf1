@@ -1,0 +1,184 @@
+{% if grev_promo %}
+<section class="grievance p-t-100 p-b-100">
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10 mb-4">
+                <span class="h2">{{ grev_promo.title }}</span>
+                {{ grev_promo.description|safe }}
+
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="contact-details">
+                    <span class="h5"><b>{{ grev_promo.name }}</b></span>
+                    <p>{{ grev_promo.designation }}</p>
+                    <div class="detailsinner">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect id="Rectangle_164092" data-name="Rectangle 164092" width="24" height="24"
+                                            fill="none"></rect>
+                                    </clipPath>
+                                    <clipPath id="clip-path-2">
+                                        <rect id="Rectangle_164091" data-name="Rectangle 164091" width="24.018"
+                                            height="20.885" fill="none"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g id="email" clip-path="url(#clip-path)">
+                                    <g id="Email-2" data-name="Email" transform="translate(0 1.566)">
+                                        <g id="Group_300735" data-name="Group 300735" clip-path="url(#clip-path-2)">
+                                            <g id="mail-send-envelope--envelope-email-message-unopened-sealed-close"
+                                                transform="translate(1.53 4.61)">
+                                                <path id="Path_3804" data-name="Path 3804"
+                                                    d="M13.156,21.527a1.591,1.591,0,0,1-1.091-.43L3.1,12.734a.522.522,0,1,1,.712-.764l8.97,8.364a.553.553,0,0,0,.753,0l8.807-8.353a.522.522,0,1,1,.719.758L14.249,21.1l0,0A1.591,1.591,0,0,1,13.156,21.527Z"
+                                                    transform="translate(-2.93 -11.83)" fill="#dd1403"></path>
+                                            </g>
+                                            <path id="Path_106844" data-name="Path 106844"
+                                                d="M21.213,23.9h-.059c-.467,0-14.512-.021-16.014-.042A2.139,2.139,0,0,1,3.3,22.946a2.17,2.17,0,0,1-.355-.906.522.522,0,0,1,0-.059c0-.121-.005-12.142,0-13.155a.523.523,0,0,1,.006-.075,1.9,1.9,0,0,1,.883-1.364,2.121,2.121,0,0,1,.721-.29.522.522,0,0,1,.087-.007H21.946a.522.522,0,0,1,.1.009,1.684,1.684,0,0,1,1.32,1.717c0,.546.026,11.946,0,13.285a.522.522,0,0,1-.007.078A2.067,2.067,0,0,1,21.213,23.9Zm-.019-1.044h.019a1.039,1.039,0,0,0,1.107-.821c.024-1.519,0-13.106,0-13.224,0-.006,0,0,0-.008a1.05,1.05,0,0,0-.078-.359.491.491,0,0,0-.351-.313H4.691a.937.937,0,0,0-.709.738c0,1.218,0,12.291,0,13.067a1.179,1.179,0,0,0,.2.447,1.138,1.138,0,0,0,.975.431c1.514.021,15.868.042,16.013.042Z"
+                                                transform="translate(-1.403 -4.955)" fill="#000001"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <a href="mailto:{{ grev_promo.email }}">{{ grev_promo.email }}</a>
+                        </span>
+                    </div>
+                    <div class="detailsinner">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect id="Rectangle_164062" data-name="Rectangle 164062" width="24" height="24"
+                                            fill="#fff"></rect>
+                                    </clipPath>
+                                    <clipPath id="clip-path-3">
+                                        <rect id="Rectangle_164060" data-name="Rectangle 164060" width="15.789"
+                                            height="6.745" transform="translate(0 0)" fill="none"></rect>
+                                    </clipPath>
+                                    <clipPath id="clip-path-4">
+                                        <rect id="Rectangle_164061" data-name="Rectangle 164061" width="10.534"
+                                            height="4.5" transform="translate(0 0)" fill="none"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g id="Mask_Group_136" data-name="Mask Group 136" clip-path="url(#clip-path)">
+                                    <g id="phone-telephone--android-phone-mobile-device-smartphone-iphone"
+                                        clip-path="url(#clip-path)">
+                                        <path id="Path_106845" data-name="Path 106845"
+                                            d="M14.684,18.646a5.04,5.04,0,0,1-2.667-.758l-.009-.006a40.362,40.362,0,0,1-5.953-4.729A39.562,39.562,0,0,1,1.137,7.42L1.13,7.41A4.671,4.671,0,0,1,.368,4.289,4.732,4.732,0,0,1,1.809,1.41l.605-.6L2.423.8a2.054,2.054,0,0,1,2.8,0l0,0L7.858,3.343l0,0a1.913,1.913,0,0,1,0,2.745L7.855,6.1a.886.886,0,0,0-.2.291.846.846,0,0,0,0,.676.886.886,0,0,0,.2.291l0,0,4.146,4a1.011,1.011,0,0,0,1.37,0,2.04,2.04,0,0,1,2.791,0l2.642,2.522.006.006a1.926,1.926,0,0,1,0,2.757l-.008.008-.619.584a5.013,5.013,0,0,1-2.964,1.383A5.109,5.109,0,0,1,14.684,18.646ZM12.574,17a4,4,0,0,0,2.111.6,4.061,4.061,0,0,0,.427-.023,3.965,3.965,0,0,0,2.348-1.1l.007-.006.617-.582a.883.883,0,0,0,0-1.265l-2.637-2.518a.992.992,0,0,0-.677-.265.98.98,0,0,0-.678.266,2.054,2.054,0,0,1-2.8,0l0,0-4.147-4a1.924,1.924,0,0,1-.441-.63,1.89,1.89,0,0,1,0-1.507,1.924,1.924,0,0,1,.439-.628.87.87,0,0,0,0-1.252L4.509,1.562a1.011,1.011,0,0,0-1.366,0l-.6.6-.007.006A3.687,3.687,0,0,0,1.4,4.407a3.627,3.627,0,0,0,.59,2.418A38.651,38.651,0,0,0,12.574,17Z"
+                                            transform="translate(1.929 2.566)" fill="#000001"></path>
+                                    </g>
+                                    <g id="Group_300653" data-name="Group 300653" transform="translate(9.668 -1.653)">
+                                        <g id="Group_300649" data-name="Group 300649"
+                                            transform="matrix(0.719, 0.695, -0.695, 0.719, 4.686, 0)">
+                                            <g id="Group_300648" data-name="Group 300648" transform="translate(0 0)"
+                                                clip-path="url(#clip-path-3)">
+                                                <g id="Group_300647" data-name="Group 300647"
+                                                    transform="translate(2.209 1.974)">
+                                                    <path id="Ellipse_4967" data-name="Ellipse 4967"
+                                                        d="M5.733,0A6.539,6.539,0,0,1,9.738,1.295a4.139,4.139,0,0,1,1.728,3.273A4.139,4.139,0,0,1,9.738,7.84,6.539,6.539,0,0,1,5.733,9.135,6.539,6.539,0,0,1,1.728,7.84,4.139,4.139,0,0,1,0,4.567,4.139,4.139,0,0,1,1.728,1.295,6.539,6.539,0,0,1,5.733,0Zm0,8.091A5.493,5.493,0,0,0,9.1,7.016a3.121,3.121,0,0,0,1.325-2.448A3.121,3.121,0,0,0,9.1,2.119,5.493,5.493,0,0,0,5.733,1.043,5.493,5.493,0,0,0,2.368,2.119,3.121,3.121,0,0,0,1.043,4.567,3.121,3.121,0,0,0,2.368,7.016,5.493,5.493,0,0,0,5.733,8.091Z"
+                                                        transform="translate(0 0)" fill="#dd1403"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <g id="Group_300652" data-name="Group 300652"
+                                            transform="matrix(0.719, 0.695, -0.695, 0.719, 4.169, 4.142)">
+                                            <g id="Group_300651" data-name="Group 300651" transform="translate(0 0)"
+                                                clip-path="url(#clip-path-4)">
+                                                <g id="Group_300650" data-name="Group 300650"
+                                                    transform="translate(1.3 1.144)">
+                                                    <path id="Ellipse_4968" data-name="Ellipse 4968"
+                                                        d="M4,0A4.536,4.536,0,0,1,6.777.9,2.931,2.931,0,0,1,8,3.221a2.931,2.931,0,0,1-1.22,2.321A4.536,4.536,0,0,1,4,6.441a4.536,4.536,0,0,1-2.778-.9A2.931,2.931,0,0,1,0,3.221,2.931,2.931,0,0,1,1.22.9,4.536,4.536,0,0,1,4,0ZM4,5.4a3.491,3.491,0,0,0,2.139-.681,1.913,1.913,0,0,0,.817-1.5,1.913,1.913,0,0,0-.817-1.5A3.491,3.491,0,0,0,4,1.043a3.491,3.491,0,0,0-2.139.681,1.913,1.913,0,0,0-.817,1.5,1.913,1.913,0,0,0,.817,1.5A3.491,3.491,0,0,0,4,5.4Z"
+                                                        transform="translate(0 0)" fill="#dd1403"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <a href="tel:{{ grev_promo.phone }}">{{ grev_promo.phone }}</a>
+                        </span>
+                    </div>
+                    <div class="detailsinner">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24.498" height="24.5"
+                                viewBox="0 0 24.498 24.5">
+                                <g id="Group_301141" data-name="Group 301141" transform="translate(0.248 0.25)">
+                                    <path id="Path_106890" data-name="Path 106890"
+                                        d="M20.06,18.746V23.14a.773.773,0,0,1-.87.865H5.05c-.1,0-.2,0-.3,0a.766.766,0,0,1-.81-.831c0-1.37,0-2.741,0-4.11v-.316c-.333,0-.657.008-.98,0a6.983,6.983,0,0,1-1.239-.071A2.207,2.207,0,0,1,.007,16.509Q0,12.415.007,8.321A2.277,2.277,0,0,1,2.328,5.99c.525-.008,1.049,0,1.614,0V5.657q0-2.384,0-4.768A.777.777,0,0,1,4.832.008H18.873c.12,0,.241,0,.362,0a.764.764,0,0,1,.827.846q0,2.269,0,4.538v.6h1.455A2.306,2.306,0,0,1,24,8.488c0,2.652,0,5.306,0,7.958a2.227,2.227,0,0,1-1.534,2.178,2.537,2.537,0,0,1-.706.117c-.556.016-1.112.005-1.7.005Zm0-1.512c.559,0,1.073,0,1.587,0a.749.749,0,0,0,.845-.846q0-4.012,0-8.024a.784.784,0,0,0-.879-.864H2.411a.788.788,0,0,0-.9.882c-.005.69,0,1.381,0,2.072q0,2.976,0,5.952c0,.419.2.783.531.8.627.04,1.258.012,1.9.012,0-.106,0-3,0-4.38,0-.522,1.152-.842,1.328-.842,2.947,0,12.284,0,14,0a.743.743,0,0,1,.785.786c.005.263,0,.526,0,.789v3.657Zm-14.6,5.24H18.529V13.524H5.465Zm13.07-16.5V1.541H5.472V5.975Z"
+                                        transform="translate(-0.003 -0.006)" stroke="#f5f5f5" stroke-width="0.5" />
+                                    <path id="Path_106891" data-name="Path 106891"
+                                        d="M297.844,137.7a.733.733,0,0,1-.765.728.752.752,0,1,1,.049-1.5.725.725,0,0,1,.717.774Z"
+                                        transform="translate(-276.861 -127.923)" />
+                                    <path id="Path_106892" data-name="Path 106892"
+                                        d="M110.97,273.965h4.2a.749.749,0,0,1,.846.745.775.775,0,0,1-.849.76q-3.924,0-7.849,0c-.219,0-.438,0-.657,0a.738.738,0,0,1-.766-.761.714.714,0,0,1,.769-.746q2.151,0,4.3,0Z"
+                                        transform="translate(-98.935 -255.95)" fill="#dd1403" stroke="#f5f5f5"
+                                        stroke-width="1" />
+                                    <path id="Path_106893" data-name="Path 106893"
+                                        d="M110.967,229.632H106.7a.717.717,0,0,1-.789-.724.735.735,0,0,1,.779-.782q4.286-.006,8.572,0a.765.765,0,0,1,.769.771.738.738,0,0,1-.792.734q-2.135,0-4.269,0Z"
+                                        transform="translate(-98.944 -213.125)" fill="#dd1403" stroke="#f5f5f5"
+                                        stroke-width="1" />
+                                </g>
+                            </svg>
+
+                            <a href="#">{{ grev_promo.mobile_number }}</a>
+                        </span>
+                    </div>
+                    <div class="detailsinner">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect id="Rectangle_801" data-name="Rectangle 801" width="13.964"
+                                            height="16.805" transform="translate(0)" fill="#fff"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g id="Group_300742" data-name="Group 300742" transform="translate(0.053 0.052)">
+                                    <g id="Group_39" data-name="Group 39" transform="translate(5.487 0.484)">
+                                        <path id="Path_3814" data-name="Path 3814"
+                                            d="M-386.572,470.553h-5.522v-1.042h5.522Z"
+                                            transform="translate(395.9 -454.133)" fill="#dd1403"></path>
+                                        <g id="travel-map-location-pin--navigation-map-maps-pin-gps-location"
+                                            transform="translate(0 0)" clip-path="url(#clip-path)">
+                                            <path id="Path_3609" data-name="Path 3609"
+                                                d="M7.384.25A4.907,4.907,0,0,1,9.316.645,5.005,5.005,0,0,1,10.95,1.767a5.146,5.146,0,0,1,1.089,1.674,5.246,5.246,0,0,1,.381,1.97c0,1.161-.785,3.05-2.333,5.614C8.96,12.893,7.816,14.466,7.8,14.482a.521.521,0,0,1-.842,0c-.011-.016-1.155-1.589-2.283-3.457C3.132,8.461,2.347,6.572,2.347,5.411a5.246,5.246,0,0,1,.381-1.97A5.146,5.146,0,0,1,3.817,1.767,5.005,5.005,0,0,1,5.452.645,4.907,4.907,0,0,1,7.384.25Zm0,13.026c1.411-2.025,3.994-6.1,3.994-7.865A4.213,4.213,0,0,0,10.2,2.493a3.909,3.909,0,0,0-5.639,0A4.213,4.213,0,0,0,3.389,5.411C3.389,7.18,5.972,11.251,7.384,13.276Z"
+                                                transform="translate(-0.794 0.972)" fill="#dd1403"></path>
+                                            <path id="Path_3610" data-name="Path 3610"
+                                                d="M7.373,7.385A2.068,2.068,0,1,1,9.4,5.318,2.05,2.05,0,0,1,7.373,7.385Zm0-3.093a1.026,1.026,0,1,0,.984,1.025A1.007,1.007,0,0,0,7.373,4.292Z"
+                                                transform="translate(-0.784 1.066)" fill="#dd1403"></path>
+                                        </g>
+                                    </g>
+                                    <g id="Group_38" data-name="Group 38" transform="translate(0.656 13.595)">
+                                        <path id="Path_3807" data-name="Path 3807"
+                                            d="M-386.168,543.373h-22.608l3.178-6.486h3.5v.782h-3.012l-2.412,4.923h20.052l-2.542-4.765h-3.12v-.782h3.589Z"
+                                            transform="translate(408.776 -536.888)" fill="#000001"></path>
+                                        <path id="Path_3809" data-name="Path 3809"
+                                            d="M-398.928,545.986h-4.013v-.521h4.013Z"
+                                            transform="translate(405.897 -541.148)" fill="#000001"></path>
+                                        <path id="Path_3811" data-name="Path 3811"
+                                            d="M-398.928,545.986h-4.013v-.521h4.013Z"
+                                            transform="translate(405.897 -541.148)" fill="#000001"></path>
+                                        <path id="Path_3813" data-name="Path 3813"
+                                            d="M-398.928,545.986h-4.013v-.521h4.013Z"
+                                            transform="translate(418.806 -541.148)" fill="#000001"></path>
+                                        <path id="Path_3816" data-name="Path 3816" d="M-401,547.252h-1.942v-.521H-401Z"
+                                            transform="translate(419.465 -544.51)" fill="#000001"></path>
+                                        <path id="Path_3817" data-name="Path 3817" d="M-401,547.252h-1.942v-.521H-401Z"
+                                            transform="translate(407.479 -544.51)" fill="#000001"></path>
+                                    </g>
+                                    <rect id="Rectangle_855" data-name="Rectangle 855" width="24" height="24"
+                                        transform="translate(-0.052 -0.052)" fill="none"></rect>
+                                </g>
+                            </svg>
+
+                            {{ grev_promo.location }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

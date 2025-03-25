@@ -1,0 +1,15 @@
+{% if financial_program_promo %}
+<div class="boxshadowcard">
+    <div class="row">
+        {% for detail in financial_program_promo.details.all %}
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="contact-details-box">
+                <span class="h6 mb-2 text-premier">{{ detail.heading }}</span>
+                {{ detail.description|safe }}
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+{% endif %}

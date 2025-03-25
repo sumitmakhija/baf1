@@ -1,0 +1,14 @@
+{% load static %}
+{% if video_section %}
+<section class="video-sec p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h2 headingColor m-b-27">{{ video_section.title }}</span>
+                <video src="{{ video_section.video.url }}" muted autoplay
+                    placeholder="{% static 'images/video-covers/digital-banking-goal-based.png' %}" controls></video>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

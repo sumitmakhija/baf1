@@ -1,0 +1,207 @@
+{% if accounts_promo %}
+<section class="p-t-100 p-b-50">
+    <div class="container">
+        <div class="row">
+            <div
+                class="col-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-10 offset-xl-1 col-xxl-10 offset-xxl-1 ">
+                <span class="h2 text-center">{{ accounts_promo.title }}</span>
+
+
+
+                <p class="text-center mt-3">{{ accounts_promo.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- tabs section -->
+<section class="tabbed-section p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2 col-xxl-8 offset-xxl-2">
+                <!-- tabs list -->
+                <ul class="row mb-3 list-unstyled justify-content-center" id="pills-tab" role="tablist">
+                    {% for account_type in accounts_promo.account_types.all %}
+
+                    {% if account_type.type == 'Current Account' %}
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 nav-item" role="presentation">
+                        <button class="btn-tabs nav-link active" id="current-account" data-bs-toggle="pill"
+                            data-bs-target="#tab-current-account" type="button" role="tab"
+                            aria-controls="tab-current-account" aria-selected="true">
+                            {% if account_type.image %}
+                            <img class="img-fluid img-icon" src="{{ account_type.image.url }}" alt=""
+                                title="" />
+                            {% endif %}
+                            <span>Current Account</span>
+                        </button>
+                    </li>
+                    {% endif %}
+                    {% if account_type.type == 'Saving Account' %}
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 nav-item" role="presentation">
+                        <button class="btn-tabs nav-link" id="saving-account" data-bs-toggle="pill"
+                            data-bs-target="#tab-saving-account" type="button" role="tab"
+                            aria-controls="tab-saving-account" aria-selected="false">
+                            {% if account_type.image %}
+                            <img class="img-fluid img-icon" src="{{ account_type.image.url }}" alt=""
+                                title="" />
+                            <span>Saving Account</span>
+                            {% endif %}
+                        </button>
+                    </li>
+                    {% endif %}
+                    {% if account_type.type == 'Digital Accounts' %}
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 nav-item" role="presentation">
+                        <button class="btn-tabs nav-link" id="digital-accounts" data-bs-toggle="pill"
+                            data-bs-target="#tab-digital-accounts" type="button" role="tab"
+                            aria-controls="tab-digital-accounts" aria-selected="false">
+                            {% if account_type.image %}
+                            <img class="img-fluid img-icon" src="{{ account_type.image.url }}" alt=""
+                                title="" />
+                            {% endif %}
+                            <span>Digital Accounts</span>
+                        </button>
+                    </li>
+                    {% endif %}
+                    {% if account_type.type == 'Fixed Deposit Account' %}
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 nav-item" role="presentation">
+                        <button class="btn-tabs nav-link" id="fixed-deposit-accounts" data-bs-toggle="pill"
+                            data-bs-target="#tab-fixed-deposit-accounts" type="button" role="tab"
+                            aria-controls="tab-fixed-deposit-accounts" aria-selected="false">
+                            {% if account_type.image %}
+                            <img class="img-fluid img-icon" src="{{ account_type.image.url }}" alt=""
+                                title="" />
+                            {% endif %}
+                            <span>Fixed Deposit Account</span>
+                        </button>
+                    </li>
+                    {% endif %}
+
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- current account tab -->
+                    {% for account_type in accounts_promo.account_types.all %}
+
+                    {% if account_type.type == 'Current Account' %}
+                    <div class="tab-pane fade show active" id="tab-current-account" role="tabpanel"
+                        aria-labelledby="current-account" tabindex="0">
+                        <div class="row">
+                            <!-- account box -->
+                            {% for card in account_type.cards.all %}
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                <div class="account-box">
+                                    {% if card.image %}
+                                    <div class="img-wrapper">
+                                        <img src="{{ card.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                    </div>
+                                    {% endif %}
+                                    <div class="account-details">
+                                        <span class="tag">{{ card.tag }}</span>
+                                        <span class="h6">{{ card.title }}</span>
+                                        <p>{{ card.description }}</p>
+
+                                        <a href="{{ card.cta_link }}" class="btn-learnMore">{{ card.cta_text }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                    {% endif %}
+                    <!-- saving account tab -->
+                    {% if account_type.type == 'Saving Account' %}
+                    <div class="tab-pane fade" id="tab-saving-account" role="tabpanel" aria-labelledby="saving-account"
+                        tabindex="0">
+                        <div class="row">
+                            <!-- account box -->
+                            {% for card in account_type.cards.all %}
+
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                <div class="account-box">
+                                    {% if card.image %}
+                                    <div class="img-wrapper">
+                                        <img src="{{ card.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                    </div>
+                                    {% endif %}
+                                    <div class="account-details">
+                                        <span class="tag">{{ card.tag }}</span>
+                                        <span class="h6">{{ card.title }}</span>
+                                        <p>{{ card.description }}</p>
+
+                                        <a href="{{ card.cta_link }}" class="btn-learnMore">{{ card.cta_text }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                    {% endif %}
+                    <!-- digital account tab -->
+                    {% if account_type.type == 'Digital Accounts' %}
+                    <div class="tab-pane fade" id="tab-digital-accounts" role="tabpanel"
+                        aria-labelledby="digital-accounts" tabindex="0">
+                        <div class="row">
+                            <!-- account box -->
+                            {% for card in account_type.cards.all %}
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                <div class="account-box">
+                                    {% if card.image %}
+                                    <div class="img-wrapper">
+                                        <img src="{{ card.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                    </div>
+                                    {% endif %}
+                                    <div class="account-details">
+                                        <span class="tag">{{ card.tag }}</span>
+                                        <span class="h6">{{ card.title }}</span>
+                                        <p>{{ card.description }}</p>
+                                        <a href="{{ card.cta_link }}" class="btn-learnMore">{{ card.cta_text }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if account_type.type == 'Fixed Deposit Account' %}
+                    <!-- fixed deposit account tab -->
+                    <div class="tab-pane fade" id="tab-fixed-deposit-accounts" role="tabpanel"
+                        aria-labelledby="fixed-deposit-accounts" tabindex="0">
+                        <div class="row">
+                            <!-- account box -->
+                            {% for card in account_type.cards.all %}
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                <div class="account-box">
+                                    {% if card.image %}
+                                    <div class="img-wrapper">
+                                        <img src="{{ card.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                    </div>
+                                    {% endif %}
+                                    <div class="account-details">
+                                        <span class="tag">{{ card.tag }}</span>
+                                        <span class="h6">{{ card.title }}</span>
+                                        <p>{{ card.description }}</p>
+                                        <a href="{{ card.cta_link }}" class="btn-learnMore">{{ card.cta_text }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

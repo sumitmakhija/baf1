@@ -1,0 +1,67 @@
+{% load customfilters %}
+{% if bullet_data %}
+<section class="content-right content-list p-t-100 p-b-50">
+    <div class="container">
+
+        <!-- Full-width section -->
+        {% if bullet_data.heading_full_width or bullet_data.full_width_first_column_data or bullet_data.full_width_second_column_data %}
+        <div class="row">
+            {% if bullet_data.heading_full_width %}
+            <div class="col-12">
+                <span class="h3">{{ bullet_data.heading_full_width }}</span>
+            </div>
+            {% endif %}
+
+            {% if bullet_data.full_width_first_column_data %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                <ul class="list-unstyled list-check-circle-outline mt-4">
+                    {{ bullet_data.full_width_first_column_data|strip_ul|safe }}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if bullet_data.full_width_second_column_data %}
+            <div
+                class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1">
+                <ul class="list-unstyled list-check-circle-outline mt-4">
+                    {{ bullet_data.full_width_second_column_data|strip_ul|safe }}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <!-- Half-width section -->
+        {% if bullet_data.heading_half_width_1 or bullet_data.half_width_1_data or bullet_data.heading_half_width_2 or bullet_data.half_width_2_data %}
+        <div class="row">
+            {% if bullet_data.heading_half_width_1 or bullet_data.half_width_1_data %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                {% if bullet_data.heading_half_width_1 %}
+                <span class="h5">{{ bullet_data.heading_half_width_1 }}</span>
+                {% endif %}
+                {% if bullet_data.half_width_1_data %}
+                <ul class="list-unstyled list-check-circle-outline mt-4">
+                    {{ bullet_data.half_width_1_data|strip_ul|safe }}
+                </ul>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% if bullet_data.heading_half_width_2 or bullet_data.half_width_2_data %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1">
+                {% if bullet_data.heading_half_width_2 %}
+                <span class="h5">{{ bullet_data.heading_half_width_2 }}</span>
+                {% endif %}
+                {% if bullet_data.half_width_2_data %}
+                <ul class="list-unstyled list-check-circle-outline mt-4">
+                    {{ bullet_data.half_width_2_data|strip_ul|safe }}
+                </ul>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+{% endif %}

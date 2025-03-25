@@ -1,0 +1,73 @@
+<section class="Opportunities p-t-0 p-b-100 ">
+    <div class="container">
+        <div class="row mt-5 align-items-center">
+            {% for entry in promo_box %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6  col-xxl-6">
+                <div class="compalintbox">
+                    <div class="complintInner">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="76.364" viewBox="0 0 80 76.364">
+                            <g id="Group_301199" data-name="Group 301199" transform="translate(-1 -2)">
+                                <rect id="Rectangle_164105" data-name="Rectangle 164105" width="80" height="76.364" transform="translate(1 2)" fill="none"/>
+                                <g id="Group_300755" data-name="Group 300755" transform="translate(3.152 11.134)">
+                                <g id="Group_300754" data-name="Group 300754" transform="translate(0 0)">
+                                    <path id="Ellipse_8" data-name="Ellipse 8" d="M15.29,2.909A12.381,12.381,0,1,0,27.671,15.29,12.4,12.4,0,0,0,15.29,2.909M15.29,0A15.29,15.29,0,1,1,0,15.29,15.29,15.29,0,0,1,15.29,0Z" transform="translate(29.633 0)" fill="#fff"/>
+                                    <path id="Path_106596" data-name="Path 106596" d="M1003.3-329.159c-.309-.048-7.621-1.246-11.536-6.9-2.254-3.257-2.9-7.275-1.932-11.942.887-4.257,2.968-7.312,6.186-9.079,6.678-3.668,15.77-.308,16.153-.163l-1.027,2.722c-.08-.03-8.239-3.03-13.734,0-2.433,1.34-4.025,3.735-4.73,7.118-.8,3.848-.309,7.1,1.465,9.677,3.19,4.628,9.542,5.69,9.605,5.7Z" transform="translate(-978.764 358.952)" fill="#fff"/>
+                                    <path id="Path_106597" data-name="Path 106597" d="M991.4-295.669c-3.191,0-7.433-.059-12.493-.178l-1.077-.025-.29-1.038a31.322,31.322,0,0,1-.995-13.652,22.672,22.672,0,0,1,3.714-9.2,21.323,21.323,0,0,1,7.373-6.713l1.277,2.614a18.782,18.782,0,0,0-6.338,5.871c-3.558,5.214-4.4,11.69-2.5,19.263,14.908.332,17.041.017,17.126,0a.506.506,0,0,0-.1.023l.765,2.807A46.744,46.744,0,0,1,991.4-295.669Z" transform="translate(-976.184 352.726)" fill="#fff"/>
+                                    <g id="Group_300753" data-name="Group 300753" transform="translate(21.519 27.222)">
+                                    <path id="Path_106598" data-name="Path 106598" d="M996.7-295.8c-4.9,0-10.815-.044-17.542-.176l-1.026-.02-.325-.974a26.509,26.509,0,0,1-1.188-13.7,20.785,20.785,0,0,1,4.436-9.21,24.417,24.417,0,0,1,8.67-6.62l1.1,2.693a21.848,21.848,0,0,0-7.6,5.869c-4.223,5.16-5.219,11.572-2.966,19.069,19.417.359,31.772-.016,31.9-.019l.091,2.908C1012.158-295.977,1006.433-295.8,996.7-295.8Z" transform="translate(-976.184 326.499)" fill="#fff"/>
+                                    </g>
+                                </g>
+                                <g id="icons8-info" transform="translate(50.452 28.139)">
+                                    <path id="Path_106604" data-name="Path 106604" d="M12.174-.5A12.674,12.674,0,1,1-.5,12.174,12.688,12.688,0,0,1,12.174-.5Zm0,23.53A10.856,10.856,0,1,0,1.318,12.174,10.868,10.868,0,0,0,12.174,23.03Z" transform="translate(0.5 0.5)" fill="#fff"/>
+                                    <circle id="Ellipse_11" data-name="Ellipse 11" cx="1.604" cy="1.604" r="1.604" transform="translate(11.604 6.257)" fill="#fff"/>
+                                    <rect id="Rectangle_164103" data-name="Rectangle 164103" width="2.139" height="8.38" transform="matrix(1, -0.017, 0.017, 1, 12.063, 11.023)" fill="#fff"/>
+                                    <path id="Line_10" data-name="Line 10" d="M4.527,1.318H-.5V-.5H4.527Z" transform="translate(11.195 11.195)" fill="#fff"/>
+                                    <path id="Line_11" data-name="Line 11" d="M4.527,1.318H-.5V-.5H4.527Z" transform="translate(11.195 18.682)" fill="#fff"/>
+                                </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="h3">{{ entry.title }}</span>
+                        <p>{{ entry.description }}</p>
+                        <a href="{{ entry.cta_url }}">{{ entry.cta_text }}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                                    <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#fff" opacity="0"/>
+                                    <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#fff"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6  col-xxl-6">
+                <div class="compalintbox">
+                    <div class="complintInner">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="76.364" viewBox="0 0 80 76.364">
+                            <g id="Group_300760" data-name="Group 300760" transform="translate(-1 -2)">
+                                <rect id="Rectangle_164105" data-name="Rectangle 164105" width="80" height="76.364" transform="translate(1 2)" fill="none"/>
+                                <g id="Group_300762" data-name="Group 300762" transform="translate(6 6)">
+                                <g id="baggage-claim">
+                                    <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" width="71" height="69.364" fill="none"/>
+                                </g>
+                                <path id="Path_106612" data-name="Path 106612" d="M72.6,29.74H61.235V21.87A7.735,7.735,0,0,0,53.66,14H38.511a7.735,7.735,0,0,0-7.575,7.87v7.87H19.575A7.735,7.735,0,0,0,12,37.61V69.09a7.735,7.735,0,0,0,7.575,7.87H72.6a7.735,7.735,0,0,0,7.575-7.87V37.61A7.735,7.735,0,0,0,72.6,29.74ZM35.678,18.949H56.51V29.74H35.678Zm39.59,52.662H16.042l.16-36.656H75.188Z" transform="translate(-10.903 -10.708)" fill="#fff"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="h3">Know Our Groups</span>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        <a href="#">Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                                    <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#fff" opacity="0"/>
+                                    <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#fff"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>

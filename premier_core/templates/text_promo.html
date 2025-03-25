@@ -1,0 +1,10 @@
+{% if text_promo %}
+<section class="disclaimer-txt">
+    <div class="container">
+    {% if text_promo.show_title == True %}
+    <span class="h6">{{ text_promo.title }}</span>
+    {% endif %}
+    {{ text_promo.description_before|safe }}
+    </div>
+</section>
+{% endif %}

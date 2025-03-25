@@ -1,0 +1,37 @@
+{% load static %}
+{% if eligible_docs %}
+<section class="bg-slate0 p-t-100 p-b-100">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="h2 text-center">{{ eligible_docs_title }}</div>
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-10 offset-xl-1 col-xxl-10 offset-xl-1">
+                <div class="row">
+                    {% for doc in eligible_docs %}
+              
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                        <div class="box-requirements">
+                            {% if doc.tile_image %}
+                            <img class="img-fluid img-icon" src="{{ doc.tile_image.url }}" alt=""
+                                title="" />
+                            {% endif %}
+                            <span>{{ doc.tile_title }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3 col-xxl-6 offset-xxl-3">
+                {{ eligible_docs_desc|safe }}
+            </div>
+            </divx>
+        </div>
+</section>
+{% endif %}

@@ -1,0 +1,18 @@
+{% if dbg_full_text %}
+<section class="content-right p-t-100 p-b-50 text-list-sec bggrey">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10">
+                {% for entry in dbg_full_text %}
+                    
+                    <div class="content-wrp">
+                        <span class="h2 mb-3">{{ entry.heading }}</span>
+                        {{ entry.description|safe }}
+                    </div>
+                    
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

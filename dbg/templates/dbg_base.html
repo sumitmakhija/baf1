@@ -1,0 +1,299 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include 'header_tags.html' %}
+</head>
+
+<body class="theme-corporate">
+    {% include 'header.html' %}
+
+    {% include 'hero_section_2.html' %}
+    {% include 'dbg_all_text.html' %}
+    {% include 'cards_content.html' %}
+    {% include 'account_category.html' %}
+    {% include 'acc_features_zigzag.html' %}
+    {% include 'dbg_tips_promo.html' %}
+    {% include 'dbg_box_promo.html' %}
+    {% include 'dbg_box_promo_2.html' %}
+    {% include 'service_promo_1.html' %}
+    {% include 'service_promo_2.html' %}
+    {% include 'service_promo_3.html' %}
+    {% include 'service_promo_4.html' %}
+    {% include 'service_promo_5.html' %}
+    {% include 'service_promo_6.html' %}
+    {% include 'orbit_reward_promo.html' %}
+    {% include 'prem_nested_faqs.html' %}
+    {% include 'dbg_col_text.html' %}
+    {% include 'dbg_agent_text.html' %}
+    {% include 'dbg_full_text_2.html' %}
+    {% include 'dbg_col_text_2.html' %}
+    {% include 'dbg_col_text_3.html' %}
+
+
+    {% if table_promo_1 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+        <div class="container">
+            <span class="h4 mb-4 ">{{ table_promo_1.title }}</span>
+            <p class="mb-5">{{ table_promo_1.description }}</p>
+            <div>
+                {{ table_promo_1.table|safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% include 'dbg_video.html' %}
+    {% if table_promo_2 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+        <div class="container">
+            <span class="h4 mb-4 ">{{ table_promo_2.title }}</span>
+            <p class="mb-5">{{ table_promo_2.description }}</p>
+            <div>
+                {{ table_promo_2.table|safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% if table_promo_3 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+        <div class="container">
+            <span class="h4 mb-4 ">{{ table_promo_3.title }}</span>
+            <p class="mb-5">{{ table_promo_3.description }}</p>
+            <div>
+                {{ table_promo_3.table|safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% if table_promo_4 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+        <div class="container">
+            <span class="h4 mb-4 ">{{ table_promo_4.title }}</span>
+            <p class="mb-5">{{ table_promo_4.description }}</p>
+            <div>
+                {{ table_promo_4.table|safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% if table_promo_5 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+        <div class="container">
+            <span class="h4 mb-4 ">{{ table_promo_5.title }}</span>
+            <p class="mb-5">{{ table_promo_5.description }}</p>
+            <div>
+                {{ table_promo_5.table|safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+
+    {% include 'golden_promo.html' %}
+    {% include 'dbg_red_duplicate.html' %}
+    {% include 'dbg_red_duplicate_3.html' %}
+    {% include 'faq.html' %}
+    {% include 'dbg_faqs_2.html' %}
+    {% include 'election_directors_file.html' %}
+    {% include 'promo_banner_full.html' %}
+    {% include 'key_facts.html' %}
+    {% include 'files_faq.html' %}
+    {% include 'dbg_feature_promo.html' %}
+    {% if promo_banner %}
+    <section class="p-t-100 p-b-100">
+        {% include 'promo_banner.html' %}
+    </section>
+    {% endif %}
+
+    <!-- Roshan Apni Car Calculator -->
+    <section class="p-t-100 p-b-100">
+        <div class="container">
+          <div class="roshan-calculator">
+            <div class="form-heading">
+              <h2>Roshan Apni Car Calculator</h2>
+            </div>
+            <div class="form-wrp">
+              <form action="">
+                <div class="row">
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Select Product Type</option>
+                        <option value="2">Normal Products</option>
+                        <option value="3">Lien Based Product</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Select Markup Type</option>
+                        <option value="1">Variable</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Select Car Type</option>
+                        <option value="1">Locally Manufactured (New)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Select Manufacture</option>
+                        <option value="1">Suzuki</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Select Car</option>
+                        <option value="1">Alto</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Select Tenure</option>
+                        <option value="1">2 years</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Equity</option>
+                        <option value="1">15%</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Insurance Company</option>
+                        <option value="1">Adamjee Insurance</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Insurance Category</option>
+                        <option value="1">Adamjee Insurance</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                  >
+                    <div class="form-group m-b-22">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="" selected>Tracker</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+                  >
+                    <div class="btn-wrp">
+                      <button type="submit" class="btn-outline active">
+                        Submit
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                        >
+                          <g
+                            id="Group_172555"
+                            data-name="Group 172555"
+                            transform="translate(-356 -420)"
+                          >
+                            <rect
+                              id="Rectangle_7490"
+                              data-name="Rectangle 7490"
+                              width="16"
+                              height="16"
+                              transform="translate(356 420)"
+                              fill="#fff"
+                              opacity="0"
+                            ></rect>
+                            <path
+                              id="Icon_material-chevron-right"
+                              data-name="Icon material-chevron-right"
+                              d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z"
+                              transform="translate(347.115 413)"
+                              fill="#fff"
+                            ></path>
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Roshan Apni Car Calculator -->
+
+    {% include 'footer.html' %}
+    {% include 'footer_tags.html' %}
+</body>
+
+</html>

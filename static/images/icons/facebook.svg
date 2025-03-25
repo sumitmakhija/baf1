@@ -1,0 +1,9 @@
+<svg id="Link" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Link_Frame_Border_" data-name="Link [Frame Border]" fill="none" stroke="rgba(20,23,49,0.15)" stroke-width="1">
+    <rect width="40" height="40" rx="6" stroke="none"/>
+    <rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="none"/>
+  </g>
+  <g id="Img" transform="translate(9 9)">
+    <path id="Vector" d="M6.417,18.333H2.75V10.542H0V6.875H2.75V4.308A3.975,3.975,0,0,1,7.006,0,25.822,25.822,0,0,1,9.625.128v3.08H8.25c-1.833,0-1.833.889-1.833,1.833V6.875H9.625l-.917,3.667H6.417Z" transform="translate(6.417 1.833)" fill="#6e6e6e"/>
+  </g>
+</svg>

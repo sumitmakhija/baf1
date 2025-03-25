@@ -1,0 +1,244 @@
+/*****************************************************************
+default styling
+*****************************************************************/
+html,
+body {
+  overflow-x: hidden;
+  font-family: $tahoma;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+// body {
+//   min-height: 3000px;
+// }
+
+* {
+  // margin: 0;
+  // padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fefefe;
+
+
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #fefefe;
+}
+
+
+
+input {
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $zemestro;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: block;
+  color: #454545;
+}
+
+h1,
+.h1 {
+  font-size: clamp(26px, 4vw + 1rem, 54px);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+h2,
+.h2 {
+  font-size: clamp(22px, 4vw + 1rem, 44px);
+  line-height: 52px;
+  font-weight: 400;
+}
+
+h3,
+.h3 {
+  font-size: clamp(20px, 4vw + 1rem, 34px);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+h4,
+.h4 {
+  font-size: clamp(18px, 4vw + 1rem, 28px);
+  line-height: 38px;
+  font-weight: 400;
+}
+
+h5,
+.h5 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+h6,
+.h6 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: $text-black;
+  font-family: $tahoma;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/***************************************************************
+lists - checked list,
+***************************************************************/
+
+.list-check-circle {
+  list-style: none;
+  // padding-left: 25px;
+  padding-left: 40px;
+  margin-bottom: 25px;
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: $tahoma;
+
+  li {
+    color: $text-grey;
+    margin-bottom: 16px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.73' height='16.73' viewBox='0 0 16.73 16.73'%3E%3Cpath id='check_circle_FILL0_wght400_GRAD0_opsz24' d='M87.194-867.787l5.9-5.9-1.171-1.171-4.726,4.726-2.384-2.384-1.171,1.171Zm1.171,4.517a8.146,8.146,0,0,1-3.262-.659,8.448,8.448,0,0,1-2.656-1.788,8.448,8.448,0,0,1-1.788-2.656A8.146,8.146,0,0,1,80-871.635a8.146,8.146,0,0,1,.659-3.262,8.448,8.448,0,0,1,1.788-2.656,8.448,8.448,0,0,1,2.656-1.788A8.146,8.146,0,0,1,88.365-880a8.146,8.146,0,0,1,3.262.659,8.448,8.448,0,0,1,2.656,1.788,8.448,8.448,0,0,1,1.788,2.656,8.146,8.146,0,0,1,.659,3.262,8.146,8.146,0,0,1-.659,3.262,8.448,8.448,0,0,1-1.788,2.656,8.448,8.448,0,0,1-2.656,1.788A8.146,8.146,0,0,1,88.365-863.27Zm0-1.673a6.458,6.458,0,0,0,4.747-1.945,6.458,6.458,0,0,0,1.945-4.747,6.459,6.459,0,0,0-1.945-4.747,6.459,6.459,0,0,0-4.747-1.945,6.459,6.459,0,0,0-4.747,1.945,6.459,6.459,0,0,0-1.945,4.747,6.458,6.458,0,0,0,1.945,4.747A6.458,6.458,0,0,0,88.365-864.943ZM88.365-871.635Z' transform='translate(-80 880)' fill='%23666' /%3E%3C/svg%3E");
+      // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cg id='Group_300508' data-name='Group 300508' transform='translate(-4358 2711)'%3E%3Crect id='::before' width='28' height='28' rx='14' transform='translate(4358 -2711)' fill='%23dd1403'/%3E%3Cg id='Group_175438' data-name='Group 175438' transform='translate(4365 -2715.668)'%3E%3Cpath id='Vector' d='M5.4-2.333,1.6-6.2a.9.9,0,0,0-.667-.267A.9.9,0,0,0,.267-6.2.9.9,0,0,0,0-5.533a.9.9,0,0,0,.267.667L4.8-.267A.9.9,0,0,0,5.467,0a.821.821,0,0,0,.667-.333l7.4-8.733a.76.76,0,0,0,.233-.633,1.142,1.142,0,0,0-.3-.667.821.821,0,0,0-.633-.3.865.865,0,0,0-.633.267Z' transform='translate(0 24.334)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+      background-size: cover;
+      background-repeat: no-repeat;
+      // margin-top: 6px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.list-check-circle-outline {
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 25px;
+  position: relative;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: $tahoma;
+
+  li {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.73' height='16.73' viewBox='0 0 16.73 16.73'%3E%3Cpath id='check_circle_FILL0_wght400_GRAD0_opsz24' d='M87.194-867.787l5.9-5.9-1.171-1.171-4.726,4.726-2.384-2.384-1.171,1.171Zm1.171,4.517a8.146,8.146,0,0,1-3.262-.659,8.448,8.448,0,0,1-2.656-1.788,8.448,8.448,0,0,1-1.788-2.656A8.146,8.146,0,0,1,80-871.635a8.146,8.146,0,0,1,.659-3.262,8.448,8.448,0,0,1,1.788-2.656,8.448,8.448,0,0,1,2.656-1.788A8.146,8.146,0,0,1,88.365-880a8.146,8.146,0,0,1,3.262.659,8.448,8.448,0,0,1,2.656,1.788,8.448,8.448,0,0,1,1.788,2.656,8.146,8.146,0,0,1,.659,3.262,8.146,8.146,0,0,1-.659,3.262,8.448,8.448,0,0,1-1.788,2.656,8.448,8.448,0,0,1-2.656,1.788A8.146,8.146,0,0,1,88.365-863.27Zm0-1.673a6.458,6.458,0,0,0,4.747-1.945,6.458,6.458,0,0,0,1.945-4.747,6.459,6.459,0,0,0-1.945-4.747,6.459,6.459,0,0,0-4.747-1.945,6.459,6.459,0,0,0-4.747,1.945,6.459,6.459,0,0,0-1.945,4.747,6.458,6.458,0,0,0,1.945,4.747A6.458,6.458,0,0,0,88.365-864.943ZM88.365-871.635Z' transform='translate(-80 880)' fill='%23666' /%3E%3C/svg%3E");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-top: 8px;
+    }
+
+    a{
+      text-decoration: underline;
+    }
+  }
+}
+
+.headingColor {
+  color: $heading-color;
+
+}
+
+.boldFont {
+  font-weight: bold;
+}
+
+.imgBoxShadow {
+  box-shadow: 0 10px 20px rgb(0 0 0 / 16%);
+}
+
+.imgRadius{
+  border-radius: 8px;
+}
+
+.lineCustom small{
+  line-height: 20px;
+}
+
+.boxshadowcard{
+  padding: 80px 0;
+  .contact-details-box{
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px #0000003b;
+    padding: 45px 30px 10px 30px;
+    .h6{
+      font-size: 24px;
+    }
+    p{
+      font-weight: bold;
+      color: $black;
+      small{
+        color: $text-grey;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+    ul{
+      padding-left: 0;
+      list-style: none;
+      li{
+        color: $text-grey;
+        line-height: 30px;
+      svg{
+        margin-right: 5px;
+      }
+      }
+    }
+  }
+}

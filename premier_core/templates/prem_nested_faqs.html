@@ -1,0 +1,77 @@
+{% if faq_prem_nested %}
+<section class="financial-tab alfa-bnpl-accordian p-t-50 p-b-50">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-1">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- tabs content-1 -->
+                    <div class="tab-pane fade show active" id="tab-annual-report" role="tabpanel"
+                        aria-labelledby="tab-annual-report" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample">
+                                {% for main_header in faq_prem_nested.faq_premier.all %}
+                                <div class="accordion-item">
+                                    
+                                    <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                        
+                                        <button class="{% if forloop.first %}accordion-button{% else %}accordion-button collapsed{% endif %}" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="true"
+                                            aria-controls="collapse{{ forloop.counter }}">
+                                            {{ main_header.header }}
+                                        </button>
+                                    </h2>
+                                   
+                                    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
+                                        aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="accordion theme-accordions" id="faqs">
+                                                {% for faq in main_header.faq_premier_question_answers.all %}
+                               
+                                                {% if faq.answer_col_1 and faq.answer_col_2 %}
+                                                <div class="row">
+                                                    
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                                                        {{ faq.answer_col_1|safe }}
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1">
+                                                        {{ faq.answer_col_2|safe }}
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                {% else %}
+                                                <div class="accordion-item">
+                                                    <div class="accordion-header">
+                                                        <button class="{% if forloop.first %}accordion-button{% else %}accordion-button collapsed{% endif %}" type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#faq-collapse{{ forloop.counter }}" aria-expanded="true"
+                                                            aria-controls="faq-collapse{{ forloop.counter }}">
+                                                            {{ faq.question }}
+                                                        </button>
+                                                    </div>
+                                                    <div id="faq-collapse{{ forloop.counter }}"
+                                                        class="accordion-collapse collapse {% if forloop.first %}show{% endif %}">
+                                                        <div class="accordion-body">
+                                                            {{ faq.answer_col_1|safe }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

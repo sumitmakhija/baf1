@@ -1,0 +1,13 @@
+{% if secp_promo %}
+<section class="secp p-t-100 p-b-100">
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10 ">
+                <span class="h2">{{ secp_promo.title }}</span>
+                {{ secp_promo.description_before|safe }}
+               <img class="img-fluid"  src="{{ secp_promo.image.url }}" alt="" title="" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

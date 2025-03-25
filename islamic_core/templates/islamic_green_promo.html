@@ -1,0 +1,21 @@
+{% if golden_prem_promo  %}
+<section class="p-t-50 p-b-50">
+    <div class="container">
+        <div class="row">
+            {% for promo in golden_prem_promo %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="vision-box vision-box-left">
+                    <div class="vision-box-txt">
+                        <div>
+                            <span class="h5 text-islamic mb-10">{{ promo.title }}</span>
+                            {{ promo.description|safe }}
+                        </div>
+                        <a href="{{ promo.cta1_url }}" class="btn-outline active">{{ promo.cta1_text }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

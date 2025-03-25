@@ -1,0 +1,49 @@
+{% if faqs_2 %}
+<section class="p-t-100 p-b-100 bg-slate0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <span class="h2 text-center">{{faqs_2.0.faq_section.title }}</span>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-10 offset-xl-1 col-xxl-10 offset-xxl-1">
+                <div class="accordion theme-accordions" id="faqs_secondary">
+                    <!-- faq box -->
+                     {% for faq in faqs_2 %}
+                     {% if  forloop.counter == 1 %}
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="faq2-collapse{{ forloop.counter }}">
+                                {{ faq.question }}
+                              
+                            </button>
+                        </div>
+                        <div id="faq2-collapse{{ forloop.counter }}" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                {{ faq.answer|safe }}
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="faq2-collapse{{ forloop.counter }}">
+                                {{ faq.question }}
+                              
+                            </button>
+                        </div>
+                        <div id="faq2-collapse{{ forloop.counter }}" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                {{ faq.answer|safe }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

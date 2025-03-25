@@ -1,0 +1,46 @@
+{% load static %}   
+<section class="hero-banner-revamp">
+    <div class="swiper heroHomeSwiper">
+      <div class="swiper-wrapper">
+        {% for slide in hero_slider.slides.all %}
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                <div class="content-hero">
+                  <span class="h1">{{ slide.title }}</span>
+                  <p>{{ slide.description }}</p>
+                  {% if slide.cta_text %}
+                  <a href="{{ slide.cta_link }}" class="btn-outline active">
+                    {{ slide.cta_text }}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                        <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16"
+                          transform="translate(356 420)" fill="#dd1403" opacity="0" />
+                        <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right"
+                          d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)"
+                          fill="#dd1403" />
+                      </g>
+                    </svg>
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
+                {% if slide.image %}
+                <img class="img-fluid mx-auto text-center"
+                  src="{{ slide.image.url }}" alt="Bank Alfalah Hero Banner"
+                  title="Bank Alfalah Hero Banner" />
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% if forloop.first %}
+          <img class="img-absolute-blob" src="{% static 'images/section-images/home/conventional-back.webp' %}" />
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination heroHomeSwiper-pagination"></div>
+    </div>
+  </section>

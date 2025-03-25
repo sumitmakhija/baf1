@@ -1,0 +1,39 @@
+{% load static %}
+{% if hero_sections %}
+<section class="hero-inner">
+
+    <div class="container-fluid p-0">
+        <div class="row align-items-center justify-content-between flex-row-reverse">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                {% if hero_sections.image %}
+                <img class="img-fluid" src="{{ hero_sections.image.url }}" alt="" title="" />
+                {% else %}
+                <img class="img-fluid" src="{% static 'images/backgrounds/coperate-bg.png' %}" alt="" title="" />
+                {% endif %}
+            </div>
+            <div
+                class="col-12 col-sm-12 col-md-4 offset-md-1 col-lg-4 offset-lg-1 col-xl-4 offset-xl-2 col-xxl-4  offset-xxl-2  ">
+                <div class="banner-content-box">
+                    <span class="h1">{{ hero_sections.title|safe }}</span>
+                    {{ hero_sections.description|safe }}
+                </div>
+                {% if hero_sections.show_app_buttons == True %}
+                <div class="app-logo-wrp">
+                    <ul>
+                        <li>
+                            <img class="img-fluid" src="{% static 'images/icons/play-icon.png' %}" alt="">
+                        </li>
+                        <li>
+                            <img class="img-fluid" src="{% static '/images/icons/appleicon.png' %}" alt="">
+                        </li>
+                        <li>
+                            <img class="img-fluid" src="{% static 'images/icons/huawei-icon.png' %}" alt="">
+                        </li>
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

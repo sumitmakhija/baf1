@@ -1,0 +1,37 @@
+<!-- solutions section -->
+<section class="solutions-section p-t-100 p-b-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+          {% if financial_solution_promos.0.main_heading %}
+          <span class="h2">{{ financial_solution_promos.0.main_heading }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4">
+      <div class="swiper solutionsSlider">
+        <div class="swiper-wrapper">
+        {% for promo in financial_solution_promos %}
+          <div class="swiper-slide">
+            <div class="product-box">
+              <div class="img-wrapper">
+                <img src="{{ promo.card_image.url }}" class="img-fluid img-cover" alt="" title="">
+              </div>
+              <div class="product-details">
+                {% if promo.card_title  %}
+                <span class="tag">{{ promo.card_title }}</span>
+                {% endif %}
+                <span class="h6">{{ promo.card_header }}</span>
+                <p>{{ promo.card_description }}</p>
+
+                <a href="{{ promo.cta_link }}" class="btn-learnMore">{{ promo.cta_text }}</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+        <div class="swiper-pagination solutionsSlider-pagination"></div>
+      </div>
+    </div>
+    </section>

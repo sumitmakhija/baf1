@@ -1,0 +1,80 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    {% include 'header_tags.html' %}
+</head>
+<body class="theme-corporate">
+{% include 'header.html' %}
+
+<!-- Main Page Block Start -->
+{% include 'hero_section_2.html' %}
+<!-- tabs heading section / general content section -->
+{% include 'account_category.html' %}
+<!-- IBAN generator cta -->
+<section class="p-t-50 p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="cta-iban">
+                    <span class="h2 text-white mb-3">Generate your IBAN</span>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
+                            <div class="form-div">
+                                <span class="h6">Enter your Account Number</span>
+                                <form class="" id="generate-iban-form" action="javescript:;" method="POST">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                            <input class="form-control" type="text" pattern="" min-lenghth="4" max-length="4" id="generate-iban-branchCode" name="generate-iban-branchCode" placeholder="XXXX"/>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                            <input class="form-control" type="text" pattern="" min-lenghth="9" max-length="9" id="generate-iban-accountNo" name="generate-iban-accountNo" placeholder="123456789"/>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <button type="submit" class="btn-outline active" id="generate-iban-btn">
+                                                Generate
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                    <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                                                    <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#dd1403" opacity="0"/>
+                                                    <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#dd1403"/>
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                            <div class="generated-iban-box">
+                                <button type="button" id="copy-to-clipboard" class="icon-copy-to-clipboard">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+                                        <g id="Group_300259" data-name="Group 300259" transform="translate(-4690 -2999)">
+                                            <rect id="Rectangle_163882" data-name="Rectangle 163882" width="38" height="38" transform="translate(4690 2999)" fill="none"/>
+                                            <path id="file_copy_24dp_5F6368_FILL0_wght300_GRAD-25_opsz24" d="M133.963-864.269H118.691a2.469,2.469,0,0,1-1.8-.728,2.4,2.4,0,0,1-.741-1.779v-19.41a2.4,2.4,0,0,1,.741-1.772,2.467,2.467,0,0,1,1.8-.731h10.262l7.544,7.427v14.487a2.4,2.4,0,0,1-.741,1.779A2.47,2.47,0,0,1,133.963-864.269Zm-6.051-15.963v-6.4h-9.218a.441.441,0,0,0-.315.141.429.429,0,0,0-.143.311v19.406a.425.425,0,0,0,.143.314.445.445,0,0,0,.315.138H133.96a.445.445,0,0,0,.315-.138.425.425,0,0,0,.143-.314v-13.456ZM113.038-858.69a2.47,2.47,0,0,1-1.8-.728,2.4,2.4,0,0,1-.741-1.78v-19.064h2.082V-861.2a.425.425,0,0,0,.143.314.445.445,0,0,0,.315.138h14.9v2.055Zm5.2-27.945v0Z" transform="translate(4585.5 3891.69)" fill="#5f6368"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <span class="h6 text-center">Your IBAN Number is</span>
+                                <div class="generatedIBAN" id="generatedIBAN">
+                                    PK44ALFH4444000123456789
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'faq.html' %}
+
+<!-- Main Page Block End-->
+
+<!-- Footer Block -->
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}
+</body>
+</html>

@@ -1,0 +1,607 @@
+/*****************************************************************
+function / mixins
+*****************************************************************/
+
+/***************************************************************
+themify function/mixin
+***************************************************************/
+
+// Define the themify mixin with theme name and color variables
+@mixin themify(
+  $theme-name,
+  $primary-color,
+  $secondary-color,
+  $primary-gradient,
+  $primary-gradient-hover,
+  $image-cta,
+  $svgtick,
+  $secondCta,
+  $calculatorImg,
+  $largeBg,
+  $white,
+  $black
+) {
+  // scrollbar color according to theme
+  .#{$theme-name} {
+    ::selection {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+
+  .#{$theme-name}::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+  }
+
+  // global styling
+  .#{$theme-name} .btn-outline {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+
+    svg {
+        path {
+          fill: $primary-color;
+        }
+      }
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $white;
+      background: $primary-gradient;
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    &.active {
+      &:hover,
+      &:focus {
+        background: $primary-gradient-hover;
+      }
+    }
+  }
+
+  // header
+  .#{$theme-name} .top-bar {
+    .banking-select {
+      .dropdown-toggle{
+        transition: all 0.5s ease;
+                    &.active,
+            &:hover,
+            &:focus{
+              color: $primary-color;
+              transition: all 0.5s ease;
+              svg.down-arrow{
+                path{
+                  fill: $primary-color;
+                }
+              }
+            }
+      }
+      .dropdown-menu {
+        li {
+          a {
+            &.active,
+            &:hover,
+            &:focus {
+              background: none;
+              color: $primary-color;
+              // transition: all 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+
+    .list-top-bar {
+      li {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            svg {
+              path {
+                fill: $primary-color;
+                transition: all 0.5s ease;
+              }
+            }
+
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  .#{$theme-name} .theme-navbar {
+    .nav-item {
+      .nav-link{
+        &:hover, &:focus, &.active{
+          color: $primary-color !important;
+          transition: all 0.5s ease;
+          svg{
+            path{
+              fill: $primary-color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // hero banner
+  .#{$theme-name} .hero-banner, .#{$theme-name} .hero-banner-revamp {
+    .content-hero {
+      .h1 {
+        color: $primary-color;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      &.swiper-pagination-bullet-active {
+        background: $primary-color;
+      }
+    }
+  }
+
+  // footer
+  .#{$theme-name} footer {
+    border-bottom: 6px solid $primary-color;
+
+    .list-footer,
+    .list-footer-contact {
+      li {
+        a {
+          &:hover,
+          &:focus {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .box-social .list-social-icons {
+      li {
+        a {
+          transition: all 0.5s ease;
+
+          &:hover,
+          &:focus {
+            transition: all 0.5s ease;
+
+            svg {
+              .Link_Frame_Border_ {
+                rect:first-child {
+                  fill: $primary-color;
+                  transition: all 0.5s ease;
+                }
+              }
+
+              path {
+                fill: $white;
+                transition: all 0.5s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .copyrights {
+      p {
+        a {
+          transition: all 0.5s ease;
+
+          &:hover,
+          &:focus {
+            color: $primary-color;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+
+      ul {
+        li {
+          a {
+            &:hover,
+            &:focus {
+              color: $primary-color;
+              transition: all 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // inner page theming
+  .#{$theme-name} {
+    a {
+      color: $primary-color;
+    }
+
+    .mobile-menu {
+      .mobile-header-logo {
+      }
+
+      .offcanvas-wrp {
+        // .offcanvas-back {
+        //   svg {
+        //     fill: $primary-color;
+        //   }
+        // }
+
+        .offcanvas-toggle {
+          .toggle-icon {
+            fill: $primary-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .register-box-sec {
+      .register-boxwrp {
+        .resiter-box {
+          &:hover {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .internet-banking-table {
+      .charges-txt {
+        color: $primary-color;
+      }
+    }
+
+    .hero-inner .banner-content-box .h1 {
+      color: $primary-color;
+    }
+
+    .tableLayout .fullbg {
+      background-color: $primary-color;
+    }
+
+    .accordion {
+      .accordion-item {
+        border: 0;
+
+        .accordion-header {
+          button.accordion-button {
+            &:not(.collapsed) {
+              background-color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    .list-check-circle-outline {
+      li {
+        a {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .account-box {
+      .account-details {
+        .btn-learnMore {
+          &:hover,
+          &:focus {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .women-service-accordian {
+      .accordian-heading {
+        .h3 {
+          color: $primary-color;
+        }
+
+        p {
+          a {
+            color: $primary-color;
+          }
+        }
+      }
+
+      .box-sub-txt {
+        .h4 {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .tabbed-section {
+      .btn-tabs {
+        &:hover,
+        &:focus,
+        &.active {
+          background: $primary-gradient;
+          box-shadow: 0px 5px 30px #00000038;
+          border: 2px solid $primary-color;
+          border-radius: 8px;
+          transition: all 0.5s ease;
+
+          svg {
+            path,
+            rect:not(:last-child) {
+              fill: $white;
+              transition: all 0.5s ease;
+            }
+          }
+
+          img {
+            -webkit-filter: invert(100%); /* Safari/Chrome */
+            filter: invert(100%);
+          }
+
+          span {
+            color: $white;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+
+    .box-requirements {
+      &:hover,
+      &:focus,
+      &.active {
+        background: $primary-gradient;
+        box-shadow: 0px 5px 30px #00000038;
+        border: 2px solid $primary-color;
+        border-radius: 8px;
+        transition: all 0.5s ease;
+
+        svg {
+          path,
+          rect:not(:last-child) {
+            fill: $white;
+            transition: all 0.5s ease;
+          }
+        }
+
+        span {
+          color: $white;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    .custom-mega {
+      .menu-left {
+        position: relative;
+
+        img {
+          width: 100%;
+        }
+
+        .menu-left-content {
+          background-color: $white;
+          border-radius: 14px;
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          padding: 46px;
+
+          .h3 {
+            font-size: 30px;
+            color: $primary-color;
+          }
+
+          a {
+            font-size: 18px;
+            color: $primary-color;
+            font-weight: 600;
+          }
+
+          svg {
+            rect {
+              fill: $primary-color;
+            }
+
+            path {
+              stroke: $primary-color;
+            }
+          }
+        }
+      }
+
+      .nav-tabs {
+        border: none;
+        background: #cccccc8c;
+        border-radius: 100px;
+        height: 36px;
+        align-items: center;
+        margin-top: 1rem;
+        justify-content: space-between;
+
+        .nav-item {
+          text-align: center;
+
+          .nav-link1 {
+            color: #666666;
+            font-size: 16px;
+            padding: 8px 23px;
+
+            &.active {
+              border-radius: 100px !important;
+              background: $white;
+              color: $primary-color;
+              box-shadow: 0px 3px 8px #0000001f;
+              padding: 8px 23px;
+              font-weight: 400;
+            }
+
+            &:hover {
+              border-radius: 100px !important;
+              background: $white;
+              color: $primary-color;
+              box-shadow: 0px 3px 8px #0000001f;
+              padding: 8px 23px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        .h4 {
+          color: $primary-color;
+          font-size: 22px;
+        }
+
+        ul {
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            list-style: none;
+            flex: 2 2 321px;
+          }
+
+          a {
+            padding-bottom: 10px !important;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    .theme-navbar {
+      .nav-item {
+        .nav-link {
+          &.search-icon {
+            path {
+              fill: $primary-color !important;
+            }
+          }
+        }
+      }
+    }
+
+    code {
+      color: $primary-color;
+    }
+
+    .notice-table {
+      th {
+        background-color: $primary-color;
+      }
+    }
+
+    .cta-mobile {
+      background-image: url($image-cta) !important;
+    }
+
+    .news-ticker {
+      background: $primary-color;
+    }
+
+    .solutions-section {
+      .swiper-pagination-bullet {
+        &.swiper-pagination-bullet-active {
+          background: $primary-color;
+        }
+      }
+    }
+
+    .offersSlider-scrollbar {
+      .swiper-scrollbar-drag {
+        background: $primary-color;
+      }
+    }
+
+    .featured-news {
+      .swiper-pagination-bullet {
+        &.swiper-pagination-bullet-active {
+          background: $primary-color;
+        }
+      }
+    }
+
+    .product-box {
+      .product-details {
+        .btn-learnMore {
+          &:hover,
+          &:focus {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .list-check-circle {
+      li {
+        &:before {
+          content: "";
+          background-image: url($svgtick);
+        }
+      }
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: $primary-color;
+    }
+
+    .board-office-cta {
+      .cta-wrp {
+        background-image: url($secondCta);
+      }
+    }
+
+    .contact-details .h5 {
+      color: $primary-color;
+    }
+
+    .account-box {
+      .account-details {
+        .btn-learnMore {
+          color: $primary-color;
+
+          path {
+            fill: $primary-color;
+          }
+        }
+      }
+    }
+
+    .calculator-sec {
+      .calculator-box {
+        background-image: url($calculatorImg);
+
+        small {
+          text-align: right;
+          display: block;
+          color: $primary-color;
+        }
+      }
+    }
+
+    .vision-box-large {
+      background-image: url($largeBg);
+    }
+  }
+
+  .contact-details {
+    &.heightbox2 {
+      min-height: 415px;
+    }
+  }
+}
+
+// Example usage for the three themes
+
+// @include themify(corporate, #FF0000, #B20000, #FFFFFF, #000000);
+// @include themify(islamic, #008000, #005f00, #f8f9fa, #212529);
+// @include themify(premier, #FFD700, #B8860B, #FFFFFF, #000000);

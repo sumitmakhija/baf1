@@ -1,0 +1,187 @@
+{% if grouped_locations %}
+<section class="home-finance p-b-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="tab-list">
+                    <!-- Tabs List -->
+                    <ul class="row mb-3 list-unstyled scroll-container" id="pills-tab" role="tablist">
+                        {% for group in grouped_locations %}
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="btn-tabs nav-link {% if forloop.first %}active{% endif %}"
+                                    id="tab-{{ forloop.counter }}-tab"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#tab-{{ forloop.counter }}"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="tab-{{ forloop.counter }}"
+                                    aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+                                    <span>{{ group.region_name }}</span>
+                                </button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
+                <!-- Tabs Content -->
+                <div class="tab-content" id="pills-tabContents">
+                    {% for group in grouped_locations %}
+                        <div 
+                            class="tab-pane fade {% if forloop.first %}show active{% endif %}" 
+                            id="tab-{{ forloop.counter }}" 
+                            role="tabpanel" 
+                            aria-labelledby="tab-{{ forloop.counter }}-tab" 
+                            tabindex="0">
+                            <div class="row">
+                                {% for contact in group.contacts %}
+                                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                    <div class="contact-details">
+                                        <p><b>{{ contact.poc_name }}</b></p>
+                                        <div class="detailsinner">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.9" height="21.9" viewBox="0 0 21.9 21.9">
+                                                    <defs>
+                                                        <clipPath id="clip-path">
+                                                        <rect id="Rectangle_164092" data-name="Rectangle 164092" width="21.9" height="21.9" fill="none"/>
+                                                        </clipPath>
+                                                        <clipPath id="clip-path-2">
+                                                        <rect id="Rectangle_164091" data-name="Rectangle 164091" width="22.194" height="19.299" fill="none"/>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <g id="email" clip-path="url(#clip-path)">
+                                                        <g id="Email-2" data-name="Email" transform="translate(0 1.447)">
+                                                        <g id="Group_300735" data-name="Group 300735" clip-path="url(#clip-path-2)">
+                                                            <g id="mail-send-envelope--envelope-email-message-unopened-sealed-close" transform="translate(1.414 4.26)">
+                                                            <path id="Path_3804" data-name="Path 3804" d="M12.379,20.791a1.47,1.47,0,0,1-1.008-.4L3.083,12.665a.482.482,0,1,1,.658-.706l8.289,7.729a.511.511,0,0,0,.7,0l8.138-7.719a.482.482,0,1,1,.664.7l-8.139,7.72,0,0A1.47,1.47,0,0,1,12.379,20.791Z" transform="translate(-2.93 -11.83)" fill="#e6c26c"/>
+                                                            </g>
+                                                            <path id="Path_106844" data-name="Path 106844" d="M19.825,22.627H19.77c-.432,0-13.41-.02-14.8-.039a1.976,1.976,0,0,1-1.7-.845,2.006,2.006,0,0,1-.328-.838.483.483,0,0,1,0-.054c0-.112,0-11.22,0-12.156a.483.483,0,0,1,.005-.069,1.758,1.758,0,0,1,.816-1.26A1.96,1.96,0,0,1,4.425,7.1a.482.482,0,0,1,.081-.007h16a.483.483,0,0,1,.09.008,1.556,1.556,0,0,1,1.22,1.587c0,.5.024,11.039,0,12.276a.482.482,0,0,1-.007.072A1.91,1.91,0,0,1,19.825,22.627Zm-.018-.965h.018a.96.96,0,0,0,1.023-.758c.023-1.4,0-12.111,0-12.22,0-.005,0,0,0-.007a.97.97,0,0,0-.072-.332.454.454,0,0,0-.325-.289H4.558a.866.866,0,0,0-.655.682c0,1.126,0,11.357,0,12.074a1.089,1.089,0,0,0,.181.413,1.051,1.051,0,0,0,.9.4c1.4.019,14.663.038,14.8.039Z" transform="translate(-1.519 -5.117)" fill="#000001"/>
+                                                        </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+
+                                                <a href="mailto:agha.farrukh@bankalfalah.com">{{ contact.email }}</a>
+                                            </span>
+                                        </div>
+                                        <div class="detailsinner">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.9" height="21.9" viewBox="0 0 21.9 21.9">
+                                                    <defs>
+                                                        <clipPath id="clip-path">
+                                                        <rect id="Rectangle_164062" data-name="Rectangle 164062" width="21.9" height="21.9" fill="#fff"/>
+                                                        </clipPath>
+                                                        <clipPath id="clip-path-3">
+                                                        <rect id="Rectangle_164060" data-name="Rectangle 164060" width="14.59" height="6.233" transform="translate(0 0)" fill="none"/>
+                                                        </clipPath>
+                                                        <clipPath id="clip-path-4">
+                                                        <rect id="Rectangle_164061" data-name="Rectangle 164061" width="9.734" height="4.158" transform="translate(0 0)" fill="none"/>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <g id="Mask_Group_136" data-name="Mask Group 136" clip-path="url(#clip-path)">
+                                                        <g id="phone-telephone--android-phone-mobile-device-smartphone-iphone" clip-path="url(#clip-path)">
+                                                        <path id="Path_106845" data-name="Path 106845" d="M13.6,17.249a4.657,4.657,0,0,1-2.464-.7l-.008-.005a37.3,37.3,0,0,1-5.5-4.37,36.558,36.558,0,0,1-4.545-5.3L1.07,6.867a4.317,4.317,0,0,1-.7-2.884A4.373,4.373,0,0,1,1.7,1.322L2.257.77,2.265.763a1.9,1.9,0,0,1,2.591,0l0,0L7.287,3.109l0,0a1.768,1.768,0,0,1,0,2.537l-.006.005a.819.819,0,0,0-.189.269.782.782,0,0,0,0,.625.819.819,0,0,0,.189.269l0,0,3.831,3.7a.934.934,0,0,0,1.266,0,1.885,1.885,0,0,1,2.579,0L17.4,12.844l.006.006a1.78,1.78,0,0,1,0,2.548l-.008.007-.572.54a4.633,4.633,0,0,1-2.739,1.278A4.722,4.722,0,0,1,13.6,17.249Zm-1.95-1.517a3.694,3.694,0,0,0,1.95.553,3.752,3.752,0,0,0,.395-.021,3.664,3.664,0,0,0,2.169-1.012l.006-.006.571-.538a.816.816,0,0,0,0-1.169L14.3,11.212a.917.917,0,0,0-.625-.245.905.905,0,0,0-.627.246,1.9,1.9,0,0,1-2.592,0l0,0-3.832-3.7a1.778,1.778,0,0,1-.407-.582,1.746,1.746,0,0,1,0-1.393,1.778,1.778,0,0,1,.406-.581.8.8,0,0,0,0-1.157L4.192,1.463a.934.934,0,0,0-1.262,0l-.558.55-.006.006A3.407,3.407,0,0,0,1.324,4.092a3.351,3.351,0,0,0,.545,2.234A35.716,35.716,0,0,0,11.645,15.732Z" transform="translate(1.757 2.352)" fill="#000001"/>
+                                                        </g>
+                                                        <g id="Group_300653" data-name="Group 300653" transform="translate(8.934 -1.528)">
+                                                        <g id="Group_300649" data-name="Group 300649" transform="matrix(0.719, 0.695, -0.695, 0.719, 4.33, 0)">
+                                                            <g id="Group_300648" data-name="Group 300648" transform="translate(0 0)" clip-path="url(#clip-path-3)">
+                                                            <g id="Group_300647" data-name="Group 300647" transform="translate(2.041 1.824)">
+                                                                <path id="Ellipse_4967" data-name="Ellipse 4967" d="M5.3,0A6.042,6.042,0,0,1,9,1.2,3.825,3.825,0,0,1,10.6,4.22,3.825,3.825,0,0,1,9,7.245a6.042,6.042,0,0,1-3.7,1.2,6.042,6.042,0,0,1-3.7-1.2A3.825,3.825,0,0,1,0,4.22,3.825,3.825,0,0,1,1.6,1.2,6.042,6.042,0,0,1,5.3,0Zm0,7.477a5.076,5.076,0,0,0,3.11-.994A2.884,2.884,0,0,0,9.632,4.22,2.884,2.884,0,0,0,8.408,1.958,5.076,5.076,0,0,0,5.3.964a5.076,5.076,0,0,0-3.11.994A2.884,2.884,0,0,0,.964,4.22,2.884,2.884,0,0,0,2.188,6.483,5.076,5.076,0,0,0,5.3,7.477Z" transform="translate(0 0)" fill="#e6c26c"/>
+                                                            </g>
+                                                            </g>
+                                                        </g>
+                                                        <g id="Group_300652" data-name="Group 300652" transform="matrix(0.719, 0.695, -0.695, 0.719, 3.853, 3.828)">
+                                                            <g id="Group_300651" data-name="Group 300651" transform="translate(0 0)" clip-path="url(#clip-path-4)">
+                                                            <g id="Group_300650" data-name="Group 300650" transform="translate(1.201 1.057)">
+                                                                <path id="Ellipse_4968" data-name="Ellipse 4968" d="M3.695,0A4.192,4.192,0,0,1,6.262.832,2.708,2.708,0,0,1,7.39,2.976,2.708,2.708,0,0,1,6.262,5.121a4.192,4.192,0,0,1-2.567.832,4.192,4.192,0,0,1-2.567-.832A2.708,2.708,0,0,1,0,2.976,2.708,2.708,0,0,1,1.128.832,4.192,4.192,0,0,1,3.695,0Zm0,4.988a3.226,3.226,0,0,0,1.976-.629,1.768,1.768,0,0,0,.755-1.383,1.768,1.768,0,0,0-.755-1.383A3.226,3.226,0,0,0,3.695.964a3.226,3.226,0,0,0-1.976.629A1.768,1.768,0,0,0,.964,2.976a1.768,1.768,0,0,0,.755,1.383A3.226,3.226,0,0,0,3.695,4.988Z" transform="translate(0 0)" fill="#e6c26c"/>
+                                                            </g>
+                                                            </g>
+                                                        </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <a href="tel:">{{ contact.phone_number }}</a>
+                                            </span>
+                                        </div>
+                                        <div class="detailsinner">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.9" height="21.9" viewBox="0 0 21.9 21.9">
+                                                    <defs>
+                                                        <clipPath id="clip-path">
+                                                        <rect id="Rectangle_164062" data-name="Rectangle 164062" width="21.9" height="21.9" fill="#fff"/>
+                                                        </clipPath>
+                                                        <clipPath id="clip-path-3">
+                                                        <rect id="Rectangle_164060" data-name="Rectangle 164060" width="14.59" height="6.233" transform="translate(0 0)" fill="none"/>
+                                                        </clipPath>
+                                                        <clipPath id="clip-path-4">
+                                                        <rect id="Rectangle_164061" data-name="Rectangle 164061" width="9.734" height="4.158" transform="translate(0 0)" fill="none"/>
+                                                        </clipPath>
+                                                    </defs>
+                                                    <g id="Mask_Group_136" data-name="Mask Group 136" clip-path="url(#clip-path)">
+                                                        <g id="phone-telephone--android-phone-mobile-device-smartphone-iphone" clip-path="url(#clip-path)">
+                                                        <path id="Path_106845" data-name="Path 106845" d="M13.6,17.249a4.657,4.657,0,0,1-2.464-.7l-.008-.005a37.3,37.3,0,0,1-5.5-4.37,36.558,36.558,0,0,1-4.545-5.3L1.07,6.867a4.317,4.317,0,0,1-.7-2.884A4.373,4.373,0,0,1,1.7,1.322L2.257.77,2.265.763a1.9,1.9,0,0,1,2.591,0l0,0L7.287,3.109l0,0a1.768,1.768,0,0,1,0,2.537l-.006.005a.819.819,0,0,0-.189.269.782.782,0,0,0,0,.625.819.819,0,0,0,.189.269l0,0,3.831,3.7a.934.934,0,0,0,1.266,0,1.885,1.885,0,0,1,2.579,0L17.4,12.844l.006.006a1.78,1.78,0,0,1,0,2.548l-.008.007-.572.54a4.633,4.633,0,0,1-2.739,1.278A4.722,4.722,0,0,1,13.6,17.249Zm-1.95-1.517a3.694,3.694,0,0,0,1.95.553,3.752,3.752,0,0,0,.395-.021,3.664,3.664,0,0,0,2.169-1.012l.006-.006.571-.538a.816.816,0,0,0,0-1.169L14.3,11.212a.917.917,0,0,0-.625-.245.905.905,0,0,0-.627.246,1.9,1.9,0,0,1-2.592,0l0,0-3.832-3.7a1.778,1.778,0,0,1-.407-.582,1.746,1.746,0,0,1,0-1.393,1.778,1.778,0,0,1,.406-.581.8.8,0,0,0,0-1.157L4.192,1.463a.934.934,0,0,0-1.262,0l-.558.55-.006.006A3.407,3.407,0,0,0,1.324,4.092a3.351,3.351,0,0,0,.545,2.234A35.716,35.716,0,0,0,11.645,15.732Z" transform="translate(1.757 2.352)" fill="#000001"/>
+                                                        </g>
+                                                        <g id="Group_300653" data-name="Group 300653" transform="translate(8.934 -1.528)">
+                                                        <g id="Group_300649" data-name="Group 300649" transform="matrix(0.719, 0.695, -0.695, 0.719, 4.33, 0)">
+                                                            <g id="Group_300648" data-name="Group 300648" transform="translate(0 0)" clip-path="url(#clip-path-3)">
+                                                            <g id="Group_300647" data-name="Group 300647" transform="translate(2.041 1.824)">
+                                                                <path id="Ellipse_4967" data-name="Ellipse 4967" d="M5.3,0A6.042,6.042,0,0,1,9,1.2,3.825,3.825,0,0,1,10.6,4.22,3.825,3.825,0,0,1,9,7.245a6.042,6.042,0,0,1-3.7,1.2,6.042,6.042,0,0,1-3.7-1.2A3.825,3.825,0,0,1,0,4.22,3.825,3.825,0,0,1,1.6,1.2,6.042,6.042,0,0,1,5.3,0Zm0,7.477a5.076,5.076,0,0,0,3.11-.994A2.884,2.884,0,0,0,9.632,4.22,2.884,2.884,0,0,0,8.408,1.958,5.076,5.076,0,0,0,5.3.964a5.076,5.076,0,0,0-3.11.994A2.884,2.884,0,0,0,.964,4.22,2.884,2.884,0,0,0,2.188,6.483,5.076,5.076,0,0,0,5.3,7.477Z" transform="translate(0 0)" fill="#e6c26c"/>
+                                                            </g>
+                                                            </g>
+                                                        </g>
+                                                        <g id="Group_300652" data-name="Group 300652" transform="matrix(0.719, 0.695, -0.695, 0.719, 3.853, 3.828)">
+                                                            <g id="Group_300651" data-name="Group 300651" transform="translate(0 0)" clip-path="url(#clip-path-4)">
+                                                            <g id="Group_300650" data-name="Group 300650" transform="translate(1.201 1.057)">
+                                                                <path id="Ellipse_4968" data-name="Ellipse 4968" d="M3.695,0A4.192,4.192,0,0,1,6.262.832,2.708,2.708,0,0,1,7.39,2.976,2.708,2.708,0,0,1,6.262,5.121a4.192,4.192,0,0,1-2.567.832,4.192,4.192,0,0,1-2.567-.832A2.708,2.708,0,0,1,0,2.976,2.708,2.708,0,0,1,1.128.832,4.192,4.192,0,0,1,3.695,0Zm0,4.988a3.226,3.226,0,0,0,1.976-.629,1.768,1.768,0,0,0,.755-1.383,1.768,1.768,0,0,0-.755-1.383A3.226,3.226,0,0,0,3.695.964a3.226,3.226,0,0,0-1.976.629A1.768,1.768,0,0,0,.964,2.976a1.768,1.768,0,0,0,.755,1.383A3.226,3.226,0,0,0,3.695,4.988Z" transform="translate(0 0)" fill="#e6c26c"/>
+                                                            </g>
+                                                            </g>
+                                                        </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <a href="tel:">{{ contact.phone_number_2 }}</a>
+                                            </span>
+                                        </div>
+                                        <div class="detailsinner">
+                                            <span>
+                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.892" height="18.109" viewBox="0 0 20.892 18.109">
+                                                <defs>
+                                                    <clipPath id="clip-path">
+                                                    <rect id="Rectangle_801" data-name="Rectangle 801" width="12.904" height="15.529" transform="translate(0)" fill="#e6c26c"/>
+                                                    </clipPath>
+                                                </defs>
+                                                <g id="Group_302177" data-name="Group 302177" transform="translate(-0.654 -0.495)">
+                                                    <g id="Group_39" data-name="Group 39" transform="translate(5.118 0.495)">
+                                                    <path id="Path_3814" data-name="Path 3814" d="M-386.992,470.474h-5.1v-.963h5.1Z" transform="translate(395.611 -455.301)" fill="#e6c26c"/>
+                                                    <g id="travel-map-location-pin--navigation-map-maps-pin-gps-location" transform="translate(0 0)" clip-path="url(#clip-path)">
+                                                        <path id="Path_3609" data-name="Path 3609" d="M7,.25A4.534,4.534,0,0,1,8.786.615,4.625,4.625,0,0,1,10.3,1.651,4.755,4.755,0,0,1,11.3,3.2a4.848,4.848,0,0,1,.353,1.821c0,1.073-.725,2.818-2.155,5.188C8.458,11.933,7.4,13.387,7.39,13.4a.482.482,0,0,1-.778,0C6.6,13.387,5.545,11.933,4.5,10.207c-1.43-2.37-2.155-4.115-2.155-5.188A4.848,4.848,0,0,1,2.7,3.2,4.755,4.755,0,0,1,3.706,1.651,4.625,4.625,0,0,1,5.216.615,4.534,4.534,0,0,1,7,.25ZM7,12.287c1.3-1.871,3.691-5.633,3.691-7.268a3.893,3.893,0,0,0-1.086-2.7,3.612,3.612,0,0,0-5.21,0,3.893,3.893,0,0,0-1.086,2.7C3.31,6.654,5.7,10.416,7,12.287Z" transform="translate(-0.912 0.88)" fill="#e6c26c"/>
+                                                        <path id="Path_3610" data-name="Path 3610" d="M7.22,7.071A1.911,1.911,0,1,1,9.092,5.161,1.894,1.894,0,0,1,7.22,7.071Zm0-2.858a.948.948,0,1,0,.909.948A.93.93,0,0,0,7.22,4.213Z" transform="translate(-1.13 0.738)" fill="#e6c26c"/>
+                                                    </g>
+                                                    </g>
+                                                    <g id="Group_38" data-name="Group 38" transform="translate(0.654 12.611)">
+                                                    <path id="Path_3807" data-name="Path 3807" d="M-387.885,542.881h-20.892l2.937-5.993h3.234v.722h-2.783l-2.229,4.549h18.529l-2.349-4.4h-2.883v-.722H-391Z" transform="translate(408.776 -536.888)" fill="#000001"/>
+                                                    <path id="Path_3809" data-name="Path 3809" d="M-399.233,545.946h-3.709v-.482h3.709Z" transform="translate(405.672 -541.476)" fill="#000001"/>
+                                                    <path id="Path_3811" data-name="Path 3811" d="M-399.233,545.946h-3.709v-.482h3.709Z" transform="translate(405.672 -541.476)" fill="#000001"/>
+                                                    <path id="Path_3813" data-name="Path 3813" d="M-399.233,545.946h-3.709v-.482h3.709Z" transform="translate(417.601 -541.476)" fill="#000001"/>
+                                                    <path id="Path_3816" data-name="Path 3816" d="M-401.147,547.212h-1.794v-.482h1.794Z" transform="translate(418.21 -544.679)" fill="#000001"/>
+                                                    <path id="Path_3817" data-name="Path 3817" d="M-401.147,547.212h-1.794v-.482h1.794Z" transform="translate(407.135 -544.679)" fill="#000001"/>
+                                                    </g>
+                                                </g>
+                                                </svg>
+                                                {{ contact.location_name }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

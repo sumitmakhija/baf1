@@ -1,0 +1,87 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include 'header_tags.html' %}
+</head>
+
+<body class="theme-corporate">
+    {% include 'header.html' %}
+
+    {% include 'hero_section_2.html' %}
+    {% include 'dbg_all_text.html' %}
+    {% include 'cards_content.html' %}
+    {% include 'account_category.html' %}
+    {% include 'acc_features_zigzag.html' %}
+    {% include 'dbg_alfaqr_text.html' %}
+    {% include 'orbit_reward_promo.html' %}
+    {% include 'prem_nested_faqs.html' %}
+    {% if table_promo_1 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+        <div class="container">
+            <span class="h4 mb-4 ">{{ table_promo_1.title }}</span>
+            <p class="mb-5">{{ table_promo_1.description }}</p>
+            <div>
+                {{ table_promo_1.table|safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% include 'dbg_video.html' %}
+    {% if table_promo_2 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+        <div class="container">
+            <span class="h4 mb-4 ">{{ table_promo_2.title }}</span>
+            <p class="mb-5">{{ table_promo_2.description }}</p>
+            <div>
+                {{ table_promo_2.table|safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    {% if table_promo_3 %}
+    <section class="notice-table p-t-50 p-b-50 table-responsive">
+        <div class="container">
+            <span class="h4 mb-4 ">{{ table_promo_3.title }}</span>
+            <p class="mb-5">{{ table_promo_3.description }}</p>
+            <div>
+                {{ table_promo_3.table|safe }}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+
+    {% include 'golden_promo.html' %}
+    {% include 'faq.html' %}
+    {% include 'election_directors_file.html' %}
+    <section class="p-b-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div class="vision-box key-fact-box"
+                        data-bg="{% static 'images/section-images/alfa-chat/key-box-img.png' %}">
+                        <div class="vision-box-txt">
+                            <div>
+                                <span class="h2 text-islamic mb-10">Key Fact Statement</span>
+                                <a href="" class="btn-outline white-btn">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'files_faq.html' %}
+
+    {% if promo_banner %}
+    <section class="p-t-100 p-b-100">
+        {% include 'promo_banner.html' %}
+    </section>
+    {% endif %}
+    {% include 'footer.html' %}
+    {% include 'footer_tags.html' %}
+</body>
+
+</html>

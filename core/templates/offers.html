@@ -1,0 +1,44 @@
+{% load static %}
+<!-- Offers Promo Section -->
+<section class="offers-section p-t-100 p-b-100">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="mx-auto text-center">
+            <span class="h2">{{ offers_promo.title }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 align-items-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 offset-lg-2 col-xl-4 offset-xl-2 col-xxl-4 offset-xxl-2">
+          <div>
+            <span class="h2">{{ offers_promo.header }}</span>
+            <p class="mt-3">{{ offers_promo.description }}</p>
+            <a href="{{ offers_promo.link }}" class="btn-outline mt-4">
+                {{ offers_promo.cta_text }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                  <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#dd1403" opacity="0"/>
+                  <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#dd1403"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="swiper offersSlider">
+              <div class="swiper-wrapper">
+                {% for image in offers_promo.images.all %}
+                <div class="swiper-slide">
+                    
+                  <img src="{{ image.image.url }}" class="img-fluid w-100" alt="" titie="" />
+                  
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="swiper-scrollbar offersSlider-scrollbar"></div>
+        </div>
+      </div>
+    </div>
+  </section>

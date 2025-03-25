@@ -1,0 +1,28 @@
+{% if promo_banner %}
+<div class="container">
+    <div class="cta-mobile">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <span class="h3 m-b-50">{{ promo_banner.banner_text }}</span>
+
+          <span class="h5">{{ promo_banner.description }}</span>
+          <ul class="list-inline mt-3">
+            <li class="list-inline-item">
+              <a href="{{ promo_banner.cta1_link }}" target="_blank">
+                <img class="img-fluid app-icon" src="{{ promo_banner.cta1_image.url }}" alt="" title="" />
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="{{ promo_banner.cta2_link }}" target="_blank">
+                <img class="img-fluid app-icon" src="{{ promo_banner.cta2_image.url }}" alt="" title="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 position-relative">
+          <img class="img-fluid img-absolute" src="{{ promo_banner.image.url }}" alt="" title="" />
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

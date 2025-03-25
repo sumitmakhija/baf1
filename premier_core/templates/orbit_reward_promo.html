@@ -1,0 +1,21 @@
+{% if orbit_promo %}
+<section class="content-left p-t-50 p-b-50">
+    <div class="container">
+        <div class="row align-items-center p-t-0">
+
+            {% for orbit in orbit_promo %}
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ">
+                <div class="company-ass-inner">
+                    <img class="img-fluid"  src="{{ orbit.orbit_logo.url }}" alt="" title="">
+                    <span class="h4 text-premier">{{ orbit.heading }}</span>
+                    {{ orbit.orbit_description|safe }}
+                    <a href="{{ orbit.orbit_cta_link }}" class="text-premier">{{ orbit.orbit_cta_text }}</a>
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+        </div>
+    </div>
+</section>
+{% endif %}

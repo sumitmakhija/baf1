@@ -1,0 +1,33 @@
+{% if investor_promo %}
+<section class="p-t-100 p-b-100">
+    <div class="container">
+        <div class="row">
+            {% for investor in investor_promo %}
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4 mb-4">
+                <a href="{{ investor.cta_link }}">
+                    <div class="investor-inner">
+                        <img class="img-fluid" src="{{ investor.image.url }}" alt="" title="" />
+                        <div class="investor-detail">
+                                <span class="h3 text-white">{{ investor.title }}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% else %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <a href="{{ investor.cta_link }}">
+                    <div class="investor-inner">
+                        <img class="img-fluid" src="{{ investor.image.url }}" alt="" title="" />
+                        <div class="investor-detail">
+                                <span class="h3 text-white">{{ investor.title }}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

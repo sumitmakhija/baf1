@@ -1,0 +1,59 @@
+{% if tiles_promo_data %}
+<section class="bnpl-benifit-sec">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                <div class="heading">
+                    <span class="h3">{{ tile_promo_title }}</span>
+                </div>
+                <ul>
+                    {% for tile_data in tiles_promo_data %}
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64"
+                            height="64" viewBox="0 0 64 64">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect id="Rectangle_164312" data-name="Rectangle 164312" width="64" height="64"
+                                        fill="#fff" />
+                                </clipPath>
+                            </defs>
+                            <g id="Mask_Group_163" data-name="Mask Group 163" clip-path="url(#clip-path)">
+                                <g id="Group_301501" data-name="Group 301501" transform="translate(5.907 5.907)">
+                                    <g id="Group_301499" data-name="Group 301499" transform="translate(14.77 11.816)">
+                                        <line id="Line_30" data-name="Line 30" x1="18.096" y2="25.056"
+                                            transform="translate(2.291 2.461)" fill="none" stroke="#007d84"
+                                            stroke-width="2" />
+                                        <g id="Ellipse_4974" data-name="Ellipse 4974" transform="translate(0)"
+                                            fill="none" stroke="#007d84" stroke-width="2">
+                                            <circle cx="4.923" cy="4.923" r="4.923" stroke="none" />
+                                            <circle cx="4.923" cy="4.923" r="3.923" fill="none" />
+                                        </g>
+                                        <g id="Ellipse_4975" data-name="Ellipse 4975" transform="translate(12.8 18.708)"
+                                            fill="none" stroke="#007d84" stroke-width="2">
+                                            <circle cx="4.923" cy="4.923" r="4.923" stroke="none" />
+                                            <circle cx="4.923" cy="4.923" r="3.923" fill="none" />
+                                        </g>
+                                    </g>
+                                    <g id="Group_301500" data-name="Group 301500" transform="translate(0 0)">
+                                        <g id="Ellipse_4976" data-name="Ellipse 4976" fill="none" stroke="#000001"
+                                            stroke-width="2">
+                                            <circle cx="26.092" cy="26.092" r="26.092" stroke="none" />
+                                            <circle cx="26.092" cy="26.092" r="25.092" fill="none" />
+                                        </g>
+                                        <line id="Line_31" data-name="Line 31" x2="34.8" y2="34.8"
+                                            transform="translate(8.709 8.709)" fill="none" stroke="#000001"
+                                            stroke-width="2" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <p>{{ tile_data.icon_text }}</p>
+                    </li>
+                    {% endfor %}
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

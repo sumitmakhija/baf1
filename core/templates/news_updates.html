@@ -1,0 +1,43 @@
+<section class="featured-news p-t-50 p-b-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <span class="h2 text-center">{{ news_updates.0.heading }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="swiper newsSlider">
+        <div class="swiper-wrapper">
+        {% for slider_data in news_updates  %}
+          <div class="swiper-slide">
+            <div class="blog-box">
+              <div class="img-wrapper">
+                <img src="{{ slider_data.image.url }}" class="img-fluid img-cover" alt="" title="">
+              </div>
+              <div class="blog-details">
+                <span class="h6">{{ slider_data.headline }}</span>
+                <p>{{ slider_data.description }}</p>
+
+                <a href="{{ slider_data.cta_link }}" class="btn-outline">
+                    {{ slider_data.cta_text }}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                      <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#dd1403" opacity="0"/>
+                      <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#dd1403"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+         
+          
+          
+          
+        </div>
+        <div class="swiper-pagination newsSlider-pagination"></div>
+      </div>
+    </div>
+  </section>

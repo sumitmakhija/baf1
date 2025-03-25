@@ -1,0 +1,28 @@
+/* Initially hide the success message */
+#successMessage {
+    display: none;
+}
+
+/* Initially hide the spinner */
+#spinner {
+    display: none;
+}
+
+/* For the error alert, hide it initially as well */
+#errorMessage {
+    display: none;
+}
+
+#successMessage-fraud {
+    display: none;
+}
+
+/* Initially hide the spinner */
+#spinner-fraud {
+    display: none;
+}
+
+/* For the error alert, hide it initially as well */
+#errorMessage-fraud {
+    display: none;
+}

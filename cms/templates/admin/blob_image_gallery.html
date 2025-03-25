@@ -1,0 +1,90 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blob_image_picker.css' %}">
+<style>
+    body {
+        padding: 20px;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="image-gallery">
+    <h1>Image Gallery</h1>
+    
+    <div class="image-gallery-search">
+        <form method="get" action="">
+            <input type="hidden" name="field_name" value="{{ field_name }}">
+            <input type="text" name="search" value="{{ search_query }}" placeholder="Search by filename...">
+            <button type="submit">Search</button>
+            {% if search_query %}
+                <a href="?field_name={{ field_name }}" class="button">Clear</a>
+            {% endif %}
+        </form>
+    </div>
+    
+    {% if folders %}
+    <div class="image-gallery-folders">
+        <form method="get" action="">
+            <input type="hidden" name="field_name" value="{{ field_name }}">
+            {% if search_query %}
+                <input type="hidden" name="search" value="{{ search_query }}">
+            {% endif %}
+            <select name="folder" onchange="this.form.submit()">
+                <option value="all" {% if selected_folder == 'all' %}selected{% endif %}>All Folders</option>
+                {% for folder in folders %}
+                    <option value="{{ folder }}" {% if selected_folder == folder %}selected{% endif %}>{{ folder }}</option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+    {% endif %}
+    
+    <div class="image-gallery-container">
+        {% for blob in page_obj %}
+            <div class="image-gallery-item" onclick="selectImage('{{ blob.url }}')">
+                <img src="{{ blob.url }}" alt="{{ blob.name }}">
+            </div>
+        {% empty %}
+            <p>No images found.</p>
+        {% endfor %}
+    </div>
+    
+    {% if page_obj.has_other_pages %}
+    <div class="image-gallery-pagination">
+        {% if page_obj.has_previous %}
+            <a href="?field_name={{ field_name }}&page={{ page_obj.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_folder %}&folder={{ selected_folder }}{% endif %}">&laquo; Previous</a>
+        {% endif %}
+        
+        {% for i in page_obj.paginator.page_range %}
+            {% if page_obj.number == i %}
+                <a class="active">{{ i }}</a>
+            {% else %}
+                <a href="?field_name={{ field_name }}&page={{ i }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_folder %}&folder={{ selected_folder }}{% endif %}">{{ i }}</a>
+            {% endif %}
+        {% endfor %}
+        
+        {% if page_obj.has_next %}
+            <a href="?field_name={{ field_name }}&page={{ page_obj.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}{% if selected_folder %}&folder={{ selected_folder }}{% endif %}">Next &raquo;</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+
+<script>
+    function selectImage(imageUrl) {
+        // Send the selected image URL back to the opener window
+        if (window.opener && !window.opener.closed) {
+            window.opener.setSelectedImage('{{ field_name }}', imageUrl);
+            window.close();
+        } else {
+            alert('The parent window has been closed.');
+        }
+    }
+</script>
+{% endblock %}

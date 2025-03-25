@@ -1,0 +1,24 @@
+<section class="offers-section p-t-100 p-b-100">
+    <div class="container-fluid">
+        <div class="row mt-5 align-items-center justify-content-between">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 offset-lg-1 col-xl-3 offset-xl-1 col-xxl-3 offset-xxl-2">
+            <div>
+            <span class="h2 headingColor">{{ offers_promo.header }}</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
+            <div class="swiper seniorsSlider">
+                <div class="swiper-wrapper">
+                {% for image in offers_promo.images.all %}
+                <div class="swiper-slide">
+                    <img src="{{ image.image.url }}" class="img-fluid" alt="" titie="" />
+                </div>
+                {% endfor %}
+                
+                </div>
+            </div>
+            <div class="swiper-scrollbar offersSlider-scrollbar"></div>
+        </div>
+        </div>
+    </div>
+    </section>

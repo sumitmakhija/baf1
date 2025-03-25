@@ -1,0 +1,344 @@
+<section class="financial-tab p-t-100 p-b-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  col-xxl-12">
+                <div class="tab-list">
+                    <!-- tabs list -->
+                    
+                    <ul class="row mb-3 list-unstyled scroll-container" id="pills-tab" role="tablist">
+                        <li class=" nav-item" role="presentation">
+                            <button class="btn-tabs nav-link active" id="annual-report" data-bs-toggle="pill" data-bs-target="#tab-annual-report" type="button" role="tab" aria-controls="annual-report" aria-selected="true">
+                            <span>Annual Reports</span>
+                            </button>
+                        </li>
+                        <li class=" nav-item" role="presentation">
+                            <button class="btn-tabs nav-link" id="analyst-briefing" data-bs-toggle="pill" data-bs-target="#tab-analyst-briefing" type="button" role="tab" aria-controls="analyst-briefing" aria-selected="false">
+                                <span>Analyst Briefing</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="btn-tabs nav-link" id="capital-adequacy-ratio" data-bs-toggle="pill" data-bs-target="#tab-capital-adequacy-ratio" type="button" role="tab" aria-controls="capital-adequacy-ratio" aria-selected="false">
+                                <span>Capital Adequacy Ratio</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="btn-tabs nav-link" id="ceo-review" data-bs-toggle="pill" data-bs-target="#tab-ceo-review" type="button" role="tab" aria-controls="tab-ceo-review" aria-selected="false">
+                                <span>CEO Review</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="btn-tabs nav-link" id="best-corporate-report" data-bs-toggle="pill" data-bs-target="#tab-best-corporate-report" type="button" role="tab" aria-controls="tab-best-corporate-report" aria-selected="false">
+                                <span>Best Corporate Report</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="btn-tabs nav-link" id="credit-rating" data-bs-toggle="pill" data-bs-target="#tab-credit-rating" type="button" role="tab" aria-controls="tab-credit-rating" aria-selected="false">
+                                <span>Credit Rating</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="btn-tabs nav-link" id="material-information" data-bs-toggle="pill" data-bs-target="#tab-material-information" type="button" role="tab" aria-controls="tab-material-information" aria-selected="false">
+                                <span>Material Information</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="btn-tabs nav-link" id="unclaimed-deposits" data-bs-toggle="pill" data-bs-target="#tab-unclaimed-deposits" type="button" role="tab" aria-controls="tab-unclaimed-deposits" aria-selected="false">
+                                <span>Unclaimed Deposits</span>
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+               
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- tabs content-1 -->
+                     
+                    {% for report_type in reports_tab.report_types.all %}
+                    {% if report_type.type == 'Annual Reports' %}
+                    <div class="tab-pane fade show active" id="tab-annual-report" role="tabpanel" aria-labelledby="tab-annual-report" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample">
+                                {% for year, cards in grouped_reports.items %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                            <button class="accordion-button {% if forloop.counter != 1 %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{% if forloop.counter == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}">
+                                                {{ year }}
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.counter == 1 %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    {% for card in cards %}
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                            <div class="director-box mb-3">
+                                                                <div class="box-heading">
+                                                                    <p>{{ card.header }}</p>
+                                                                    <span class="h3">{{ card.title }}</span>
+                                                                </div>
+                                                                <div class="box-btn">
+                                                                    <span>{{ card.date }}</span>
+                                                                    <a href="{{ card.cta_link }}" class="btn-outline">Download</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if report_type.type == 'Analyst Briefing' %}
+                    <!-- tabs content-2 -->
+                    <div class="tab-pane fade" id="tab-analyst-briefing" role="tabpanel" aria-labelledby="tab-analyst-briefing" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample1">
+                                {% for year, cards in grouped_reports_analyst.items %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                            <button class="accordion-button {% if forloop.counter != 1 %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{% if forloop.counter == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}">
+                                                {{ year }}
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.counter == 1 %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    {% for card in cards %}
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                            <div class="director-box mb-3">
+                                                                <div class="box-heading">
+                                                                    <p>{{ card.header }}</p>
+                                                                    <span class="h3">{{ card.title }}</span>
+                                                                </div>
+                                                                <div class="box-btn">
+                                                                    <span>{{ card.date }}</span>
+                                                                    <a href="{{ card.cta_link }}" class="btn-outline">Download</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if report_type.type == 'Capital Adequacy Ratio' %}
+                    <div class="tab-pane fade" id="tab-capital-adequacy-ratio" role="tabpanel" aria-labelledby="tab-capital-adequacy-ratio" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample2">
+                                {% for year, cards in grouped_reports_capital.items %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                            <button class="accordion-button {% if forloop.counter != 1 %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{% if forloop.counter == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}">
+                                                {{ year }}
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.counter == 1 %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    {% for card in cards %}
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                            <div class="director-box mb-3">
+                                                                <div class="box-heading">
+                                                                    <p>{{ card.header }}</p>
+                                                                    <span class="h3">{{ card.title }}</span>
+                                                                </div>
+                                                                <div class="box-btn">
+                                                                    <span>{{ card.date }}</span>
+                                                                    <a href="{{ card.cta_link }}" class="btn-outline">Download</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if report_type.type == 'CEO Review' %}
+                    <div class="tab-pane fade" id="tab-ceo-review" role="tabpanel" aria-labelledby="tab-ceo-review" tabindex="0">
+                        <div class="row">
+                            {% for cards in reports_tab.report_types.all %}
+                            {% for card in cards.cards_reports.all %}
+                            {% if card.image %}
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="img-wrapper">
+                                    <img src="{{ card.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                </div>
+                                <div class="account-details">
+                                    <span class="h6">{{ card.title }}</span>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if report_type.type == 'Best Corporate Report' %}
+                    <div class="tab-pane fade" id="tab-best-corporate-report" role="tabpanel" aria-labelledby="tab-best-corporate-report" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample3">
+                                {% for year, cards in grouped_reports_corporate.items %}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                        <button class="accordion-button {% if forloop.counter != 1 %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{% if forloop.counter == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}">
+                                            {{ year }}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.counter == 1 %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                {% for card in cards %}
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                        <div class="director-box mb-3">
+                                                            <div class="box-heading">
+                                                                <p>{{ card.header }}</p>
+                                                                <span class="h3">{{ card.title }}</span>
+                                                            </div>
+                                                            <div class="box-btn">
+                                                                {% if card.date %}
+                                                                <span>{{ card.date }}</span>
+                                                                {% endif %}
+                                                                <a href="{{ card.cta_link }}" class="btn-outline">Download</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                            {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if report_type.type == 'Credit Rating' %}
+                    <div class="tab-pane fade" id="tab-credit-rating" role="tabpanel" aria-labelledby="tab-credit-rating" tabindex="0">
+                        <div class="row">
+                            {% for year, cards in grouped_reports_credit.items %}
+                            {% for card in cards %}
+                            <div class="col-md-3">
+                                <div class="director-box mb-3">
+                                    <div class="box-heading">
+                                        <p>{{ card.header }}</p>
+                                        <span class="h3">{{ card.title }}</span>
+                                        {{ card.description|safe }}
+                                    </div>
+                                    {% if card.cta_link %}
+                                    <div class="box-btn">
+                                        <a href="{{ card.cta_link }}" class="btn-outline">Download</a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if report_type.type == 'Material Information' %}
+                    <div class="tab-pane fade" id="tab-material-information" role="tabpanel" aria-labelledby="tab-material-information" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample4">
+                                {% for year, cards in grouped_reports_material.items %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                            <button class="accordion-button {% if forloop.counter != 1 %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{% if forloop.counter == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}">
+                                                {{ year }}
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.counter == 1 %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    {% for card in cards %}
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                            <div class="director-box mb-3">
+                                                                <div class="box-heading">
+                                                                    <p>{{ card.header }}</p>
+                                                                    <span class="h3">{{ card.title }}</span>
+                                                                </div>
+                                                                <div class="box-btn">
+                                                                    <span>{{ card.date }}</span>
+                                                                    <a href="{{ card.cta_link }}" class="btn-outline">Download</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if report_type.type == 'Unclaimed Deposits' %}
+                    <div class="tab-pane fade" id="tab-unclaimed-deposits" role="tabpanel" aria-labelledby="tab-unclaimed-deposits" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample5">
+                                {% for year, cards in grouped_reports_unclaimed.items %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                            <button class="accordion-button {% if forloop.counter != 1 %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{% if forloop.counter == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}">
+                                                {{ year }}
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.counter == 1 %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    {% for card in cards %}
+                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                            <div class="director-box mb-3">
+                                                                <div class="box-heading">
+                                                                    <p>{{ card.header }}</p>
+                                                                    <span class="h3">{{ card.title }}</span>
+                                                                </div>
+                                                                <div class="box-btn">
+                                                                    <span>{{ card.date }}</span>
+                                                                    <a href="{{ card.cta_link }}" class="btn-outline">Download</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

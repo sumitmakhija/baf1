@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Zemestro Std';
+    src: url('fonts/ZemestroStd.eot');
+    src: url('fonts/ZemestroStd.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ZemestroStd.woff2') format('woff2'),
+        url('fonts/ZemestroStd.woff') format('woff'),
+        url('fonts/ZemestroStd.ttf') format('truetype'),
+        url('fonts/ZemestroStd.svg#ZemestroStd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Zemestro Std';
+    src: url('fonts/ZemestroStd-Bold.eot');
+    src: url('fonts/ZemestroStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ZemestroStd-Bold.woff2') format('woff2'),
+        url('fonts/ZemestroStd-Bold.woff') format('woff'),
+        url('fonts/ZemestroStd-Bold.ttf') format('truetype'),
+        url('fonts/ZemestroStd-Bold.svg#ZemestroStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url('fonts/Tahoma-Bold.eot');
+    src: url('fonts/Tahoma-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Tahoma-Bold.woff2') format('woff2'),
+        url('fonts/Tahoma-Bold.woff') format('woff'),
+        url('fonts/Tahoma-Bold.ttf') format('truetype'),
+        url('fonts/Tahoma-Bold.svg#Tahoma-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url('fonts/Tahoma.eot');
+    src: url('fonts/Tahoma.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Tahoma.woff2') format('woff2'),
+        url('fonts/Tahoma.woff') format('woff'),
+        url('fonts/Tahoma.ttf') format('truetype'),
+        url('fonts/Tahoma.svg#Tahoma') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

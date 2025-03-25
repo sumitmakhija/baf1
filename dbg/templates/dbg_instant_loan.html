@@ -1,0 +1,77 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    {% include 'header_tags.html' %}
+</head>
+<body class="theme-corporate">
+{% include 'header.html' %}
+
+{% include 'hero_section_2.html' %}
+
+
+
+{% include 'dbg_agent_text.html' %}
+{% include 'dbg_col_text.html' %}
+<section class="calculator-sec p-t-100 p-b-50">
+    <div class="container">
+        <div class="calculator-box">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                    <span class="h2 mb-4">Bank Alfalah calculate your instant loan instalment</span>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-2 mb-md-0">
+                    <div class="calculator-inner-box">
+                        <form action="">
+                            <div class="row row-gap-2 align-items-center">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 px-2">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected="" hidden="">Enter Required Financing</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 px-2 ">
+                                    <input type="text" class="form-control" placeholder="Enter Required Financing">
+                                    
+                                </div>
+                                
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 px-2 mt-3">
+                                    <button type="submit" class="btn-outline active">Calculate <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                                                <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#fff" opacity="0"></rect>
+                                                <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#fff"></path>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 px-2 mt-3 text-right">
+                                    <small class="">*Terms &amp; Conditions apply.</small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include 'dbg_tab.html' %}
+
+{% include 'faq.html' %}
+
+
+{% if promo_banner %}
+<section class="p-t-100 p-b-100">
+    {% include 'promo_banner.html' %}
+</section>
+{% endif %}
+{% include 'footer.html' %}
+{% include 'footer_tags.html' %}
+</body>
+</html>

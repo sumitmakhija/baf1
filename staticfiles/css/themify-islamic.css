@@ -1,0 +1,279 @@
+/*****************************************************************
+colors
+*****************************************************************/
+/*****************************************************************
+theme colors
+*****************************************************************/
+.text-corporate {
+  color: #dd1403;
+}
+
+.text-islamic {
+  color: #007d84;
+}
+
+.text-premier {
+  color: #dbb35b;
+}
+
+.font-tahoma {
+  font-family: "Tahoma", sans-serif;
+}
+
+.font-zemestro {
+  font-family: "Zemestro Std", sans-serif;
+}
+
+.bg-slate0 {
+  background-color: #f8f8f8;
+}
+
+.link-corporate {
+  color: #dd1403;
+  text-decoration: underline;
+}
+
+.link-islamic {
+  color: #007d84;
+  text-decoration: underline;
+}
+
+.link-white {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.headingColor {
+  color: #272727;
+}
+
+/*****************************************************************
+function / mixins
+*****************************************************************/
+/***************************************************************
+themify function/mixin
+***************************************************************/
+.theme-islamic ::selection {
+  background: #007d84;
+  color: #ffffff;
+}
+
+.theme-islamic::-webkit-scrollbar-thumb {
+  background-color: #007d84;
+}
+
+.theme-islamic .btn-outline {
+  border: 1px solid #007d84;
+  color: #007d84;
+}
+.theme-islamic .btn-outline:hover, .theme-islamic .btn-outline:focus, .theme-islamic .btn-outline.active {
+  color: #ffffff;
+  background: transparent linear-gradient(281deg, #4ac8b4 0%, #007d84 100%) 0% 0% no-repeat padding-box;
+}
+.theme-islamic .btn-outline:hover svg path, .theme-islamic .btn-outline:focus svg path, .theme-islamic .btn-outline.active svg path {
+  fill: #ffffff;
+}
+.theme-islamic .btn-outline.active:hover, .theme-islamic .btn-outline.active:focus {
+  background: transparent linear-gradient(79deg, #007d84 0%, #4ac8b4 100%) 0% 0% no-repeat padding-box;
+}
+
+.theme-islamic .top-bar .banking-select .dropdown-menu li a.active, .theme-islamic .top-bar .banking-select .dropdown-menu li a:hover, .theme-islamic .top-bar .banking-select .dropdown-menu li a:focus {
+  background: none;
+  color: #007d84;
+  transition: all 0.5s ease;
+}
+.theme-islamic .top-bar .list-top-bar li a:hover, .theme-islamic .top-bar .list-top-bar li a:focus, .theme-islamic .top-bar .list-top-bar li a.active {
+  color: #007d84;
+}
+.theme-islamic .top-bar .list-top-bar li a:hover svg path, .theme-islamic .top-bar .list-top-bar li a:focus svg path, .theme-islamic .top-bar .list-top-bar li a.active svg path {
+  fill: #007d84;
+  transition: all 0.5s ease;
+}
+
+.theme-islamic .hero-banner .content-hero .h1 {
+  color: #007d84;
+}
+
+.theme-islamic footer {
+  border-bottom: 6px solid #007d84;
+}
+.theme-islamic footer .list-footer li a:hover, .theme-islamic footer .list-footer li a:focus,
+.theme-islamic footer .list-footer-contact li a:hover,
+.theme-islamic footer .list-footer-contact li a:focus {
+  color: #007d84;
+}
+.theme-islamic footer .box-social .list-social-icons li a {
+  transition: all 0.5s ease;
+}
+.theme-islamic footer .box-social .list-social-icons li a:hover, .theme-islamic footer .box-social .list-social-icons li a:focus {
+  transition: all 0.5s ease;
+}
+.theme-islamic footer .box-social .list-social-icons li a:hover svg .Link_Frame_Border_ rect:first-child, .theme-islamic footer .box-social .list-social-icons li a:focus svg .Link_Frame_Border_ rect:first-child {
+  fill: #007d84;
+  transition: all 0.5s ease;
+}
+.theme-islamic footer .box-social .list-social-icons li a:hover svg path, .theme-islamic footer .box-social .list-social-icons li a:focus svg path {
+  fill: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-islamic footer .copyrights p a {
+  transition: all 0.5s ease;
+}
+.theme-islamic footer .copyrights p a:hover, .theme-islamic footer .copyrights p a:focus {
+  color: #007d84;
+  transition: all 0.5s ease;
+}
+.theme-islamic footer .copyrights ul li a:hover, .theme-islamic footer .copyrights ul li a:focus {
+  color: #007d84;
+  transition: all 0.5s ease;
+}
+
+.theme-islamic .hero-inner .banner-content-box .h1 {
+  color: #007d84;
+}
+.theme-islamic .accordion .accordion-item {
+  border: 0;
+}
+.theme-islamic .accordion .accordion-item .accordion-header button.accordion-button:not(.collapsed) {
+  background-color: #007d84;
+}
+.theme-islamic .list-check-circle-outline li a {
+  color: #007d84;
+}
+.theme-islamic .account-box .account-details .btn-learnMore:hover, .theme-islamic .account-box .account-details .btn-learnMore:focus {
+  color: #007d84;
+}
+.theme-islamic .women-service-accordian .accordian-heading .h3 {
+  color: #007d84;
+}
+.theme-islamic .women-service-accordian .accordian-heading p a {
+  color: #007d84;
+}
+.theme-islamic .women-service-accordian .box-sub-txt .h4 {
+  color: #007d84;
+}
+.theme-islamic .tabbed-section .btn-tabs:hover, .theme-islamic .tabbed-section .btn-tabs:focus, .theme-islamic .tabbed-section .btn-tabs.active {
+  background: transparent linear-gradient(281deg, #4ac8b4 0%, #007d84 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2196078431);
+  border: 2px solid #007d84;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.theme-islamic .tabbed-section .btn-tabs:hover svg path,
+.theme-islamic .tabbed-section .btn-tabs:hover svg rect:not(:last-child), .theme-islamic .tabbed-section .btn-tabs:focus svg path,
+.theme-islamic .tabbed-section .btn-tabs:focus svg rect:not(:last-child), .theme-islamic .tabbed-section .btn-tabs.active svg path,
+.theme-islamic .tabbed-section .btn-tabs.active svg rect:not(:last-child) {
+  fill: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-islamic .tabbed-section .btn-tabs:hover span, .theme-islamic .tabbed-section .btn-tabs:focus span, .theme-islamic .tabbed-section .btn-tabs.active span {
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-islamic .box-requirements:hover, .theme-islamic .box-requirements:focus, .theme-islamic .box-requirements.active {
+  background: transparent linear-gradient(281deg, #4ac8b4 0%, #007d84 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2196078431);
+  border: 2px solid #007d84;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+.theme-islamic .box-requirements:hover svg path,
+.theme-islamic .box-requirements:hover svg rect:not(:last-child), .theme-islamic .box-requirements:focus svg path,
+.theme-islamic .box-requirements:focus svg rect:not(:last-child), .theme-islamic .box-requirements.active svg path,
+.theme-islamic .box-requirements.active svg rect:not(:last-child) {
+  fill: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-islamic .box-requirements:hover span, .theme-islamic .box-requirements:focus span, .theme-islamic .box-requirements.active span {
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.theme-islamic .custom-mega .menu-left {
+  position: relative;
+}
+.theme-islamic .custom-mega .menu-left img {
+  width: 100%;
+}
+.theme-islamic .custom-mega .menu-left .menu-left-content {
+  background-color: #ffffff;
+  border-radius: 14px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 46px;
+}
+.theme-islamic .custom-mega .menu-left .menu-left-content .h3 {
+  font-size: 30px;
+  color: #007d84;
+}
+.theme-islamic .custom-mega .menu-left .menu-left-content a {
+  font-size: 18px;
+  color: #007d84;
+  font-weight: 600;
+}
+.theme-islamic .custom-mega .menu-left .menu-left-content svg rect {
+  fill: #007d84;
+}
+.theme-islamic .custom-mega .menu-left .menu-left-content svg path {
+  stroke: #007d84;
+}
+.theme-islamic .custom-mega .nav-tabs {
+  border: none;
+  background: rgba(204, 204, 204, 0.5490196078);
+  border-radius: 100px;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.theme-islamic .custom-mega .nav-tabs .nav-item {
+  text-align: center;
+}
+.theme-islamic .custom-mega .nav-tabs .nav-item .nav-link {
+  color: #666666;
+  font-size: 16px;
+  padding: 8px 23px;
+}
+.theme-islamic .custom-mega .nav-tabs .nav-item .nav-link.active {
+  border-radius: 100px !important;
+  background: #ffffff;
+  color: #007d84;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1215686275);
+  padding: 8px 23px;
+}
+.theme-islamic .custom-mega .nav-tabs .nav-item .nav-link:hover {
+  border-radius: 100px !important;
+  background: #ffffff;
+  color: #007d84;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1215686275);
+  padding: 8px 23px;
+}
+.theme-islamic .custom-mega .tab-content .h4 {
+  color: #007d84;
+  font-size: 22px;
+}
+.theme-islamic .custom-mega .tab-content ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.theme-islamic .custom-mega .tab-content ul li {
+  list-style: none;
+  flex: 2 2 321px;
+}
+.theme-islamic .custom-mega .tab-content ul a {
+  padding-bottom: 10px !important;
+  padding-left: 0;
+}
+.theme-islamic .theme-navbar .nav-item .nav-link.search-icon path {
+  fill: #007d84 !important;
+}
+.theme-islamic code {
+  color: #007d84;
+}
+.theme-islamic .notice-table th {
+  background-color: #007d84;
+}
+.theme-islamic .cta-mobile {
+  background-image: url("../images/section-images//islamic/islamic-about/islamic-cta-bg.png") !important;
+}
+
+/*# sourceMappingURL=themify-islamic.css.map */

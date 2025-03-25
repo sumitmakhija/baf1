@@ -1,0 +1,53 @@
+
+{% if files_faq %}
+<section class="financial-tab p-t-100 p-b-100">
+    <div class="container">
+        <div class="section-heading">
+            <span class="h2 mb-0">{{ files_faq.0.title }}</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-1">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    {% for section in files_faq %}
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="tab-{{ forloop.counter }}" role="tabpanel" aria-labelledby="tab-{{ forloop.counter }}" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample{{ forloop.counter }}">
+                                {% for category in section.categories %}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{ forloop.counter }}-{{ forloop.parentloop.counter }}">
+                                        <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}-{{ forloop.parentloop.counter }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}-{{ forloop.parentloop.counter }}">
+                                            {{ category.header }}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse{{ forloop.counter }}-{{ forloop.parentloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}-{{ forloop.parentloop.counter }}" data-bs-parent="#accordionExample{{ forloop.parentloop.counter }}">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                {% for question in category.questions %}
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                                    <div class="director-box mb-3">
+                                                        <div class="box-heading">
+                                                            <span class="h3">{{ question.file_name }}</span>
+                                                        </div>
+                                                        <div class="box-btn">
+                                                            <span>{{ question.small_desc }}</span>
+                                                            <a href="{{ question.file_cta_url }}" class="btn-outline">{{ question.file_cta_text }}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

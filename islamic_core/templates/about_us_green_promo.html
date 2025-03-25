@@ -1,0 +1,24 @@
+{% if green_promo_data %}
+<section class="board-office-cta">
+    <div class="container">
+        <div class="cta-wrp">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h2>{{ green_promo_data.title }}</h2>
+                    {{ green_promo_data.description|safe }}
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="text-end">
+                        <a href="{{ green_promo_data.cta1_url }}" class="btn-outline active">{{ green_promo_data.cta1_text }}</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div class="cta-address">
+                        {{ green_promo_data.addrss_bar|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

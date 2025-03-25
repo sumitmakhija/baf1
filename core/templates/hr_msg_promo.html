@@ -1,0 +1,43 @@
+{% if hr_promo %}
+<section class="message-section p-t-100 p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <img class="img-fluid w-100 imgBoxShadow"
+                    src="{{ hr_promo.hrpicture.url }}" alt=""
+                    title="" />
+            </div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                <ul class="message-detail">
+                    <li>
+                        <svg id="Group_300748" data-name="Group 300748" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="66.055"
+                            viewBox="0 0 76 66.055">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect id="Rectangle_164071" data-name="Rectangle 164071" width="76"
+                                        height="66.055" fill="#f0f0f0" />
+                                </clipPath>
+                            </defs>
+                            <g id="Group_300746" data-name="Group 300746" clip-path="url(#clip-path)">
+                                <path id="Path_106849" data-name="Path 106849"
+                                    d="M132.2,33.106h.527q9.982,0,19.963-.014c.435,0,.545.121.545.546q-.023,15.041-.02,30.083c0,.638,0,1.277.017,1.916.009.3-.07.405-.4.4q-16.064-.009-32.127.015c-.488,0-.412-.237-.413-.55,0-5.034-.028-10.067-.025-15.1,0-5.924-.015-11.85.062-17.773a32.417,32.417,0,0,1,4.8-16.421A32.8,32.8,0,0,1,137.814,4.07,32.172,32.172,0,0,1,149.6.284c1.075-.125,2.158-.177,3.236-.277.3-.028.389.075.389.368q-.013,5.593-.006,11.186c0,.322-.147.4-.435.41a20.814,20.814,0,0,0-9.081,2.4,22.147,22.147,0,0,0-5.972,4.732,20.956,20.956,0,0,0-5.141,10.629c-.2,1.086-.254,2.2-.384,3.379"
+                                    transform="translate(-77.239 -0.001)" fill="#f0f0f0" />
+                                <path id="Path_106850" data-name="Path 106850"
+                                    d="M11.981,33.116H32.953c0,.288,0,.536,0,.784q0,15.712,0,31.423c0,.875.088.72-.7.721q-10.184.009-20.367.007c-3.8,0-7.606-.007-11.409,0-.322,0-.472-.045-.471-.431C.021,54.8-.037,43.986.042,33.171A32.523,32.523,0,0,1,8.02,11.81,33.083,33.083,0,0,1,26.944.644,31.156,31.156,0,0,1,32.508,0c.333-.009.435.087.434.422q-.022,5.549-.017,11.1c0,.308-.081.441-.425.454a20.711,20.711,0,0,0-14.17,6.184,20.942,20.942,0,0,0-5.64,9.788,41.269,41.269,0,0,0-.707,4.7,3.844,3.844,0,0,0,0,.467"
+                                    transform="translate(0 0)" fill="#f0f0f0" />
+                            </g>
+                        </svg>
+                    </li>
+                    <li>
+                        <span class="h2">{{ hr_promo.hrmessage }}</span>
+                        <span class="h3">{{ hr_promo.hrname }}</span>
+                        <p>{{ hr_promo.hrdesignation }}</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,80 @@
+<section class="leadership-tab p-t-100 p-b-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  col-xxl-12">
+                <!-- tabs list -->
+                <ul class="row mb-3 list-unstyled " id="pills-tab" role="tablist">
+                    <li class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 nav-item" role="presentation">
+                        <button class="btn-tabs nav-link active" id="board" data-bs-toggle="pill"
+                            data-bs-target="#tab-board" type="button" role="tab" aria-controls="board"
+                            aria-selected="true">
+                            <span>Board of Directors</span>
+                        </button>
+                    </li>
+                    <li class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 nav-item" role="presentation">
+                        <button class="btn-tabs nav-link" id="management" data-bs-toggle="pill"
+                            data-bs-target="#tab-management" type="button" role="tab" aria-controls="management"
+                            aria-selected="false">
+                            <span>Managment Team</span>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- Director -->
+
+                    <div class="tab-pane fade show active" id="tab-board" role="tabpanel" aria-labelledby="tab-board"
+                        tabindex="0">
+                        <div class="row">
+                            {% for member in investor_promo %}
+                            {% if member.category == 'board_of_directors' %}
+                            <!-- board-directors -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                <div class="account-box">
+                                    <div class="img-wrapper">
+                                        <img src="{{ member.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                    </div>
+                                    <div class="account-details">
+                                        <span class="h6">{{ member.name }}</span>
+                                        <p>{{ member.designation }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                            <!-- board-directors -->
+
+                        </div>
+                    </div>
+                    <!-- tab-banknotes -->
+                    <div class="tab-pane fade" id="tab-management" role="tabpanel" aria-labelledby="tab-management"
+                        tabindex="0">
+                        <div class="row">
+                            {% for member in investor_promo %}
+                            {% if member.category == 'management_team' %}
+                            <!-- management -->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                <div class="account-box">
+                                    <div class="img-wrapper">
+                                        <img src="{{ member.image.url }}" class="img-fluid img-cover" alt="" title="">
+                                    </div>
+                                    <div class="account-details">
+                                        <span class="h6">{{ member.name }}</span>
+                                        <p>{{ member.designation }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                            <!-- management -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

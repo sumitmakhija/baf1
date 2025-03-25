@@ -1,0 +1,22 @@
+@import "partials/_colors";
+@import "partials/_functions";
+
+@include themify(
+  "theme-premier",
+  map-get($premier, gold-primary),
+  //primary color
+  map-get($premier, gold-secondary),
+  //secondary color
+  map-get($premier, gold-gradient),
+  // primary gradient
+  map-get($premier, gold-gradient-hover),
+  "../images/section-images/premier/home/premier-cta.png",
+  //primary gradient hover
+ "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgdmlld0JveD0iMCAwIDI4IDI4Ij4KICA8ZyBpZD0iR3JvdXBfMzAwNTI1IiBkYXRhLW5hbWU9Ikdyb3VwIDMwMDUyNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQzNTggMjcxMSkiPgogICAgPHJlY3QgaWQ9Ijo6YmVmb3JlIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSIxNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDM1OCAtMjcxMSkiIGZpbGw9IiM3NjViMGIiLz4KICAgIDxnIGlkPSJHcm91cF8xNzU0MzgiIGRhdGEtbmFtZT0iR3JvdXAgMTc1NDM4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzY1IC0yNzE1LjY2OCkiPgogICAgICA8cGF0aCBpZD0iVmVjdG9yIiBkPSJNNS40LTIuMzMzLDEuNi02LjJhLjkuOSwwLDAsMC0uNjY3LS4yNjdBLjkuOSwwLDAsMCwuMjY3LTYuMi45LjksMCwwLDAsMC01LjUzM2EuOS45LDAsMCwwLC4yNjcuNjY3TDQuOC0uMjY3QS45LjksMCwwLDAsNS40NjcsMGEuODIxLjgyMSwwLDAsMCwuNjY3LS4zMzNsNy40LTguNzMzYS43Ni43NiwwLDAsMCwuMjMzLS42MzMsMS4xNDIsMS4xNDIsMCwwLDAtLjMtLjY2Ny44MjEuODIxLDAsMCwwLS42MzMtLjMuODY1Ljg2NSwwLDAsMC0uNjMzLjI2N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMjQuMzM0KSIgZmlsbD0iI2ZmZiIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+",
+ '../images/section-images//premier/visa-signature-debit-card/bgpremier.png', 
+  '../images/section-images//premier/premier-financing-options/calculatorbg.png',
+  '../images/section-images/islamic/about/islamic-bg-large.png',
+ $white,
+  $black
+);
+

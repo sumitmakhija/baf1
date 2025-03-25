@@ -1,0 +1,31 @@
+{% load static %}
+{% if promo_banner_full %}
+<section class="p-t-100 p-b-50">
+    <div class="container">
+        {% if promo_banner_full.image %}
+        <div class="cta-bgImage" data-bg="{{ promo_banner_full.image.url }}">
+        {% endif %}
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                    <span class="h3 text-white mb-4">{{ promo_banner_full.banner_text }}</span>
+                    <a href="{{ promo_banner_full.cta_link }}" class="btn-outline active">
+                        {{ promo_banner_full.cta_text }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                                <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16"
+                                    transform="translate(356 420)" fill="#dd1403" opacity="0" />
+                                <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right"
+                                    d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z"
+                                    transform="translate(347.115 413)" fill="#dd1403" />
+                            </g>
+                        </svg>
+                    </a>
+                    <p class="text-white">
+                        {{ promo_banner_full.description|safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,14 @@
+{% if article_content %}
+<section class="experience p-t-100 p-b-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h2 headingColor">{{ article_content.title }}</span>
+                <p class="mt-4 mb-0">{{ article_content.description_before|safe }}</p>
+                <img class="img-fluid w-100 m-t-30 m-b-30"
+                    src="{{ article_content.image.url }}" alt="">
+                {{ article_content.description_after|safe }}
+            </div>
+        </div>
+</section>
+{% endif %}

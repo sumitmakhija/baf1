@@ -1,0 +1,36 @@
+{% if box_data_2 %}
+<section class="benefit p-t-50 p-b-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h3">{{ box_data_2.heading }}</span>
+                {{ box_data_2.description|safe }}
+            </div>
+            {% for promo in box_data_2.entries %}
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <div class="benefit-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="47" viewBox="0 0 48 47">
+                        <defs>
+                            <clipPath id="clip-path">
+                            <rect id="Rectangle_164709" data-name="Rectangle 164709" width="48" height="47" transform="translate(-0.363 0.272)" fill="#fff"></rect>
+                            </clipPath>
+                        </defs>
+                        <g id="Mask_Group_156" data-name="Mask Group 156" transform="translate(0.363 -0.272)" clip-path="url(#clip-path)">
+                            <g id="Group_302901" data-name="Group 302901">
+                            <g id="Group_302902" data-name="Group 302902" transform="translate(10325.162 -14447.728)">
+                                <path id="shopping_bag_speed_24dp_5F6368_FILL0_wght200_GRAD0_opsz24" d="M112.154-806.907l.972-7.853,1.372-11.293.524-4.214ZM88.862-805a2.48,2.48,0,0,1-1.606-.544,1.718,1.718,0,0,1-.675-1.4h24.377a1.3,1.3,0,0,0,.9-.336,1.384,1.384,0,0,0,.449-.86l2.532-20.779a1.1,1.1,0,0,0-.3-.935,1.171,1.171,0,0,0-.9-.411H108.7l-.61,4.917a1.023,1.023,0,0,1-.374.671,1.027,1.027,0,0,1-.729.234.863.863,0,0,1-.634-.331.828.828,0,0,1-.2-.686l.587-4.805H97.036l-.61,4.906a1.045,1.045,0,0,1-.374.677,1.015,1.015,0,0,1-.729.239.874.874,0,0,1-.639-.336.835.835,0,0,1-.2-.692l.587-4.794H89.086a1.933,1.933,0,0,1,1.021-1.487,3.909,3.909,0,0,1,1.9-.469h3.291l.112-.972a8,8,0,0,1,2.26-5.02A7.092,7.092,0,0,1,102.772-840a5.785,5.785,0,0,1,4.654,2.159,6.558,6.558,0,0,1,1.531,5.02l-.075.6h5.033a2.817,2.817,0,0,1,2.169.987,2.749,2.749,0,0,1,.7,2.277l-2.58,20.94a3.293,3.293,0,0,1-1.139,2.163,3.379,3.379,0,0,1-2.29.855Zm8.376-27.222h9.711l.075-.6a4.757,4.757,0,0,0-1.131-3.662,4.234,4.234,0,0,0-3.382-1.573,4.917,4.917,0,0,0-3.6,1.27,5.779,5.779,0,0,0-1.565,3.591Z" transform="translate(-10399.931 15293)"></path>
+                                <path id="Path_107466" data-name="Path 107466" d="M-10316.035,14473.688l.5-2.046h10.686l-.514,2.046Z" fill="#db3a2e"></path>
+                                <path id="Path_107467" data-name="Path 107467" d="M-10316.035,14473.688l.5-2.046h10.686l-.514,2.046Z" transform="translate(-3.896 7)" fill="#db3a2e"></path>
+                            </g>
+                            </g>
+                        </g>
+                    </svg>
+                        <p>{{ promo.name }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</section>
+{% endif %}

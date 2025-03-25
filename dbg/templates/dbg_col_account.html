@@ -1,0 +1,26 @@
+{% if col_entries_2 %}
+<section class="content-right p-t-100 p-b-50 text-list-sec">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <span class="h3 m-b-40">{{ col_entries_2.0.title }}</span>
+                <div class="content-wrp">
+                    <div class="row">
+                        {% for entry in col_entries_2 %}
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                            {{ entry.column1.description|safe }}
+                        </div>
+                        {% endfor %}
+                        {% for entry in col_entries_2 %}
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 offset-lg-1 offset-xl-1 offset-xxl-1">
+                            {{ entry.column2.description|safe }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <p><b>Note:</b> A single document showing the Proof of Profession and Source of Income/ Funds may also suffice both the requirements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

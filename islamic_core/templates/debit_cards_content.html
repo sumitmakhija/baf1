@@ -1,0 +1,37 @@
+
+<section class="tabbed-section p-t-100 p-b-100">
+    <div class="container">
+        <div class="section-heading">
+            <div class="text-end">
+                <a href="#" class="btn-outline active">
+                Discounts and Privileges 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="Group_172555" data-name="Group 172555" transform="translate(-356 -420)">
+                    <rect id="Rectangle_7490" data-name="Rectangle 7490" width="16" height="16" transform="translate(356 420)" fill="#dd1403" opacity="0"></rect>
+                    <path id="Icon_material-chevron-right" data-name="Icon material-chevron-right" d="M14.3,9l-1.41,1.41L17.465,15l-4.58,4.59L14.3,21l6-6Z" transform="translate(347.115 413)" fill="#dd1403"></path>
+                    </g>
+                </svg>
+                </a>
+            </div>
+            <span class="h2 mb-3">{{ cards_data.title }}</span>
+            <p>{{ cards_data.description }}</p>
+        </div>
+        <div class="row m-t-40">
+            {% for card in cards_data.cards.all %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                <div class="account-box">
+                    <div class="img-wrapper">
+                        <img src="{{ card.image.url }}"
+                            class="img-fluid img-cover" alt="" title="">
+                    </div>
+                    <div class="account-details">
+                        <span class="h6 mt-0">{{ card.title }}</span>
+                        <p>{{ card.description }}</p>
+                        <a href="{{ card.cta_link }}" class="btn-learnMore">{{ card.cta_text }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

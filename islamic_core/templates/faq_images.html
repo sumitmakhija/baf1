@@ -1,0 +1,57 @@
+{% load customfilters %}
+<section class="financial-tab women-service-accordian p-t-100 p-b-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-1">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- tabs content-1 -->
+                    <div class="tab-pane fade show active" id="tab-annual-report" role="tabpanel"
+                        aria-labelledby="tab-annual-report" tabindex="0">
+                        <div class="row">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    {% for faq in faqs_data %}
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="true"
+                                            aria-controls="collapse{{ forloop.counter }}">
+                                            {{ faq.question }}
+                                        </button>
+                                    </h2>
+                                    {% endfor %}
+                                    {% for faq in faqs_data %}
+                                    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse show"
+                                        aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row align-items-center">
+                                         
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                    <div class="box-para">
+                                                        {{ faq.top_description|safe }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
+                                                    {{ faq.mid_description|safe }}
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+                                                    <img class="img-fluid" src="{{ faq.image.url }}" alt="">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                    {{ faq.bottom_description|safe }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

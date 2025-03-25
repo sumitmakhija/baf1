@@ -1,0 +1,42 @@
+{% load customfilters %}
+<section class="tabbed-section p-b-100  p-t-50 customtab">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2 col-xxl-8 offset-xxl-2">
+                <!-- tabs list -->
+                <ul class="row mb-3 list-unstyled justify-content-center" id="pills-tab" role="tablist">
+                    {% for item in acc_features %}
+                    <li class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 nav-item {% if not forloop.first %}p-0{% endif %}"
+                        role="presentation">
+                        <button class="btn-tabs nav-link {% if forloop.first %}active{% endif %}"
+                            id="tab-{{ forloop.counter }}" data-bs-toggle="pill"
+                            data-bs-target="#content-tab-{{ forloop.counter }}" type="button" role="tab"
+                            aria-controls="content-tab-{{ forloop.counter }}"
+                            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" {% if not forloop.first
+                            %}tabindex="-1" {% endif %}>
+                            <span>{{ item.title|safe }}</span>
+                        </button>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4">
+                <!-- tabs content -->
+                <div class="tab-content" id="pills-tabContent">
+                    {% for item in acc_features %}
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}"
+                        id="content-tab-{{ forloop.counter }}" role="tabpanel"
+                        aria-labelledby="tab-{{ forloop.counter }}" tabindex="0">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10 mb-1">
+                                <span class="h3">{{ item.title }}</span>
+                                <p>{{ item.description|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

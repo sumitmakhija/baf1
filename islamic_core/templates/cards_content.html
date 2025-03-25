@@ -1,0 +1,33 @@
+{% if cards_data %}
+<section class="tabbed-section p-t-100 p-b-100">
+    <div class="container">
+        {% if cards_data.title or cards_data.description %}
+        <div class="section-heading">
+            <span class="h2 mb-3">{{ cards_data.title }}</span>
+            {% if cards_data.description %}
+            <p>{{ cards_data.description }}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+        <div class="row m-t-40">
+            {% for card in cards_data.cards.all %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                <div class="account-box">
+                    <div class="img-wrapper">
+                        <img src="{{ card.image.url }}"
+                            class="img-fluid img-cover" alt="" title="">
+                    </div>
+                    <div class="account-details">
+                        <span class="h6 mt-0">{{ card.title }}</span>
+                        {% if card.description %}
+                        <p>{{ card.description }}</p>
+                        {% endif %}
+                        <a href="{{ card.cta_link }}" class="btn-learnMore">{{ card.cta_text }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

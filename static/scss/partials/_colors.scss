@@ -1,0 +1,197 @@
+/*****************************************************************
+colors
+*****************************************************************/
+$tahoma: "Tahoma", sans-serif;
+$zemestro: "Zemestro Std", sans-serif;
+$white: #ffffff;
+$black: #000000;
+$black-light: #303030;
+$text-black: #454545;
+$text-grey: #6a6a6a;
+$white-topBar: #f6f6f6;
+$heading-color: #272727;
+$bg-color: #fafafa;
+$sub-heading-color: #c13333;
+$redColor-heading: #da291c;
+
+$slate: (
+  slate-0: #f8f8f8,
+  slate-10: #f0f0f0,
+  slate-20: #e1e1e1,
+  slate-30: #c3c3c3,
+  slate-40: #a9a9a9,
+  slate-50: #8e8e8e,
+  slate-60: #767676,
+  slate-70: #5d5d5d,
+  slate-80: #454545,
+  slate-90: #2e2e2e,
+  slate-100: #171717,
+);
+$gray: (
+  gray-0: #f6f7f9,
+  gray-10: #edeef2,
+  gray-20: #dcdee6,
+  gray-30: #bbbfcc,
+  gray-40: #9ea2b3,
+  gray-50: #838799,
+  gray-60: #6b6f80,
+  gray-70: #545766,
+  gray-80: #3e414c,
+  gray-90: #292b33,
+  gray-100: #141519,
+);
+$red: (
+  red-0: #fbe1df,
+  red-10: #f9cecb,
+  red-20: #f4aca8,
+  red-30: #f6938d,
+  red-40: #f47871,
+  red-50: #f25a51,
+  red-60: #ea5148,
+  red-70: #db3127,
+  red-80: #b40c02,
+  red-90: #990800,
+  red-100: #810801,
+);
+$teal: (
+  teal-0: #cbede7,
+  teal-10: #b0e4db,
+  teal-20: #93ddd1,
+  teal-30: #80d9cb,
+  teal-40: #76d3c4,
+  teal-50: #4ac8b4,
+  teal-60: #3ebfab,
+  teal-70: #29ac97,
+  teal-80: #109883,
+  teal-90: #0a8471,
+  teal-100: #067564,
+);
+$gold: (
+  gold-0: #f2e8d6,
+  gold-10: #eddfc6,
+  gold-20: #e7d3af,
+  gold-30: #e2c798,
+  gold-40: #e0c18c,
+  gold-50: #dbb573,
+  gold-60: #d3a553,
+  gold-70: #c7912f,
+  gold-80: #b88221,
+  gold-90: #a77416,
+  gold-100: #8f6008,
+);
+$success-green: (
+  green-0: #e6fff3,
+  green-10: #82e6b6,
+  green-20: #3dcc87,
+  green-30: #18b368,
+  green-40: #069952,
+  green-50: #008042,
+);
+$warning-orange: (
+  orange-0: #fff5e6,
+  orange-10: #eda12f,
+  orange-20: #db8400,
+  orange-30: #c97900,
+  orange-40: #b86e00,
+  orange-50: #a66300,
+);
+$danger-red: (
+  red-0: #ffe6e6,
+  red-10: #e62e2e,
+  red-20: #cc0000,
+  red-30: #b30000,
+  red-40: #990000,
+  red-50: #800000,
+);
+$info-blue: (
+  blue-0: #e6f6ff,
+  blue-10: #2ea2e6,
+  blue-20: #0081cc,
+  blue-30: #0071b3,
+  blue-40: #006199,
+  blue-50: #005180,
+);
+$gradients: (
+  redBlack: linear-gradient(135deg, #db3127 0%, #540d08 73.91%, #300300 100%),
+  redWhite: linear-gradient(135deg, #db3127 0%, #ff665c 68.23%, #ff7a71 100%),
+  redWhite2: linear-gradient(135deg, #db3127 0%, #f47871 100%),
+  tealBlack: linear-gradient(135deg, #3ebfab 0%, #001a21 100%),
+  tealWhite: linear-gradient(135deg, #29ac97 0%, #76d3c4 100%),
+  goldBlack: linear-gradient(135deg, #c7912f 0%, #2c1c00 100%),
+  goldWhite: linear-gradient(135deg, #b88220 0%, #dcbb82 90.67%, #e0c18c 100%),
+  darkRedWhite:
+    linear-gradient(135deg, #b90c00 6.25%, #f71000 52.6%, #fe7067 100%),
+  darkTealWhite: linear-gradient(135deg, #109883 0%, #88fff8 100%),
+  darkGoldWhite: linear-gradient(135deg, #cf8600 0%, #ffd589 100%),
+);
+
+/*****************************************************************
+theme colors
+*****************************************************************/
+$corporate: (
+  red-primary: #dd1403,
+  red-light: #ee1d25,
+  redBlack: transparent linear-gradient(281deg, #a72b2a 0%, #da291c 100%) 0% 0%
+    no-repeat padding-box,
+  redBlackHover: transparent linear-gradient(79deg, #a72b2a 0%, #da291c 100%) 0%
+    0% no-repeat padding-box,
+);
+$islamic: (
+  teal-primary: #007d84,
+  teal-secondary: #4ac8b4,
+  teal-gradient: transparent linear-gradient(281deg, #4ac8b4 0%, #007d84 100%)
+    0% 0% no-repeat padding-box,
+  teal-gradient-hover: transparent
+    linear-gradient(79deg, #4ac8b4 0%, #007d84 100%) 0% 0% no-repeat padding-box,
+);
+$premier: (
+  gold-primary: #9c7513,
+  gold-secondary: #765b0b,
+  gold-gradient: transparent linear-gradient(281deg, #e6c26c 0%, #765b0b 100%)
+    0% 0% no-repeat padding-box,
+  gold-gradient-hover: transparent
+    linear-gradient(79deg, #e6c26c 0%, #765b0b 100%) 0% 0% no-repeat padding-box,
+);
+
+.text-corporate {
+  color: map-get($map: $corporate, $key: red-primary);
+}
+.text-islamic {
+  color: map-get($map: $islamic, $key: teal-primary);
+}
+.text-premier {
+  color: map-get($map: $premier, $key: gold-primary);
+}
+.font-tahoma {
+  font-family: $tahoma;
+}
+.font-zemestro {
+  font-family: $zemestro;
+}
+.bg-slate0 {
+  background-color: map-get($map: $slate, $key: slate-0);
+}
+.link-corporate {
+  color: map-get($map: $corporate, $key: red-primary);
+  text-decoration: underline;
+}
+.link-islamic {
+  color: map-get($map: $islamic, $key: teal-primary);
+  text-decoration: underline;
+}
+.link-white {
+  color: $white;
+  text-decoration: underline;
+}
+
+.headingColor {
+  color: $heading-color;
+}
+
+.redColor {
+  color: map-get($map: $corporate, $key: red-primary);
+}
+
+.bggrey {
+  background-color: $bg-color;
+}

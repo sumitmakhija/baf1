@@ -1,0 +1,44 @@
+{% if branch_logo_promo %}
+<section class="notice-table p-t-0 p-b-50">
+    <div class="container">
+        <div class="row align-items-center p-t-100">
+            {% for benefits_data in branch_logo_promo.logo_promo.all %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+                <div class="atmLoct">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+                        <defs>
+                            <clipPath id="clip-path">
+                            <rect id="Rectangle_801" data-name="Rectangle 801" width="37.237" height="44.814" transform="translate(0)" fill="#fff"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Group_300611" data-name="Group 300611" transform="translate(0.052 0.052)">
+                            <g id="Group_39" data-name="Group 39" transform="translate(14.719 1.378)">
+                            <path id="Path_3814" data-name="Path 3814" d="M-377.37,472.29h-14.724v-2.779h14.724Z" transform="translate(402.244 -428.504)" fill="#9c7513"/>
+                            <g id="travel-map-location-pin--navigation-map-maps-pin-gps-location" transform="translate(0 0)" clip-path="url(#clip-path)">
+                                <path id="Path_3609" data-name="Path 3609" d="M15.777.25A13.084,13.084,0,0,1,20.929,1.3a13.347,13.347,0,0,1,4.358,2.992,13.722,13.722,0,0,1,2.9,4.464,13.991,13.991,0,0,1,1.017,5.254c0,3.1-2.093,8.133-6.22,14.971C19.981,33.964,16.931,38.16,16.9,38.2a1.39,1.39,0,0,1-2.246,0c-.03-.042-3.08-4.237-6.087-9.218-4.127-6.838-6.22-11.875-6.22-14.971A13.99,13.99,0,0,1,3.365,8.758a13.722,13.722,0,0,1,2.9-4.464A13.347,13.347,0,0,1,10.625,1.3,13.084,13.084,0,0,1,15.777.25Zm0,34.736c3.764-5.4,10.651-16.255,10.651-20.974A11.235,11.235,0,0,0,23.3,6.233a10.424,10.424,0,0,0-15.036,0,11.235,11.235,0,0,0-3.133,7.78C5.126,18.731,12.014,29.587,15.777,34.986Z" transform="translate(1.795 3.01)" fill="#9c7513"/>
+                                <path id="Path_3610" data-name="Path 3610" d="M10.75,14.278a5.465,5.465,0,0,1-5.4-5.514,5.465,5.465,0,0,1,5.4-5.514,5.466,5.466,0,0,1,5.4,5.514A5.466,5.466,0,0,1,10.75,14.278Zm0-8.249A2.684,2.684,0,0,0,8.127,8.764,2.684,2.684,0,0,0,10.75,11.5a2.684,2.684,0,0,0,2.624-2.735A2.684,2.684,0,0,0,10.75,6.029Z" transform="translate(6.822 8.259)" fill="#9c7513"/>
+                            </g>
+                            </g>
+                            <g id="Group_38" data-name="Group 38" transform="translate(1.836 36.34)">
+                            <path id="Path_3807" data-name="Path 3807" d="M-348.487,554.183h-60.289l8.475-17.3h9.332v2.084H-399l-6.432,13.127h53.472l-6.78-12.706h-8.319v-2.084h9.569Z" transform="translate(408.776 -536.888)" fill="#000001"/>
+                            <path id="Path_3809" data-name="Path 3809" d="M-392.239,546.854h-10.7v-1.39h10.7Z" transform="translate(410.823 -533.953)" fill="#000001"/>
+                            <path id="Path_3811" data-name="Path 3811" d="M-392.239,546.854h-10.7v-1.39h10.7Z" transform="translate(410.823 -533.953)" fill="#000001"/>
+                            <path id="Path_3813" data-name="Path 3813" d="M-392.239,546.854h-10.7v-1.39h10.7Z" transform="translate(445.247 -533.953)" fill="#000001"/>
+                            <path id="Path_3816" data-name="Path 3816" d="M-397.763,548.12h-5.178v-1.39h5.178Z" transform="translate(447.004 -540.81)" fill="#000001"/>
+                            <path id="Path_3817" data-name="Path 3817" d="M-397.763,548.12h-5.178v-1.39h5.178Z" transform="translate(415.043 -540.81)" fill="#000001"/>
+                            </g>
+                            <rect id="Rectangle_855" data-name="Rectangle 855" width="64" height="64" transform="translate(-0.052 -0.052)" fill="none"/>
+                        </g>
+                    </svg>
+                    <a href="#">{{ benefits_data.perks_name }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17.347" height="12.143" viewBox="0 0 17.347 12.143">
+                            <path id="east_24dp_5F6368_FILL0_wght400_GRAD0_opsz24" d="M91.276-747.857l-1.236-1.214,3.99-3.99H80V-754.8H94.03l-3.968-3.99L91.276-760l6.072,6.072Z" transform="translate(-80 760)" fill="#5f6368"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

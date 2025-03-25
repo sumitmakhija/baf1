@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Group_300532" data-name="Group 300532" transform="translate(-593 -4914)">
+    <g id="Link" transform="translate(593 4914)">
+      <g id="Link_Frame_Border_" data-name="Link [Frame Border]" fill="none" stroke="rgba(20,23,49,0.15)" stroke-width="1">
+        <rect width="40" height="40" rx="6" stroke="none"/>
+        <rect x="0.5" y="0.5" width="39" height="39" rx="5.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_175560" data-name="Group 175560" transform="translate(602 4923)">
+      <rect id="Rectangle_96" data-name="Rectangle 96" width="21.156" height="21.156" transform="translate(0.221 0)" fill="#6e6e6e" opacity="0"/>
+      <path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M19.377,7.752c.014.192.014.384.014.576A12.507,12.507,0,0,1,6.8,20.921,12.508,12.508,0,0,1,0,18.934a9.157,9.157,0,0,0,1.069.055,8.864,8.864,0,0,0,5.5-1.891,4.434,4.434,0,0,1-4.138-3.07,5.582,5.582,0,0,0,.836.069,4.681,4.681,0,0,0,1.165-.151A4.427,4.427,0,0,1,.877,9.6V9.547a4.458,4.458,0,0,0,2,.562,4.433,4.433,0,0,1-1.37-5.92,12.581,12.581,0,0,0,9.126,4.632,5,5,0,0,1-.11-1.014,4.43,4.43,0,0,1,7.66-3.028A8.714,8.714,0,0,0,20.994,3.71a4.414,4.414,0,0,1-1.946,2.439A8.873,8.873,0,0,0,21.6,5.464a9.515,9.515,0,0,1-2.22,2.288Z" transform="translate(0 -1.793)" fill="#6e6e6e"/>
+    </g>
+  </g>
+</svg>

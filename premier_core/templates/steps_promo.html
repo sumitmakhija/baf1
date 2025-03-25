@@ -1,0 +1,33 @@
+{% if steps_data %}
+<section class="p-t-50 p-b-50" id="Newfaqs">
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
+            <span class="h2">{{ steps_promo.title }}</span>
+                <div class="accordion theme-accordions" >
+                    <!-- faq box -->
+                    {% for step in steps_data %}
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse{{ forloop.counter }}" aria-expanded="true" aria-controls="faq-collapse{{ forloop.counter }}">
+                                {{ step.step_no }}
+                            </button>
+                        </div>
+                        <div id="faq-collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}">
+                            <div class="accordion-body">
+                                {{ step.step_description|safe }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% if steps_promo.steps_image %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 offset-lg-1 col-xl-6 offset-xl-1 col-xxl-6 offset-xxl-1 ">
+                    <img class="img-fluid w-100 imgBoxShadow imgRadius" src="{{ steps_promo.steps_image.url }}" alt="" title="">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}

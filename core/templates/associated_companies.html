@@ -1,0 +1,36 @@
+{% if associated_companies  %}
+<section class="p-t-100 p-b-50 associate">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-5">
+                <span class="h2 headingColor">{{ associated_companies.0.promo.promo_title}}</span>
+            </div>
+            {% for company in associated_companies %}
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="company-ass-inner">
+                    <img class="img-fluid" src="{{ company.image.url }}" alt="" title="" />
+                    <span class="h4 text-corporate">{{ company.title }}</span>
+                    <span class="h5">{{ company.header }}</span>
+                    <p>{{ company.status_description }}</p>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g id="Group_301175" data-name="Group 301175" transform="translate(-92 -2372)">
+                                    <path id="languages-s_2_" data-name="languages-s (2)" d="M1.054,11.478H6.271A22.858,22.858,0,0,1,6.71,7.3H2.087a10.894,10.894,0,0,0-1.043,4.174ZM2.661,6.261H6.939a15.148,15.148,0,0,1,.9-2.6,8.749,8.749,0,0,1,1.44-2.275A10.977,10.977,0,0,0,2.661,6.261ZM12,0A12,12,0,1,1,0,12,12,12,0,0,1,12,0Zm0,1.043c-1.106,0-2.3,1.012-3.214,3.057a14.3,14.3,0,0,0-.762,2.16h7.951a14.3,14.3,0,0,0-.762-2.16C14.285,2.056,13.106,1.043,12,1.043Zm5.061,5.217h4.278a10.913,10.913,0,0,0-6.616-4.873,8.928,8.928,0,0,1,1.44,2.275A15.149,15.149,0,0,1,17.061,6.261ZM16.226,7.3H7.774a22.748,22.748,0,0,0-.47,4.174h9.37A22.748,22.748,0,0,0,16.216,7.3Zm1.513,4.174h5.207A10.9,10.9,0,0,0,21.9,7.3H17.29A23.791,23.791,0,0,1,17.739,11.478ZM16.7,12.522H7.3a23.3,23.3,0,0,0,.47,4.174h8.452a21.564,21.564,0,0,0,.459-4.174ZM17.29,16.7h4.623a10.94,10.94,0,0,0,1.043-4.174H17.739A23.969,23.969,0,0,1,17.3,16.7Zm-1.315,1.043H8.035A13.374,13.374,0,0,0,8.8,19.9c.929,2.045,2.108,3.057,3.214,3.057s2.3-1.012,3.214-3.057a13.374,13.374,0,0,0,.762-2.16Zm-1.252,4.873a10.977,10.977,0,0,0,6.616-4.873H17.061a15.148,15.148,0,0,1-.9,2.6,8.749,8.749,0,0,1-1.44,2.275Zm-5.447,0a8.928,8.928,0,0,1-1.44-2.275,15.148,15.148,0,0,1-.9-2.6H2.661A10.913,10.913,0,0,0,9.277,22.612ZM2.1,16.7H6.71a23.791,23.791,0,0,1-.449-4.174H1.054A10.94,10.94,0,0,0,2.1,16.7Z" transform="translate(92 2372)"/>
+                                    <g id="Ellipse_16" data-name="Ellipse 16" transform="translate(98.5 2372)" fill="none" stroke="#dd1403" stroke-linecap="square" stroke-width="1">
+                                    <ellipse cx="5.5" cy="12" rx="5.5" ry="12" stroke="none"/>
+                                    <ellipse cx="5.5" cy="12" rx="5" ry="11.5" fill="none"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </li>
+                        <li><a href="{{ company.cta_link }}" target="blank">{{ company.cta_text }}</a></li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor % %}
+        </div>
+    </div>
+</section>
+{% endif %}
