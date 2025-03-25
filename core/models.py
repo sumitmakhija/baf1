@@ -67,6 +67,7 @@ class NavigationMain(models.Model):
     title = models.CharField(max_length=255)
     navbar = models.ManyToManyField(NavbarMainItem, blank=True)
     logo = models.ImageField(upload_to='navbar-logos/', null=True, blank=True, help_text="Logo to be displayed in the navbar")
+    title1 = models.CharField(max_length=255)
 
     class Meta:
         verbose_name_plural = "Navigation Main"
